@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="description" content="Every Lucid component with the markup that produces it.">
+
+<title>Components – Quarto themes</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b357ad3a865e0589454db861382592ea.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-5769bbd8545483d5715a711f9f708f75.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-b357ad3a865e0589454db861382592ea.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-6584ca91e93a94b05a1208d2344bae82.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-136f0fceacd5afb9f1dad93e41f7732c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-6584ca91e93a94b05a1208d2344bae82.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="../site_libs/quarto-diagram/mermaid-postprocess-shim.js"></script>
+
+
+<link rel="stylesheet" href="..\site_libs\quarto-contrib\quarto-project\brenobeirigo\lucid\css\layout.css">
+<link rel="stylesheet" href="..\site_libs\quarto-contrib\quarto-project\brenobeirigo\lucid\css\tables.css">
+<link rel="stylesheet" href="..\site_libs\quarto-contrib\quarto-project\brenobeirigo\lucid\css\pseudocode.css">
+<link rel="stylesheet" href="..\site_libs\quarto-contrib\quarto-project\brenobeirigo\lucid\css\exercises.css">
+<link rel="stylesheet" href="..\site_libs\quarto-contrib\quarto-project\brenobeirigo\lucid\css\worksheets.css">
+<link rel="stylesheet" href="..\site_libs\quarto-contrib\quarto-project\brenobeirigo\lucid\css\landing.css">
+<link rel="stylesheet" href="..\site_libs\quarto-contrib\quarto-project\brenobeirigo\lucid\css\course-outline.css">
+<link rel="stylesheet" href="..\site_libs\quarto-contrib\quarto-project\brenobeirigo\lucid\css\print.css">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Quarto themes</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Themes</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-lucid" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Lucid</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-lucid">    
+        <li>
+    <a class="dropdown-item" href="../lucid/index.html">
+ <span class="dropdown-text">Overview</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lucid/components.html">
+ <span class="dropdown-text">Components</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lucid/landing.html">
+ <span class="dropdown-text">Landing page</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="../lucid/course-outline.html">
+ <span class="dropdown-text">Course outline</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/brenobeirigo/quarto-themes"> <i class="bi bi-github" role="img" aria-label="Source on GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-tables" id="toc-data-tables" class="nav-link active" data-scroll-target="#data-tables">Data tables</a></li>
+  <li><a href="#trace-tables" id="toc-trace-tables" class="nav-link" data-scroll-target="#trace-tables">Trace tables</a></li>
+  <li><a href="#great-tables" id="toc-great-tables" class="nav-link" data-scroll-target="#great-tables">Great Tables</a></li>
+  <li><a href="#pseudocode" id="toc-pseudocode" class="nav-link" data-scroll-target="#pseudocode">Pseudocode</a></li>
+  <li><a href="#flowcharts" id="toc-flowcharts" class="nav-link" data-scroll-target="#flowcharts">Flowcharts</a></li>
+  <li><a href="#exercises-and-solutions" id="toc-exercises-and-solutions" class="nav-link" data-scroll-target="#exercises-and-solutions">Exercises and solutions</a>
+  <ul class="collapse">
+  <li><a href="#e2.3-trace-a-running-total" id="toc-e2.3-trace-a-running-total" class="nav-link" data-scroll-target="#e2.3-trace-a-running-total"><span class="exercise-label" data-exercise-id="E2.3">E2.3</span> Trace a running total</a></li>
+  </ul></li>
+  <li><a href="#scope-notes" id="toc-scope-notes" class="nav-link" data-scroll-target="#scope-notes">Scope notes</a></li>
+  <li><a href="#worksheets" id="toc-worksheets" class="nav-link" data-scroll-target="#worksheets">Worksheets</a>
+  <ul class="collapse">
+  <li><a href="#spreadsheet-preview" id="toc-spreadsheet-preview" class="nav-link" data-scroll-target="#spreadsheet-preview">Spreadsheet preview</a></li>
+  <li><a href="#lettered-answers" id="toc-lettered-answers" class="nav-link" data-scroll-target="#lettered-answers">Lettered answers</a></li>
+  <li><a href="#answers-written-by-hand" id="toc-answers-written-by-hand" class="nav-link" data-scroll-target="#answers-written-by-hand">Answers written by hand</a></li>
+  <li><a href="#notice" id="toc-notice" class="nav-link" data-scroll-target="#notice">Notice</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Components</h1>
+<p class="subtitle lead">Tables, pseudocode, diagrams, exercises, and worksheets</p>
+</div>
+
+<div>
+  <div class="description">
+    Every Lucid component with the markup that produces it.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="data-tables" class="level2">
+<h2 class="anchored" data-anchor-id="data-tables">Data tables</h2>
+<p>Add <code>.data-table</code> to a captioned table for a dark header, banded rows, and a frame. Add <code>.row-headers</code> when the first column names each row.</p>
+<div id="tbl-minibus-tests" class="data-table row-headers quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-minibus-tests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Planned tests for a 10-seat minibus
+</figcaption>
+<div aria-describedby="tbl-minibus-tests-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="data-table row-headers caption-top table">
+<thead>
+<tr class="header">
+<th scope="col">Test</th>
+<th style="text-align: right;" scope="col">Capacity</th>
+<th scope="col">Requests</th>
+<th scope="col">Expected</th>
+<th scope="col">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Ordinary</td>
+<td style="text-align: right;">10</td>
+<td>4, 3</td>
+<td>Both booked</td>
+<td>Pass</td>
+</tr>
+<tr class="even">
+<td>Exact fit</td>
+<td style="text-align: right;">10</td>
+<td>4, 6</td>
+<td>Both booked</td>
+<td>Fail</td>
+</tr>
+<tr class="odd">
+<td>Over capacity</td>
+<td style="text-align: right;">10</td>
+<td>4, 7</td>
+<td>Second rejected</td>
+<td>Pass</td>
+</tr>
+<tr class="even">
+<td>Empty</td>
+<td style="text-align: right;">10</td>
+<td>none</td>
+<td>Nothing booked</td>
+<td>Pass</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1"></a>: Planned tests for a 10-seat minibus {#tbl-minibus-tests .data-table .row-headers}</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="trace-tables" class="level2">
+<h2 class="anchored" data-anchor-id="trace-tables">Trace tables</h2>
+<p>A <code>.trace-table</code> keeps its first column visible while the rest scrolls, so each step stays next to its state.</p>
+<div id="tbl-minibus-trace" class="data-table trace-table row-headers quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-minibus-trace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Trace of the minibus algorithm for requests of 4, 7, and 3 seats
+</figcaption>
+<div aria-describedby="tbl-minibus-trace-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="data-table trace-table row-headers caption-top table">
+<colgroup>
+<col style="width: 10%">
+<col style="width: 14%">
+<col style="width: 10%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 10%">
+<col style="width: 10%">
+</colgroup>
+<thead>
+<tr class="header">
+<th scope="col">Step</th>
+<th style="text-align: right;" scope="col">Request</th>
+<th scope="col">Condition</th>
+<th style="text-align: right;" scope="col">Booked before</th>
+<th style="text-align: right;" scope="col">Booked after</th>
+<th style="text-align: right;" scope="col">Seats left</th>
+<th scope="col">Decision</th>
+<th scope="col">Note</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1</td>
+<td style="text-align: right;">4</td>
+<td>0 + 4 &lt; 10</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td>Book</td>
+<td>Ordinary request</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td style="text-align: right;">7</td>
+<td>4 + 7 &lt; 10</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">6</td>
+<td>Reject</td>
+<td>Would exceed capacity</td>
+</tr>
+<tr class="odd">
+<td>3</td>
+<td style="text-align: right;">3</td>
+<td>4 + 3 &lt; 10</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">3</td>
+<td>Book</td>
+<td>Fits with room to spare</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="great-tables" class="level2">
+<h2 class="anchored" data-anchor-id="great-tables">Great Tables</h2>
+<p>Output from the Great Tables package is framed automatically. Grids with a stub column give it room and keep it in view on small screens.</p>
+<div id="tbl-loan-decision" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-loan-decision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Library loan decision table
+</figcaption>
+<div aria-describedby="tbl-loan-decision-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="loan-decision">
+<table class="gt_table" data-quarto-disable-processing="true">
+  <thead>
+    <tr>
+      <th class="gt_col_heading gt_left">Rule</th>
+      <th class="gt_col_heading gt_center">R1</th>
+      <th class="gt_col_heading gt_center">R2</th>
+      <th class="gt_col_heading gt_center">R3</th>
+      <th class="gt_col_heading gt_center">R4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><th colspan="5" class="gt_group_heading">Conditions</th></tr>
+    <tr><th class="gt_row gt_left gt_stub">Is a member</th><td class="gt_row gt_center">Y</td><td class="gt_row gt_center">Y</td><td class="gt_row gt_center">Y</td><td class="gt_row gt_center">N</td></tr>
+    <tr><th class="gt_row gt_left gt_stub">Has overdue items</th><td class="gt_row gt_center">N</td><td class="gt_row gt_center">N</td><td class="gt_row gt_center">Y</td><td class="gt_row gt_center">–</td></tr>
+    <tr><th class="gt_row gt_left gt_stub">Under the loan limit</th><td class="gt_row gt_center">Y</td><td class="gt_row gt_center">N</td><td class="gt_row gt_center">–</td><td class="gt_row gt_center">–</td></tr>
+    <tr><th colspan="5" class="gt_group_heading">Actions</th></tr>
+    <tr><th class="gt_row gt_left gt_stub">Lend the book</th><td class="gt_row gt_center" style="background-color: #e8f5ee;">✓</td><td class="gt_row gt_center"></td><td class="gt_row gt_center"></td><td class="gt_row gt_center"></td></tr>
+    <tr><th class="gt_row gt_left gt_stub">Refuse the loan</th><td class="gt_row gt_center"></td><td class="gt_row gt_center" style="background-color: #e8f5ee;">✓</td><td class="gt_row gt_center" style="background-color: #e8f5ee;">✓</td><td class="gt_row gt_center" style="background-color: #e8f5ee;">✓</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr><td class="gt_sourcenote" colspan="5">Y means yes, N means no, and a dash means the condition does not matter.</td></tr>
+  </tfoot>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</section>
+<section id="pseudocode" class="level2">
+<h2 class="anchored" data-anchor-id="pseudocode">Pseudocode</h2>
+<p>A fenced block with the <code>.pseudocode</code> class becomes a numbered terminal. Readers can link to a line.</p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource pseudocode terminal-pseudocode numberLines number-lines code-with-copy"><code class="sourceCode"><span id="cb2-1"><a href="#cb2-1"></a>booked ← 0</span>
+<span id="cb2-2"><a href="#cb2-2"></a>for each request in requests</span>
+<span id="cb2-3"><a href="#cb2-3"></a>    if booked + request ≤ capacity then</span>
+<span id="cb2-4"><a href="#cb2-4"></a>        booked ← booked + request</span>
+<span id="cb2-5"><a href="#cb2-5"></a>        record "book"</span>
+<span id="cb2-6"><a href="#cb2-6"></a>    else</span>
+<span id="cb2-7"><a href="#cb2-7"></a>        record "reject"</span>
+<span id="cb2-8"><a href="#cb2-8"></a>    end if</span>
+<span id="cb2-9"><a href="#cb2-9"></a>end for</span>
+<span id="cb2-10"><a href="#cb2-10"></a>return booked</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1"></a><span class="in">```{.pseudocode}</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="in">booked ← 0</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="in">...</span></span>
+<span id="cb3-4"><a href="#cb3-4"></a><span class="in">```</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="flowcharts" class="level2">
+<h2 class="anchored" data-anchor-id="flowcharts">Flowcharts</h2>
+<p>Mermaid diagrams keep their natural size and scroll when wider than the column. Lucid adds an SVG title and description taken from the caption.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div id="fig-minibus-flow" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-minibus-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div>
+<svg id="mermaid-figure-1" width="672" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" class="flowchart" viewbox="0 0 453.828125 713" role="graphics-document document" aria-roledescription="flowchart-v2" height="480">
+<style>#mermaid-figure-1{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}@keyframes edge-animation-frame{from{stroke-dashoffset:0;}}@keyframes dash{to{stroke-dashoffset:0;}}#mermaid-figure-1 .edge-animation-slow{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 50s linear infinite;stroke-linecap:round;}#mermaid-figure-1 .edge-animation-fast{stroke-dasharray:9,5!important;stroke-dashoffset:900;animation:dash 20s linear infinite;stroke-linecap:round;}#mermaid-figure-1 .error-icon{fill:#552222;}#mermaid-figure-1 .error-text{fill:#552222;stroke:#552222;}#mermaid-figure-1 .edge-thickness-normal{stroke-width:1px;}#mermaid-figure-1 .edge-thickness-thick{stroke-width:3.5px;}#mermaid-figure-1 .edge-pattern-solid{stroke-dasharray:0;}#mermaid-figure-1 .edge-thickness-invisible{stroke-width:0;fill:none;}#mermaid-figure-1 .edge-pattern-dashed{stroke-dasharray:3;}#mermaid-figure-1 .edge-pattern-dotted{stroke-dasharray:2;}#mermaid-figure-1 .marker{fill:#333333;stroke:#333333;}#mermaid-figure-1 .marker.cross{stroke:#333333;}#mermaid-figure-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#mermaid-figure-1 p{margin:0;}#mermaid-figure-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#mermaid-figure-1 .cluster-label text{fill:#333;}#mermaid-figure-1 .cluster-label span{color:#333;}#mermaid-figure-1 .cluster-label span p{background-color:transparent;}#mermaid-figure-1 .label text,#mermaid-figure-1 span{fill:#333;color:#333;}#mermaid-figure-1 .node rect,#mermaid-figure-1 .node circle,#mermaid-figure-1 .node ellipse,#mermaid-figure-1 .node polygon,#mermaid-figure-1 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#mermaid-figure-1 .rough-node .label text,#mermaid-figure-1 .node .label text,#mermaid-figure-1 .image-shape .label,#mermaid-figure-1 .icon-shape .label{text-anchor:middle;}#mermaid-figure-1 .node .katex path{fill:#000;stroke:#000;stroke-width:1px;}#mermaid-figure-1 .rough-node .label,#mermaid-figure-1 .node .label,#mermaid-figure-1 .image-shape .label,#mermaid-figure-1 .icon-shape .label{text-align:center;}#mermaid-figure-1 .node.clickable{cursor:pointer;}#mermaid-figure-1 .root .anchor path{fill:#333333!important;stroke-width:0;stroke:#333333;}#mermaid-figure-1 .arrowheadPath{fill:#333333;}#mermaid-figure-1 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#mermaid-figure-1 .flowchart-link{stroke:#333333;fill:none;}#mermaid-figure-1 .edgeLabel{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaid-figure-1 .edgeLabel p{background-color:rgba(232,232,232, 0.8);}#mermaid-figure-1 .edgeLabel rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaid-figure-1 .labelBkg{background-color:rgba(232, 232, 232, 0.5);}#mermaid-figure-1 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#mermaid-figure-1 .cluster text{fill:#333;}#mermaid-figure-1 .cluster span{color:#333;}#mermaid-figure-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#mermaid-figure-1 .flowchartTitleText{text-anchor:middle;font-size:18px;fill:#333;}#mermaid-figure-1 rect.text{fill:none;stroke-width:0;}#mermaid-figure-1 .icon-shape,#mermaid-figure-1 .image-shape{background-color:rgba(232,232,232, 0.8);text-align:center;}#mermaid-figure-1 .icon-shape p,#mermaid-figure-1 .image-shape p{background-color:rgba(232,232,232, 0.8);padding:2px;}#mermaid-figure-1 .icon-shape rect,#mermaid-figure-1 .image-shape rect{opacity:0.5;background-color:rgba(232,232,232, 0.8);fill:rgba(232,232,232, 0.8);}#mermaid-figure-1 .label-icon{display:inline-block;height:1em;overflow:visible;vertical-align:-0.125em;}#mermaid-figure-1 .node .label-icon path{fill:currentColor;stroke:revert;stroke-width:revert;}#mermaid-figure-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}</style>
+<g><marker id="mermaid-1789102952354_flowchart-v2-pointEnd" class="marker flowchart-v2" viewbox="0 0 10 10" refx="5" refy="5" markerunits="userSpaceOnUse" markerwidth="8" markerheight="8" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1789102952354_flowchart-v2-pointStart" class="marker flowchart-v2" viewbox="0 0 10 10" refx="4.5" refy="5" markerunits="userSpaceOnUse" markerwidth="8" markerheight="8" orient="auto"><path d="M 0 5 L 10 10 L 10 0 z" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1789102952354_flowchart-v2-circleEnd" class="marker flowchart-v2" viewbox="0 0 10 10" refx="11" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1789102952354_flowchart-v2-circleStart" class="marker flowchart-v2" viewbox="0 0 10 10" refx="-1" refy="5" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><circle cx="5" cy="5" r="5" class="arrowMarkerPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></circle></marker><marker id="mermaid-1789102952354_flowchart-v2-crossEnd" class="marker cross flowchart-v2" viewbox="0 0 11 11" refx="12" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><marker id="mermaid-1789102952354_flowchart-v2-crossStart" class="marker cross flowchart-v2" viewbox="0 0 11 11" refx="-1" refy="5.2" markerunits="userSpaceOnUse" markerwidth="11" markerheight="11" orient="auto"><path d="M 1,1 l 9,9 M 10,1 l -9,9" class="arrowMarkerPath" style="stroke-width: 2; stroke-dasharray: 1, 0;"></path></marker><g class="root"><g class="clusters"></g><g class="edgePaths"><path d="M241.762,47.5L241.678,51.583C241.595,55.667,241.428,63.833,241.415,71.5C241.402,79.167,241.543,86.334,241.613,89.917L241.683,93.501" id="L_A_B_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_A_B_0" data-points="W3sieCI6MjQxLjc2MTcxODc1LCJ5Ijo0Ny41fSx7IngiOjI0MS4yNjE3MTg3NSwieSI6NzJ9LHsieCI6MjQxLjc2MTcxODc1LCJ5Ijo5Ny41fV0=" marker-end="url(#mermaid-1789102952354_flowchart-v2-pointEnd)"></path><path d="M241.762,160.5L241.678,164.583C241.595,168.667,241.428,176.833,241.345,184.417C241.262,192,241.262,199,241.262,202.5L241.262,206" id="L_B_C_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_B_C_0" data-points="W3sieCI6MjQxLjc2MTcxODc1LCJ5IjoxNjAuNX0seyJ4IjoyNDEuMjYxNzE4NzUsInkiOjE4NX0seyJ4IjoyNDEuMjYxNzE4NzUsInkiOjIxMH1d" marker-end="url(#mermaid-1789102952354_flowchart-v2-pointEnd)"></path><path d="M184.368,431.106L173.524,446.755C162.68,462.404,140.992,493.702,130.148,514.851C119.305,536,119.305,547,119.305,552.5L119.305,558" id="L_C_D_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_C_D_0" data-points="W3sieCI6MTg0LjM2NzUxNzM1MjQ2MjA3LCJ5Ijo0MzEuMTA1Nzk4NjAyNDYyMX0seyJ4IjoxMTkuMzA0Njg3NSwieSI6NTI1fSx7IngiOjExOS4zMDQ2ODc1LCJ5Ijo1NjJ9XQ==" marker-end="url(#mermaid-1789102952354_flowchart-v2-pointEnd)"></path><path d="M298.156,431.106L309,446.755C319.844,462.404,341.531,493.702,352.375,514.851C363.219,536,363.219,547,363.219,552.5L363.219,558" id="L_C_E_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_C_E_0" data-points="W3sieCI6Mjk4LjE1NTkyMDE0NzUzNzksInkiOjQzMS4xMDU3OTg2MDI0NjIxfSx7IngiOjM2My4yMTg3NSwieSI6NTI1fSx7IngiOjM2My4yMTg3NSwieSI6NTYyfV0=" marker-end="url(#mermaid-1789102952354_flowchart-v2-pointEnd)"></path><path d="M119.305,616L119.305,620.167C119.305,624.333,119.305,632.667,135.173,642.674C151.041,652.682,182.776,664.363,198.644,670.204L214.512,676.045" id="L_D_F_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_D_F_0" data-points="W3sieCI6MTE5LjMwNDY4NzUsInkiOjYxNn0seyJ4IjoxMTkuMzA0Njg3NSwieSI6NjQxfSx7IngiOjIxOC4yNjU5MjM1NjcxNTQ1NywieSI6Njc3LjQyNjc5MjkwNDY4MDN9XQ==" marker-end="url(#mermaid-1789102952354_flowchart-v2-pointEnd)"></path><path d="M363.219,616L363.219,620.167C363.219,624.333,363.219,632.667,347.517,642.672C331.815,652.678,300.411,664.355,284.709,670.194L269.007,676.033" id="L_E_F_0" class="edge-thickness-normal edge-pattern-solid edge-thickness-normal edge-pattern-solid flowchart-link" style=";" data-edge="true" data-et="edge" data-id="L_E_F_0" data-points="W3sieCI6MzYzLjIxODc1LCJ5Ijo2MTZ9LHsieCI6MzYzLjIxODc1LCJ5Ijo2NDF9LHsieCI6MjY1LjI1NzUxNDgxNDQ5MTQsInkiOjY3Ny40MjY3OTI1ODI5ODN9XQ==" marker-end="url(#mermaid-1789102952354_flowchart-v2-pointEnd)"></path></g><g class="edgeLabels"><g class="edgeLabel"><g class="label" data-id="L_A_B_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
+<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_B_C_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
+<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel" transform="translate(119.3046875, 525)"><g class="label" data-id="L_C_D_0" transform="translate(-11.546875, -12)"><foreignobject width="23.09375" height="24">
+<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="edgeLabel">
+<p>
+yes
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="edgeLabel" transform="translate(363.21875, 525)"><g class="label" data-id="L_C_E_0" transform="translate(-8.6640625, -12)"><foreignobject width="17.328125" height="24">
+<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="edgeLabel">
+<p>
+no
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_D_F_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
+<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g><g class="edgeLabel"><g class="label" data-id="L_E_F_0" transform="translate(0, 0)"><foreignobject width="0" height="0">
+<div class="labelBkg" data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="edgeLabel"></span>
+</div>
+</foreignobject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-0" transform="translate(241.26171875, 27.5)"><g class="basic label-container outer-path"><path d="M-10.3828125 -19.5 C-2.98670223008176 -19.5, 4.40940803983648 -19.5, 10.3828125 -19.5 C10.3828125 -19.5, 10.382812499999998 -19.5, 10.382812499999998 -19.5 C10.876618661587916 -19.484164597533262, 11.370424823175831 -19.46832919506652, 11.6321817896239 -19.45993515863156 C12.097858225540767 -19.415011912916512, 12.563534661457634 -19.370088667201465, 12.876417152847864 -19.3399052695533 C13.276691751633214 -19.275191976597558, 13.676966350418564 -19.210478683641817, 14.110405759676757 -19.140403561325776 C14.563483416939228 -19.03699154266364, 15.016561074201697 -18.933579524001505, 15.32907688623539 -18.862249829261074 C15.655715554016417 -18.76530518722502, 15.982354221797443 -18.668360545188968, 16.527422751460602 -18.50658706670804 C16.940110606565277 -18.354714121184806, 17.352798461669952 -18.202841175661572, 17.700519095147794 -18.074876768247425 C17.97274463601628 -17.9543705965887, 18.244970176884763 -17.833864424929978, 18.84354541279238 -17.568892924097174 C19.279130007342452 -17.34164872012565, 19.71471460189252 -17.114404516154128, 19.951804764076783 -16.990714730406097 C20.21252286767918 -16.83266588385268, 20.473240971281573 -16.674617037299267, 21.020743073605697 -16.342718045390892 C21.359233074579638 -16.10660207370745, 21.69772307555358 -15.870486102024005, 22.045967844578712 -15.627565626425154 C22.43629205314241 -15.316292457059019, 22.82661626170611 -15.005019287692882, 23.02326620850187 -14.848196188198123 C23.285047883074153 -14.61045299771513, 23.54682955764644 -14.372709807232138, 23.948622236767985 -14.007812326905688 C24.215450183714786 -13.732290564701255, 24.48227813066159 -13.456768802496823, 24.818233442968648 -13.10986736009568 C24.990804466499842 -12.907155616286525, 25.163375490031036 -12.704443872477372, 25.628526408126582 -12.158051136245305 C25.92720388819062 -11.757850523037693, 26.225881368254655 -11.357649909830078, 26.376171464640635 -11.156274872382312 C26.582254699634497 -10.839675682334661, 26.788337934628355 -10.523076492287013, 27.058096378604247 -10.108655082055241 C27.198086451056778 -9.860088532883799, 27.338076523509304 -9.611521983712358, 27.6714989742735 -9.019496659696287 C27.81604620347984 -8.71934124543408, 27.960593432686178 -8.419185831171873, 28.21385864880834 -7.893275190886684 C28.328008394130663 -7.611323113005359, 28.442158139452985 -7.329371035124035, 28.682946729970325 -6.734618561215508 C28.785051162604848 -6.427096278252412, 28.88715559523937 -6.119573995289315, 29.07683563421488 -5.548287939305138 C29.17241094243293 -5.183817866469107, 29.26798625065098 -4.819347793633075, 29.39390678754556 -4.339158212148133 C29.464501016336264 -3.976671767403403, 29.53509524512697 -3.6141853226586726, 29.632857276581777 -3.1121979531509023 C29.671535157125657 -2.8122199494639797, 29.710213037669536 -2.512241945777057, 29.792705202509367 -1.872449005199798 C29.822001696131792 -1.4161324693264818, 29.851298189754218 -0.9598159334531658, 29.872793715913414 -0.6250057626472757 C29.872793715913414 -0.2829032424983552, 29.872793715913414 0.05919927765056532, 29.872793715913414 0.625005762647271 C29.854710293662126 0.9066696608867664, 29.836626871410843 1.1883335591262618, 29.792705202509367 1.8724490051997846 C29.754928101299186 2.1654407422535504, 29.717151000089004 2.4584324793073162, 29.632857276581777 3.1121979531508885 C29.582628153158563 3.3701138860001056, 29.53239902973535 3.6280298188493227, 29.39390678754556 4.339158212148129 C29.302739107873602 4.6868200870596155, 29.211571428201644 5.034481961971102, 29.076835634214884 5.548287939305125 C28.983742033140842 5.828671033289098, 28.890648432066797 6.10905412727307, 28.68294672997033 6.734618561215495 C28.5389806099077 7.090217661165766, 28.395014489845074 7.4458167611160375, 28.213858648808344 7.893275190886679 C28.08968136100816 8.151131985972079, 27.965504073207978 8.408988781057479, 27.671498974273504 9.019496659696284 C27.496782123779653 9.329724119747684, 27.3220652732858 9.639951579799085, 27.05809637860425 10.108655082055236 C26.909014313564253 10.337685168096446, 26.759932248524255 10.566715254137653, 26.37617146464064 11.156274872382301 C26.208900343346375 11.380402936203982, 26.041629222052105 11.604531000025661, 25.628526408126582 12.158051136245302 C25.316665319200922 12.52438091669605, 25.00480423027526 12.890710697146798, 24.81823344296866 13.10986736009567 C24.629306871394228 13.304949556406266, 24.440380299819797 13.50003175271686, 23.94862223676799 14.007812326905684 C23.588911768963158 14.334491856348594, 23.229201301158326 14.661171385791501, 23.023266208501887 14.848196188198111 C22.686660685574296 15.116630135283712, 22.350055162646704 15.385064082369313, 22.045967844578715 15.627565626425152 C21.731497991207508 15.846926182956361, 21.4170281378363 16.06628673948757, 21.020743073605708 16.34271804539089 C20.734214071022105 16.51641361058839, 20.447685068438506 16.69010917578589, 19.951804764076787 16.990714730406093 C19.597737720988565 17.175431279994452, 19.243670677900344 17.360147829582814, 18.843545412792388 17.56889292409717 C18.45552675020886 17.74065727585823, 18.067508087625338 17.912421627619285, 17.700519095147804 18.07487676824742 C17.270816629163942 18.233011247855533, 16.84111416318008 18.39114572746365, 16.527422751460616 18.506587066708033 C16.218340802681833 18.59832096670132, 15.909258853903049 18.69005486669461, 15.329076886235413 18.86224982926107 C14.895411244823062 18.961231181980658, 14.461745603410712 19.060212534700245, 14.110405759676766 19.140403561325773 C13.831389218111894 19.185512791960385, 13.552372676547023 19.230622022594996, 12.876417152847878 19.3399052695533 C12.465767570861516 19.379520140849145, 12.055117988875153 19.419135012144988, 11.6321817896239 19.45993515863156 C11.363345159864714 19.46855622608918, 11.094508530105527 19.477177293546802, 10.382812500000004 19.5 C10.382812500000002 19.5, 10.382812500000002 19.5, 10.3828125 19.5 C2.5464137070016646 19.5, -5.289985085996671 19.5, -10.382812499999996 19.5 C-10.639277887383125 19.491775654206215, -10.895743274766254 19.483551308412434, -11.632181789623893 19.45993515863156 C-12.111423024976162 19.413703333029037, -12.590664260328431 19.367471507426515, -12.876417152847871 19.3399052695533 C-13.325020925851941 19.267378490508218, -13.77362469885601 19.194851711463137, -14.110405759676759 19.140403561325773 C-14.467941806566344 19.058798291763974, -14.82547785345593 18.977193022202176, -15.329076886235388 18.862249829261074 C-15.705870107609947 18.750419578985085, -16.082663328984506 18.638589328709095, -16.52742275146059 18.506587066708043 C-16.972173770192562 18.34291458058133, -17.41692478892453 18.179242094454615, -17.700519095147797 18.074876768247425 C-18.0023577455265 17.94126175145021, -18.304196395905205 17.807646734652995, -18.84354541279238 17.568892924097174 C-19.157767995863587 17.404963203778095, -19.471990578934797 17.241033483459017, -19.95180476407678 16.990714730406097 C-20.31413003151758 16.77107102402387, -20.676455298958373 16.551427317641643, -21.020743073605686 16.3427180453909 C-21.292095420824616 16.153434394624764, -21.56344776804355 15.964150743858626, -22.045967844578712 15.627565626425156 C-22.35501897526033 15.381105573902547, -22.66407010594195 15.134645521379937, -23.02326620850187 14.848196188198125 C-23.339354524490233 14.561133142856043, -23.655442840478596 14.274070097513961, -23.948622236767974 14.007812326905697 C-24.29634869014018 13.648756214926134, -24.644075143512392 13.289700102946572, -24.818233442968655 13.109867360095677 C-25.07102962896441 12.812918575514585, -25.323825814960163 12.515969790933493, -25.62852640812658 12.158051136245307 C-25.84347798400279 11.870035607062597, -26.058429559879 11.58202007787989, -26.376171464640635 11.156274872382316 C-26.528233612824828 10.922666578367252, -26.68029576100902 10.689058284352189, -27.058096378604244 10.108655082055249 C-27.244247065941604 9.778125686886668, -27.430397753278967 9.447596291718089, -27.6714989742735 9.019496659696289 C-27.82330657621037 8.70426492611204, -27.97511417814724 8.389033192527794, -28.21385864880834 7.893275190886686 C-28.352314554443982 7.5512864271038245, -28.49077046007962 7.209297663320964, -28.682946729970325 6.73461856121551 C-28.82899943254719 6.294731091391978, -28.97505213512405 5.854843621568447, -29.07683563421488 5.5482879393051325 C-29.190659166174154 5.114229480513623, -29.304482698133423 4.680171021722113, -29.393906787545557 4.339158212148136 C-29.44543385207717 4.074577626027259, -29.49696091660878 3.809997039906383, -29.632857276581777 3.112197953150904 C-29.684734572449635 2.7098478907305763, -29.736611868317492 2.3074978283102485, -29.792705202509364 1.872449005199809 C-29.819114789022546 1.4610983778224622, -29.845524375535728 1.0497477504451154, -29.872793715913414 0.6250057626472781 C-29.872793715913414 0.2680998570160474, -29.872793715913414 -0.08880604861518338, -29.872793715913414 -0.6250057626472687 C-29.85343410038414 -0.9265474013161539, -29.83407448485486 -1.228089039985039, -29.792705202509367 -1.8724490051997822 C-29.7530047849853 -2.1803576037822836, -29.71330436746123 -2.488266202364785, -29.632857276581777 -3.112197953150895 C-29.55310489351866 -3.5217095845078594, -29.47335251045555 -3.9312212158648236, -29.39390678754556 -4.339158212148126 C-29.270081193710904 -4.811358867791519, -29.146255599876245 -5.283559523434913, -29.076835634214884 -5.548287939305123 C-28.97604138729355 -5.85186415164985, -28.87524714037221 -6.155440363994576, -28.682946729970332 -6.734618561215485 C-28.523254445235278 -7.129061591951361, -28.363562160500223 -7.523504622687238, -28.213858648808344 -7.893275190886676 C-28.02872765972895 -8.277703650878637, -27.843596670649557 -8.6621321108706, -27.671498974273504 -9.019496659696282 C-27.432055215593575 -9.444653299542242, -27.192611456913646 -9.869809939388201, -27.058096378604247 -10.108655082055243 C-26.789784357774856 -10.520854397914995, -26.521472336945465 -10.933053713774745, -26.37617146464064 -11.156274872382308 C-26.09268828492992 -11.536116507345714, -25.8092051052192 -11.91595814230912, -25.628526408126586 -12.158051136245302 C-25.407797027551783 -12.417332426526023, -25.187067646976985 -12.676613716806745, -24.818233442968662 -13.10986736009567 C-24.520864007708468 -13.416925716486503, -24.22349457244827 -13.723984072877336, -23.948622236767996 -14.007812326905677 C-23.621048622977327 -14.305306015827485, -23.29347500918666 -14.602799704749291, -23.023266208501887 -14.848196188198107 C-22.826985259550117 -15.004725021731732, -22.630704310598343 -15.161253855265356, -22.04596784457872 -15.627565626425149 C-21.638920360803432 -15.911504330305215, -21.23187287702814 -16.19544303418528, -21.02074307360571 -16.342718045390885 C-20.627348169648883 -16.58119634801458, -20.233953265692055 -16.819674650638277, -19.95180476407679 -16.99071473040609 C-19.625460036162746 -17.160968565925074, -19.2991153082487 -17.331222401444055, -18.843545412792388 -17.56889292409717 C-18.397033318817563 -17.766550582789165, -17.950521224842742 -17.964208241481156, -17.700519095147804 -18.07487676824742 C-17.278293154678806 -18.23025981735382, -16.856067214209812 -18.38564286646022, -16.52742275146062 -18.506587066708033 C-16.237271748261115 -18.59270236142395, -15.94712074506161 -18.678817656139866, -15.329076886235413 -18.862249829261067 C-14.948282349041548 -18.949163697458985, -14.567487811847686 -19.036077565656903, -14.110405759676768 -19.140403561325773 C-13.657846897027092 -19.213569768592578, -13.205288034377416 -19.28673597585938, -12.87641715284788 -19.3399052695533 C-12.42789608717931 -19.383173557332842, -11.97937502151074 -19.42644184511239, -11.632181789623903 -19.45993515863156 C-11.377999054083919 -19.468086304223647, -11.123816318543932 -19.47623744981573, -10.382812500000005 -19.5 C-10.382812500000004 -19.5, -10.382812500000002 -19.5, -10.3828125 -19.5" stroke="none" stroke-width="0" fill="#ECECFF" style=""></path><path d="M-10.3828125 -19.5 C-6.185568456843796 -19.5, -1.9883244136875913 -19.5, 10.3828125 -19.5 M-10.3828125 -19.5 C-2.229225479222693 -19.5, 5.924361541554614 -19.5, 10.3828125 -19.5 M10.3828125 -19.5 C10.3828125 -19.5, 10.382812499999998 -19.5, 10.382812499999998 -19.5 M10.3828125 -19.5 C10.3828125 -19.5, 10.382812499999998 -19.5, 10.382812499999998 -19.5 M10.382812499999998 -19.5 C10.689049741882618 -19.490179567707454, 10.995286983765238 -19.48035913541491, 11.6321817896239 -19.45993515863156 M10.382812499999998 -19.5 C10.64057386387124 -19.49173409476271, 10.89833522774248 -19.483468189525414, 11.6321817896239 -19.45993515863156 M11.6321817896239 -19.45993515863156 C12.077640425639288 -19.416962299757547, 12.523099061654678 -19.37398944088353, 12.876417152847864 -19.3399052695533 M11.6321817896239 -19.45993515863156 C12.006507365985748 -19.423824420472304, 12.380832942347594 -19.387713682313045, 12.876417152847864 -19.3399052695533 M12.876417152847864 -19.3399052695533 C13.2622791181254 -19.27752209941146, 13.648141083402935 -19.21513892926962, 14.110405759676757 -19.140403561325776 M12.876417152847864 -19.3399052695533 C13.146163407067625 -19.29629478708449, 13.415909661287388 -19.252684304615688, 14.110405759676757 -19.140403561325776 M14.110405759676757 -19.140403561325776 C14.580282388163223 -19.033157287105293, 15.05015901664969 -18.925911012884814, 15.32907688623539 -18.862249829261074 M14.110405759676757 -19.140403561325776 C14.471295185976704 -19.05803290479641, 14.83218461227665 -18.97566224826704, 15.32907688623539 -18.862249829261074 M15.32907688623539 -18.862249829261074 C15.599251676602995 -18.782063369656385, 15.869426466970598 -18.701876910051695, 16.527422751460602 -18.50658706670804 M15.32907688623539 -18.862249829261074 C15.742333972125671 -18.739597295399548, 16.155591058015954 -18.616944761538022, 16.527422751460602 -18.50658706670804 M16.527422751460602 -18.50658706670804 C16.797729365210163 -18.407111734161255, 17.06803597895972 -18.30763640161447, 17.700519095147794 -18.074876768247425 M16.527422751460602 -18.50658706670804 C16.85202318381881 -18.387131107026715, 17.176623616177018 -18.26767514734539, 17.700519095147794 -18.074876768247425 M17.700519095147794 -18.074876768247425 C18.016396454977535 -17.935047231219755, 18.332273814807277 -17.795217694192086, 18.84354541279238 -17.568892924097174 M17.700519095147794 -18.074876768247425 C18.01902732925059 -17.933882621221187, 18.337535563353384 -17.79288847419495, 18.84354541279238 -17.568892924097174 M18.84354541279238 -17.568892924097174 C19.21227169552604 -17.37652865857548, 19.5809979782597 -17.184164393053788, 19.951804764076783 -16.990714730406097 M18.84354541279238 -17.568892924097174 C19.116696286715392 -17.426390288133025, 19.389847160638404 -17.283887652168875, 19.951804764076783 -16.990714730406097 M19.951804764076783 -16.990714730406097 C20.19683053983886 -16.842178665207836, 20.441856315600933 -16.69364260000958, 21.020743073605697 -16.342718045390892 M19.951804764076783 -16.990714730406097 C20.352766754969124 -16.747649215212952, 20.75372874586147 -16.504583700019808, 21.020743073605697 -16.342718045390892 M21.020743073605697 -16.342718045390892 C21.374480561916364 -16.095966086594437, 21.728218050227028 -15.849214127797985, 22.045967844578712 -15.627565626425154 M21.020743073605697 -16.342718045390892 C21.29582721843824 -16.150831254156415, 21.57091136327078 -15.958944462921936, 22.045967844578712 -15.627565626425154 M22.045967844578712 -15.627565626425154 C22.35520147342859 -15.380960036469839, 22.664435102278464 -15.134354446514525, 23.02326620850187 -14.848196188198123 M22.045967844578712 -15.627565626425154 C22.421648111807933 -15.32797061058162, 22.797328379037154 -15.028375594738083, 23.02326620850187 -14.848196188198123 M23.02326620850187 -14.848196188198123 C23.390797136296122 -14.514414323910854, 23.758328064090378 -14.180632459623586, 23.948622236767985 -14.007812326905688 M23.02326620850187 -14.848196188198123 C23.26155703008209 -14.631786768868611, 23.499847851662313 -14.415377349539098, 23.948622236767985 -14.007812326905688 M23.948622236767985 -14.007812326905688 C24.131139821363156 -13.819347935838794, 24.31365740595833 -13.6308835447719, 24.818233442968648 -13.10986736009568 M23.948622236767985 -14.007812326905688 C24.128894638361324 -13.82166627162114, 24.309167039954662 -13.635520216336591, 24.818233442968648 -13.10986736009568 M24.818233442968648 -13.10986736009568 C25.010864742374462 -12.883591674782163, 25.203496041780276 -12.657315989468648, 25.628526408126582 -12.158051136245305 M24.818233442968648 -13.10986736009568 C25.124865054327092 -12.749680421561091, 25.43149666568554 -12.389493483026502, 25.628526408126582 -12.158051136245305 M25.628526408126582 -12.158051136245305 C25.904888743264294 -11.787750784287443, 26.181251078402006 -11.41745043232958, 26.376171464640635 -11.156274872382312 M25.628526408126582 -12.158051136245305 C25.896220589632776 -11.799365320468638, 26.163914771138966 -11.440679504691971, 26.376171464640635 -11.156274872382312 M26.376171464640635 -11.156274872382312 C26.530747149660627 -10.918805110808313, 26.685322834680623 -10.681335349234313, 27.058096378604247 -10.108655082055241 M26.376171464640635 -11.156274872382312 C26.595372181755543 -10.819523707259584, 26.81457289887045 -10.482772542136857, 27.058096378604247 -10.108655082055241 M27.058096378604247 -10.108655082055241 C27.26724472058515 -9.737291022301998, 27.476393062566054 -9.365926962548752, 27.6714989742735 -9.019496659696287 M27.058096378604247 -10.108655082055241 C27.268324254593818 -9.735374200354936, 27.478552130583388 -9.362093318654633, 27.6714989742735 -9.019496659696287 M27.6714989742735 -9.019496659696287 C27.84037022662387 -8.668831890924771, 28.009241478974246 -8.318167122153257, 28.21385864880834 -7.893275190886684 M27.6714989742735 -9.019496659696287 C27.866205076851283 -8.615185271650317, 28.060911179429063 -8.210873883604346, 28.21385864880834 -7.893275190886684 M28.21385864880834 -7.893275190886684 C28.359699024587904 -7.533046643079315, 28.505539400367468 -7.1728180952719445, 28.682946729970325 -6.734618561215508 M28.21385864880834 -7.893275190886684 C28.387324301146098 -7.464811675882192, 28.56078995348385 -7.036348160877699, 28.682946729970325 -6.734618561215508 M28.682946729970325 -6.734618561215508 C28.784488201910047 -6.428791826169546, 28.88602967384977 -6.122965091123584, 29.07683563421488 -5.548287939305138 M28.682946729970325 -6.734618561215508 C28.771892421601763 -6.466728309593048, 28.860838113233196 -6.198838057970588, 29.07683563421488 -5.548287939305138 M29.07683563421488 -5.548287939305138 C29.167285230130428 -5.203364428976316, 29.257734826045972 -4.858440918647496, 29.39390678754556 -4.339158212148133 M29.07683563421488 -5.548287939305138 C29.195867219064166 -5.0943689176596125, 29.314898803913447 -4.640449896014088, 29.39390678754556 -4.339158212148133 M29.39390678754556 -4.339158212148133 C29.45843646401266 -4.007811961841533, 29.52296614047976 -3.6764657115349317, 29.632857276581777 -3.1121979531509023 M29.39390678754556 -4.339158212148133 C29.46443496668651 -3.977010918395297, 29.53496314582746 -3.614863624642461, 29.632857276581777 -3.1121979531509023 M29.632857276581777 -3.1121979531509023 C29.695088022946504 -2.6295485731969177, 29.75731876931123 -2.146899193242933, 29.792705202509367 -1.872449005199798 M29.632857276581777 -3.1121979531509023 C29.67846745922959 -2.758454383283751, 29.724077641877408 -2.404710813416599, 29.792705202509367 -1.872449005199798 M29.792705202509367 -1.872449005199798 C29.814768380199837 -1.5287972035942259, 29.836831557890306 -1.185145401988654, 29.872793715913414 -0.6250057626472757 M29.792705202509367 -1.872449005199798 C29.81356986329535 -1.5474650718070855, 29.834434524081328 -1.2224811384143732, 29.872793715913414 -0.6250057626472757 M29.872793715913414 -0.6250057626472757 C29.872793715913414 -0.1677071337865123, 29.872793715913414 0.2895914950742511, 29.872793715913414 0.625005762647271 M29.872793715913414 -0.6250057626472757 C29.872793715913414 -0.12889159645026627, 29.872793715913414 0.36722256974674317, 29.872793715913414 0.625005762647271 M29.872793715913414 0.625005762647271 C29.84586427660314 1.0444535169569598, 29.81893483729287 1.4639012712666486, 29.792705202509367 1.8724490051997846 M29.872793715913414 0.625005762647271 C29.843278642389954 1.0847268569136834, 29.8137635688665 1.544447951180096, 29.792705202509367 1.8724490051997846 M29.792705202509367 1.8724490051997846 C29.73691802836602 2.3051233114319984, 29.681130854222676 2.737797617664212, 29.632857276581777 3.1121979531508885 M29.792705202509367 1.8724490051997846 C29.73495947487839 2.320313465521929, 29.677213747247414 2.768177925844074, 29.632857276581777 3.1121979531508885 M29.632857276581777 3.1121979531508885 C29.55637125302339 3.5049375187964094, 29.479885229465 3.8976770844419297, 29.39390678754556 4.339158212148129 M29.632857276581777 3.1121979531508885 C29.56856773373711 3.442311168058567, 29.504278190892443 3.772424382966246, 29.39390678754556 4.339158212148129 M29.39390678754556 4.339158212148129 C29.27047242331368 4.809866939756152, 29.1470380590818 5.280575667364175, 29.076835634214884 5.548287939305125 M29.39390678754556 4.339158212148129 C29.324376680744898 4.604306643917972, 29.25484657394423 4.8694550756878145, 29.076835634214884 5.548287939305125 M29.076835634214884 5.548287939305125 C28.968158601240056 5.875605847291574, 28.859481568265227 6.202923755278023, 28.68294672997033 6.734618561215495 M29.076835634214884 5.548287939305125 C28.98477829972986 5.825549963429634, 28.892720965244834 6.102811987554144, 28.68294672997033 6.734618561215495 M28.68294672997033 6.734618561215495 C28.573115319644735 7.005904268165571, 28.463283909319145 7.277189975115646, 28.213858648808344 7.893275190886679 M28.68294672997033 6.734618561215495 C28.567426615612032 7.019955477109961, 28.451906501253735 7.305292393004428, 28.213858648808344 7.893275190886679 M28.213858648808344 7.893275190886679 C28.004372757916173 8.32827712560429, 27.794886867024 8.763279060321901, 27.671498974273504 9.019496659696284 M28.213858648808344 7.893275190886679 C28.022582117080248 8.290465001682222, 27.831305585352148 8.687654812477765, 27.671498974273504 9.019496659696284 M27.671498974273504 9.019496659696284 C27.52991270703448 9.270897414343395, 27.38832643979546 9.522298168990504, 27.05809637860425 10.108655082055236 M27.671498974273504 9.019496659696284 C27.496414283103483 9.33037725811613, 27.321329591933463 9.641257856535974, 27.05809637860425 10.108655082055236 M27.05809637860425 10.108655082055236 C26.832159392292994 10.455754965605111, 26.606222405981736 10.802854849154988, 26.37617146464064 11.156274872382301 M27.05809637860425 10.108655082055236 C26.793432014939555 10.51525061697692, 26.528767651274855 10.921846151898603, 26.37617146464064 11.156274872382301 M26.37617146464064 11.156274872382301 C26.104763953515302 11.519936211557338, 25.833356442389963 11.883597550732375, 25.628526408126582 12.158051136245302 M26.37617146464064 11.156274872382301 C26.111871650953972 11.510412544514079, 25.8475718372673 11.864550216645856, 25.628526408126582 12.158051136245302 M25.628526408126582 12.158051136245302 C25.322361729481184 12.517689589045924, 25.016197050835785 12.877328041846548, 24.81823344296866 13.10986736009567 M25.628526408126582 12.158051136245302 C25.450520753795402 12.367146706631372, 25.272515099464226 12.576242277017444, 24.81823344296866 13.10986736009567 M24.81823344296866 13.10986736009567 C24.566054135808262 13.370263199044945, 24.31387482864787 13.630659037994219, 23.94862223676799 14.007812326905684 M24.81823344296866 13.10986736009567 C24.546032992509083 13.390936673267781, 24.273832542049508 13.672005986439894, 23.94862223676799 14.007812326905684 M23.94862223676799 14.007812326905684 C23.625778467483357 14.301010496191939, 23.302934698198722 14.594208665478195, 23.023266208501887 14.848196188198111 M23.94862223676799 14.007812326905684 C23.700280651611962 14.233349583786111, 23.45193906645594 14.458886840666537, 23.023266208501887 14.848196188198111 M23.023266208501887 14.848196188198111 C22.67274530441528 15.127727281454181, 22.322224400328675 15.407258374710251, 22.045967844578715 15.627565626425152 M23.023266208501887 14.848196188198111 C22.774065014947556 15.046927508535422, 22.52486382139323 15.245658828872735, 22.045967844578715 15.627565626425152 M22.045967844578715 15.627565626425152 C21.742665109109343 15.839136484924785, 21.43936237363997 16.050707343424417, 21.020743073605708 16.34271804539089 M22.045967844578715 15.627565626425152 C21.676043117110844 15.885609102523384, 21.306118389642972 16.143652578621616, 21.020743073605708 16.34271804539089 M21.020743073605708 16.34271804539089 C20.750214078618743 16.506714311956827, 20.479685083631775 16.670710578522765, 19.951804764076787 16.990714730406093 M21.020743073605708 16.34271804539089 C20.607887370649642 16.59299359873227, 20.195031667693573 16.843269152073656, 19.951804764076787 16.990714730406093 M19.951804764076787 16.990714730406093 C19.543797972394582 17.203571612285877, 19.135791180712374 17.41642849416566, 18.843545412792388 17.56889292409717 M19.951804764076787 16.990714730406093 C19.570740591771212 17.18951566501466, 19.189676419465638 17.388316599623227, 18.843545412792388 17.56889292409717 M18.843545412792388 17.56889292409717 C18.537011553239758 17.70458637071725, 18.23047769368713 17.84027981733733, 17.700519095147804 18.07487676824742 M18.843545412792388 17.56889292409717 C18.448482001390786 17.743775777184943, 18.053418589989185 17.918658630272713, 17.700519095147804 18.07487676824742 M17.700519095147804 18.07487676824742 C17.27201837799044 18.23256899317854, 16.84351766083308 18.390261218109654, 16.527422751460616 18.506587066708033 M17.700519095147804 18.07487676824742 C17.28915116760088 18.226263968228125, 16.877783240053954 18.377651168208832, 16.527422751460616 18.506587066708033 M16.527422751460616 18.506587066708033 C16.2403114021373 18.591800208108967, 15.953200052813985 18.677013349509902, 15.329076886235413 18.86224982926107 M16.527422751460616 18.506587066708033 C16.126678602900558 18.6255258264517, 15.7259344543405 18.744464586195363, 15.329076886235413 18.86224982926107 M15.329076886235413 18.86224982926107 C14.88701706722964 18.96314709823923, 14.444957248223869 19.064044367217384, 14.110405759676766 19.140403561325773 M15.329076886235413 18.86224982926107 C15.008085453502147 18.935514029117584, 14.687094020768882 19.008778228974094, 14.110405759676766 19.140403561325773 M14.110405759676766 19.140403561325773 C13.682116809482707 19.209645997362735, 13.253827859288648 19.278888433399697, 12.876417152847878 19.3399052695533 M14.110405759676766 19.140403561325773 C13.765754942997518 19.19612403255947, 13.421104126318268 19.251844503793173, 12.876417152847878 19.3399052695533 M12.876417152847878 19.3399052695533 C12.501625810636702 19.376060939583876, 12.126834468425523 19.41221660961445, 11.6321817896239 19.45993515863156 M12.876417152847878 19.3399052695533 C12.586412158330978 19.36788170259231, 12.296407163814077 19.39585813563132, 11.6321817896239 19.45993515863156 M11.6321817896239 19.45993515863156 C11.250110503321148 19.472187441126643, 10.868039217018397 19.48443972362173, 10.382812500000004 19.5 M11.6321817896239 19.45993515863156 C11.332747764872439 19.469537424992367, 11.033313740120978 19.479139691353172, 10.382812500000004 19.5 M10.382812500000004 19.5 C10.382812500000002 19.5, 10.382812500000002 19.5, 10.3828125 19.5 M10.382812500000004 19.5 C10.382812500000002 19.5, 10.382812500000002 19.5, 10.3828125 19.5 M10.3828125 19.5 C2.559856168736422 19.5, -5.263100162527156 19.5, -10.382812499999996 19.5 M10.3828125 19.5 C5.972940336191088 19.5, 1.5630681723821755 19.5, -10.382812499999996 19.5 M-10.382812499999996 19.5 C-10.815024497552258 19.48613980248812, -11.24723649510452 19.472279604976233, -11.632181789623893 19.45993515863156 M-10.382812499999996 19.5 C-10.756359276759987 19.488021081934, -11.129906053519976 19.476042163868, -11.632181789623893 19.45993515863156 M-11.632181789623893 19.45993515863156 C-12.077587489865717 19.416967406407956, -12.52299319010754 19.373999654184356, -12.876417152847871 19.3399052695533 M-11.632181789623893 19.45993515863156 C-12.047166934568772 19.419902040791385, -12.462152079513649 19.379868922951207, -12.876417152847871 19.3399052695533 M-12.876417152847871 19.3399052695533 C-13.209262699586583 19.28609338281235, -13.542108246325295 19.2322814960714, -14.110405759676759 19.140403561325773 M-12.876417152847871 19.3399052695533 C-13.357091309583971 19.262193599575962, -13.837765466320073 19.18448192959863, -14.110405759676759 19.140403561325773 M-14.110405759676759 19.140403561325773 C-14.579856271988971 19.033254545341396, -15.049306784301184 18.926105529357024, -15.329076886235388 18.862249829261074 M-14.110405759676759 19.140403561325773 C-14.548617495149024 19.040384592303045, -14.986829230621288 18.940365623280318, -15.329076886235388 18.862249829261074 M-15.329076886235388 18.862249829261074 C-15.727231906731394 18.74407950913621, -16.1253869272274 18.62590918901135, -16.52742275146059 18.506587066708043 M-15.329076886235388 18.862249829261074 C-15.596083539505507 18.783003656117028, -15.863090192775626 18.70375748297298, -16.52742275146059 18.506587066708043 M-16.52742275146059 18.506587066708043 C-16.976379142299038 18.341366964772114, -17.42533553313748 18.176146862836184, -17.700519095147797 18.074876768247425 M-16.52742275146059 18.506587066708043 C-16.92654252908041 18.35970729912117, -17.32566230670023 18.212827531534295, -17.700519095147797 18.074876768247425 M-17.700519095147797 18.074876768247425 C-17.95856500120195 17.960647500297082, -18.216610907256104 17.846418232346743, -18.84354541279238 17.568892924097174 M-17.700519095147797 18.074876768247425 C-18.12849991088342 17.885422356721087, -18.556480726619043 17.695967945194752, -18.84354541279238 17.568892924097174 M-18.84354541279238 17.568892924097174 C-19.101065754697213 17.434544726675075, -19.358586096602043 17.300196529252975, -19.95180476407678 16.990714730406097 M-18.84354541279238 17.568892924097174 C-19.25352518563976 17.355006739207273, -19.66350495848714 17.14112055431737, -19.95180476407678 16.990714730406097 M-19.95180476407678 16.990714730406097 C-20.180797957603545 16.851897710776793, -20.409791151130314 16.713080691147493, -21.020743073605686 16.3427180453909 M-19.95180476407678 16.990714730406097 C-20.312037434446168 16.772339568666023, -20.672270104815556 16.55396440692595, -21.020743073605686 16.3427180453909 M-21.020743073605686 16.3427180453909 C-21.32821020754536 16.128242282792293, -21.635677341485035 15.913766520193684, -22.045967844578712 15.627565626425156 M-21.020743073605686 16.3427180453909 C-21.392287338005467 16.083544850437594, -21.76383160240525 15.824371655484285, -22.045967844578712 15.627565626425156 M-22.045967844578712 15.627565626425156 C-22.35625793863577 15.380117533580833, -22.66654803269283 15.13266944073651, -23.02326620850187 14.848196188198125 M-22.045967844578712 15.627565626425156 C-22.29129699882212 15.431922154399013, -22.536626153065523 15.23627868237287, -23.02326620850187 14.848196188198125 M-23.02326620850187 14.848196188198125 C-23.30724661468642 14.590292697011124, -23.59122702087097 14.332389205824125, -23.948622236767974 14.007812326905697 M-23.02326620850187 14.848196188198125 C-23.270629064419015 14.623547787316692, -23.51799192033616 14.39889938643526, -23.948622236767974 14.007812326905697 M-23.948622236767974 14.007812326905697 C-24.25489512232175 13.691560427099882, -24.56116800787552 13.375308527294067, -24.818233442968655 13.109867360095677 M-23.948622236767974 14.007812326905697 C-24.210874530373474 13.737015302444288, -24.473126823978973 13.466218277982879, -24.818233442968655 13.109867360095677 M-24.818233442968655 13.109867360095677 C-25.122103785941594 12.752923964527323, -25.425974128914532 12.395980568958969, -25.62852640812658 12.158051136245307 M-24.818233442968655 13.109867360095677 C-25.038872186404035 12.850692537356316, -25.25951092983942 12.591517714616955, -25.62852640812658 12.158051136245307 M-25.62852640812658 12.158051136245307 C-25.870730102569446 11.833520250902355, -26.11293379701231 11.508989365559403, -26.376171464640635 11.156274872382316 M-25.62852640812658 12.158051136245307 C-25.902536539703156 11.790902522769214, -26.176546671279734 11.423753909293119, -26.376171464640635 11.156274872382316 M-26.376171464640635 11.156274872382316 C-26.56439580261997 10.867111743934297, -26.752620140599305 10.57794861548628, -27.058096378604244 10.108655082055249 M-26.376171464640635 11.156274872382316 C-26.631234036687037 10.764430267828399, -26.88629660873344 10.37258566327448, -27.058096378604244 10.108655082055249 M-27.058096378604244 10.108655082055249 C-27.18715116686946 9.879505237275978, -27.316205955134677 9.650355392496706, -27.6714989742735 9.019496659696289 M-27.058096378604244 10.108655082055249 C-27.27272254220559 9.727564595325324, -27.487348705806934 9.3464741085954, -27.6714989742735 9.019496659696289 M-27.6714989742735 9.019496659696289 C-27.860019110091688 8.628030563985101, -28.048539245909875 8.236564468273912, -28.21385864880834 7.893275190886686 M-27.6714989742735 9.019496659696289 C-27.83683177182215 8.676179568031353, -28.0021645693708 8.332862476366417, -28.21385864880834 7.893275190886686 M-28.21385864880834 7.893275190886686 C-28.3855424193421 7.469212958388402, -28.557226189875863 7.045150725890117, -28.682946729970325 6.73461856121551 M-28.21385864880834 7.893275190886686 C-28.33073635411195 7.604584999110068, -28.447614059415557 7.315894807333449, -28.682946729970325 6.73461856121551 M-28.682946729970325 6.73461856121551 C-28.82285388235122 6.313240509421782, -28.962761034732114 5.891862457628053, -29.07683563421488 5.5482879393051325 M-28.682946729970325 6.73461856121551 C-28.83525227935804 6.275898513053535, -28.987557828745757 5.81717846489156, -29.07683563421488 5.5482879393051325 M-29.07683563421488 5.5482879393051325 C-29.181263102510858 5.150060743541518, -29.285690570806835 4.7518335477779035, -29.393906787545557 4.339158212148136 M-29.07683563421488 5.5482879393051325 C-29.18052454002372 5.152877202399992, -29.284213445832552 4.757466465494851, -29.393906787545557 4.339158212148136 M-29.393906787545557 4.339158212148136 C-29.44492611610887 4.077184742914444, -29.49594544467218 3.815211273680752, -29.632857276581777 3.112197953150904 M-29.393906787545557 4.339158212148136 C-29.448648784814832 4.058069625895629, -29.503390782084107 3.7769810396431227, -29.632857276581777 3.112197953150904 M-29.632857276581777 3.112197953150904 C-29.665241515852063 2.8610321883619347, -29.69762575512235 2.6098664235729654, -29.792705202509364 1.872449005199809 M-29.632857276581777 3.112197953150904 C-29.666976724496237 2.847574252773423, -29.701096172410697 2.582950552395942, -29.792705202509364 1.872449005199809 M-29.792705202509364 1.872449005199809 C-29.819000746613874 1.4628746803908925, -29.845296290718384 1.053300355581976, -29.872793715913414 0.6250057626472781 M-29.792705202509364 1.872449005199809 C-29.808826368758453 1.621348828099042, -29.824947535007546 1.3702486509982752, -29.872793715913414 0.6250057626472781 M-29.872793715913414 0.6250057626472781 C-29.872793715913414 0.353238168872996, -29.872793715913414 0.0814705750987138, -29.872793715913414 -0.6250057626472687 M-29.872793715913414 0.6250057626472781 C-29.872793715913414 0.29376425762137404, -29.872793715913414 -0.03747724740453007, -29.872793715913414 -0.6250057626472687 M-29.872793715913414 -0.6250057626472687 C-29.851890237455866 -0.9505943126077213, -29.830986758998314 -1.276182862568174, -29.792705202509367 -1.8724490051997822 M-29.872793715913414 -0.6250057626472687 C-29.84360163205154 -1.0796960322219147, -29.81440954818967 -1.5343863017965609, -29.792705202509367 -1.8724490051997822 M-29.792705202509367 -1.8724490051997822 C-29.7500648058549 -2.203159501353107, -29.707424409200435 -2.533869997506432, -29.632857276581777 -3.112197953150895 M-29.792705202509367 -1.8724490051997822 C-29.75738447731331 -2.146389574954307, -29.72206375211725 -2.420330144708832, -29.632857276581777 -3.112197953150895 M-29.632857276581777 -3.112197953150895 C-29.539436244577615 -3.591895207950161, -29.446015212573453 -4.071592462749427, -29.39390678754556 -4.339158212148126 M-29.632857276581777 -3.112197953150895 C-29.549245310660066 -3.541527726763622, -29.465633344738357 -3.970857500376349, -29.39390678754556 -4.339158212148126 M-29.39390678754556 -4.339158212148126 C-29.296069877752572 -4.7122527519737245, -29.198232967959584 -5.085347291799323, -29.076835634214884 -5.548287939305123 M-29.39390678754556 -4.339158212148126 C-29.301308979974383 -4.69227378456069, -29.208711172403206 -5.045389356973255, -29.076835634214884 -5.548287939305123 M-29.076835634214884 -5.548287939305123 C-28.983640270506935 -5.82897752612875, -28.890444906798983 -6.109667112952377, -28.682946729970332 -6.734618561215485 M-29.076835634214884 -5.548287939305123 C-28.970295245228694 -5.869170616025784, -28.8637548562425 -6.190053292746445, -28.682946729970332 -6.734618561215485 M-28.682946729970332 -6.734618561215485 C-28.496842243508755 -7.19430024086105, -28.31073775704718 -7.653981920506615, -28.213858648808344 -7.893275190886676 M-28.682946729970332 -6.734618561215485 C-28.568059575969485 -7.018392052789597, -28.453172421968635 -7.302165544363708, -28.213858648808344 -7.893275190886676 M-28.213858648808344 -7.893275190886676 C-28.017810595578762 -8.300373168174259, -27.821762542349177 -8.707471145461842, -27.671498974273504 -9.019496659696282 M-28.213858648808344 -7.893275190886676 C-28.026977012212587 -8.281338907904221, -27.84009537561683 -8.669402624921766, -27.671498974273504 -9.019496659696282 M-27.671498974273504 -9.019496659696282 C-27.46281111890551 -9.390043078838978, -27.25412326353752 -9.760589497981677, -27.058096378604247 -10.108655082055243 M-27.671498974273504 -9.019496659696282 C-27.505034865988495 -9.315070540275114, -27.33857075770349 -9.610644420853944, -27.058096378604247 -10.108655082055243 M-27.058096378604247 -10.108655082055243 C-26.906620534496952 -10.341362655563504, -26.755144690389656 -10.574070229071767, -26.37617146464064 -11.156274872382308 M-27.058096378604247 -10.108655082055243 C-26.91624826264353 -10.32657187972336, -26.774400146682815 -10.544488677391476, -26.37617146464064 -11.156274872382308 M-26.37617146464064 -11.156274872382308 C-26.168240296675762 -11.434883694536152, -25.960309128710882 -11.713492516689998, -25.628526408126586 -12.158051136245302 M-26.37617146464064 -11.156274872382308 C-26.212563831382035 -11.375494195986828, -26.048956198123427 -11.594713519591346, -25.628526408126586 -12.158051136245302 M-25.628526408126586 -12.158051136245302 C-25.401089479143835 -12.425211494556315, -25.173652550161087 -12.69237185286733, -24.818233442968662 -13.10986736009567 M-25.628526408126586 -12.158051136245302 C-25.36218271826609 -12.470913589740725, -25.095839028405596 -12.78377604323615, -24.818233442968662 -13.10986736009567 M-24.818233442968662 -13.10986736009567 C-24.474786983355262 -13.46450402712524, -24.131340523741862 -13.81914069415481, -23.948622236767996 -14.007812326905677 M-24.818233442968662 -13.10986736009567 C-24.524392976123288 -13.413281766864506, -24.23055250927791 -13.716696173633343, -23.948622236767996 -14.007812326905677 M-23.948622236767996 -14.007812326905677 C-23.673661750997 -14.257524165027103, -23.398701265226002 -14.507236003148531, -23.023266208501887 -14.848196188198107 M-23.948622236767996 -14.007812326905677 C-23.694410053591973 -14.238681105580353, -23.44019787041595 -14.469549884255029, -23.023266208501887 -14.848196188198107 M-23.023266208501887 -14.848196188198107 C-22.771994093804892 -15.04857901303717, -22.520721979107897 -15.24896183787623, -22.04596784457872 -15.627565626425149 M-23.023266208501887 -14.848196188198107 C-22.63886715317848 -15.154744205530061, -22.25446809785507 -15.461292222862017, -22.04596784457872 -15.627565626425149 M-22.04596784457872 -15.627565626425149 C-21.667326570180258 -15.891689388328924, -21.288685295781796 -16.155813150232703, -21.02074307360571 -16.342718045390885 M-22.04596784457872 -15.627565626425149 C-21.80026009172614 -15.798960718297918, -21.554552338873563 -15.970355810170686, -21.02074307360571 -16.342718045390885 M-21.02074307360571 -16.342718045390885 C-20.765831441623835 -16.497246974725325, -20.51091980964196 -16.651775904059768, -19.95180476407679 -16.99071473040609 M-21.02074307360571 -16.342718045390885 C-20.791452657838896 -16.48171524288878, -20.56216224207208 -16.62071244038667, -19.95180476407679 -16.99071473040609 M-19.95180476407679 -16.99071473040609 C-19.679765829513265 -17.13263726831863, -19.40772689494974 -17.274559806231167, -18.843545412792388 -17.56889292409717 M-19.95180476407679 -16.99071473040609 C-19.694873408385508 -17.124755654097847, -19.437942052694222 -17.2587965777896, -18.843545412792388 -17.56889292409717 M-18.843545412792388 -17.56889292409717 C-18.57444669749891 -17.688014942827824, -18.305347982205436 -17.807136961558474, -17.700519095147804 -18.07487676824742 M-18.843545412792388 -17.56889292409717 C-18.580797877610117 -17.685203463793655, -18.318050342427846 -17.801514003490144, -17.700519095147804 -18.07487676824742 M-17.700519095147804 -18.07487676824742 C-17.404107260852136 -18.18395906326919, -17.107695426556464 -18.293041358290953, -16.52742275146062 -18.506587066708033 M-17.700519095147804 -18.07487676824742 C-17.426830886286186 -18.175596559054565, -17.153142677424565 -18.27631634986171, -16.52742275146062 -18.506587066708033 M-16.52742275146062 -18.506587066708033 C-16.16584115467874 -18.61390258665236, -15.804259557896861 -18.72121810659669, -15.329076886235413 -18.862249829261067 M-16.52742275146062 -18.506587066708033 C-16.06156889027615 -18.644850047390765, -15.59571502909168 -18.7831130280735, -15.329076886235413 -18.862249829261067 M-15.329076886235413 -18.862249829261067 C-14.969688250587833 -18.94427794011761, -14.610299614940253 -19.026306050974146, -14.110405759676768 -19.140403561325773 M-15.329076886235413 -18.862249829261067 C-14.893879497474064 -18.96158079331748, -14.458682108712715 -19.06091175737389, -14.110405759676768 -19.140403561325773 M-14.110405759676768 -19.140403561325773 C-13.847721963505148 -19.182872240347535, -13.585038167333527 -19.2253409193693, -12.87641715284788 -19.3399052695533 M-14.110405759676768 -19.140403561325773 C-13.679644669071818 -19.210045673852633, -13.248883578466868 -19.27968778637949, -12.87641715284788 -19.3399052695533 M-12.87641715284788 -19.3399052695533 C-12.470707486590271 -19.37904359311991, -12.064997820332664 -19.418181916686517, -11.632181789623903 -19.45993515863156 M-12.87641715284788 -19.3399052695533 C-12.474238768791519 -19.378702934572942, -12.072060384735158 -19.417500599592586, -11.632181789623903 -19.45993515863156 M-11.632181789623903 -19.45993515863156 C-11.28888926166875 -19.47094388182471, -10.945596733713597 -19.481952605017863, -10.382812500000005 -19.5 M-11.632181789623903 -19.45993515863156 C-11.176058056890236 -19.47456215894934, -10.719934324156569 -19.489189159267124, -10.382812500000005 -19.5 M-10.382812500000005 -19.5 C-10.382812500000004 -19.5, -10.382812500000002 -19.5, -10.3828125 -19.5 M-10.382812500000005 -19.5 C-10.382812500000004 -19.5, -10.382812500000002 -19.5, -10.3828125 -19.5" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g><g class="label" style="" transform="translate(-17.5078125, -12)"><rect></rect><foreignobject width="35.015625" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="nodeLabel">
+<p>
+Start
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="node default" id="flowchart-B-1" transform="translate(241.26171875, 128.5)"><polygon points="-31.5,0 215,0 246.5,-63 0,-63" class="label-container" transform="translate(-107.5,31.5)"></polygon><g class="label" style="" transform="translate(-100, -24)"><rect></rect><foreignobject width="200" height="48">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;">
+<span class="nodeLabel">
+<p>
+Read capacity, booked, and request
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="node default" id="flowchart-C-3" transform="translate(241.26171875, 349)"><polygon points="139,0 278,-139 139,-278 0,-139" class="label-container" transform="translate(-138.5, 139)"></polygon><g class="label" style="" transform="translate(-100, -24)"><rect></rect><foreignobject width="200" height="48">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table; white-space: break-spaces; line-height: 1.5; max-width: 200px; text-align: center; width: 200px;">
+<span class="nodeLabel">
+<p>
+booked + request ≤ capacity?
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="node default" id="flowchart-D-5" transform="translate(119.3046875, 589)"><rect class="basic label-container" style="" x="-111.3046875" y="-27" width="222.609375" height="54"></rect><g class="label" style="" transform="translate(-81.3046875, -12)"><rect></rect><foreignobject width="162.609375" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="nodeLabel">
+<p>
+Add request to booked
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="node default" id="flowchart-E-7" transform="translate(363.21875, 589)"><rect class="basic label-container" style="" x="-82.609375" y="-27" width="165.21875" height="54"></rect><g class="label" style="" transform="translate(-52.609375, -12)"><rect></rect><foreignobject width="105.21875" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="nodeLabel">
+<p>
+Reject request
+</p>
+</span>
+</div>
+</foreignobject></g></g><g class="node default" id="flowchart-F-9" transform="translate(241.26171875, 685.5)"><g class="basic label-container outer-path"><path d="M-5.9921875 -19.5 C-1.49387191993178 -19.5, 3.00444366013644 -19.5, 5.9921875 -19.5 C5.9921875 -19.5, 5.992187499999999 -19.5, 5.992187499999999 -19.5 C6.2920577002927685 -19.490383746338548, 6.591927900585539 -19.480767492677096, 7.2415567896239 -19.45993515863156 C7.572673610514439 -19.427992717146488, 7.903790431404979 -19.396050275661416, 8.485792152847864 -19.3399052695533 C8.745932020413147 -19.297847873180146, 9.006071887978427 -19.255790476806997, 9.719780759676757 -19.140403561325776 C10.15973698088594 -19.03998642481743, 10.599693202095121 -18.939569288309084, 10.93845188623539 -18.862249829261074 C11.375174726738763 -18.732632782604643, 11.811897567242136 -18.603015735948212, 12.136797751460602 -18.50658706670804 C12.46842839645844 -18.38454392378876, 12.800059041456281 -18.262500780869473, 13.309894095147794 -18.074876768247425 C13.715254505123015 -17.895435739340723, 14.120614915098237 -17.715994710434018, 14.452920412792382 -17.568892924097174 C14.746112686126411 -17.415934702897424, 15.03930495946044 -17.262976481697677, 15.561179764076783 -16.990714730406097 C15.799461535930224 -16.846266920009416, 16.037743307783664 -16.70181910961274, 16.630118073605697 -16.342718045390892 C16.93961256124276 -16.126828088615714, 17.24910704887982 -15.910938131840535, 17.655342844578712 -15.627565626425154 C17.973487307198308 -15.373853883665731, 18.291631769817908 -15.12014214090631, 18.63264120850187 -14.848196188198123 C18.857872321690024 -14.643647250489337, 19.08310343487818 -14.439098312780553, 19.557997236767985 -14.007812326905688 C19.814165577039493 -13.743297483763481, 20.070333917311 -13.478782640621272, 20.427608442968648 -13.10986736009568 C20.611778723987694 -12.893530468424844, 20.795949005006744 -12.677193576754009, 21.237901408126582 -12.158051136245305 C21.52780446537311 -11.769607450246792, 21.817707522619635 -11.38116376424828, 21.985546464640635 -11.156274872382312 C22.161703250618853 -10.885650744399447, 22.337860036597075 -10.61502661641658, 22.667471378604247 -10.108655082055241 C22.836778662461022 -9.808032855345994, 23.006085946317796 -9.507410628636746, 23.2808739742735 -9.019496659696287 C23.41818673622672 -8.734363771477987, 23.555499498179934 -8.449230883259688, 23.82323364880834 -7.893275190886684 C23.988296475214913 -7.485566818389801, 24.15335930162149 -7.077858445892917, 24.292321729970325 -6.734618561215508 C24.44282312481228 -6.2813323390923825, 24.59332451965423 -5.828046116969256, 24.68621063421488 -5.548287939305138 C24.749754250851822 -5.305968589090817, 24.813297867488764 -5.063649238876496, 25.00328178754556 -4.339158212148133 C25.062008018276657 -4.037611429137211, 25.120734249007754 -3.736064646126289, 25.242232276581777 -3.1121979531509023 C25.283785792690864 -2.7899170878786967, 25.325339308799954 -2.467636222606491, 25.402080202509367 -1.872449005199798 C25.428979206644673 -1.4534753033070709, 25.45587821077998 -1.0345016014143438, 25.482168715913414 -0.6250057626472757 C25.482168715913414 -0.29107594147120497, 25.482168715913414 0.04285387970486576, 25.482168715913414 0.625005762647271 C25.452260400576396 1.0908519155789567, 25.42235208523938 1.5566980685106424, 25.402080202509367 1.8724490051997846 C25.359237033400806 2.204732164465122, 25.316393864292245 2.5370153237304596, 25.242232276581777 3.1121979531508885 C25.14923080127977 3.589740872957931, 25.056229325977764 4.067283792764974, 25.00328178754556 4.339158212148129 C24.877757556299912 4.817836508433742, 24.752233325054263 5.296514804719356, 24.686210634214884 5.548287939305125 C24.55839989070011 5.93323353489512, 24.430589147185334 6.318179130485113, 24.29232172997033 6.734618561215495 C24.110999456809143 7.182488081551294, 23.929677183647954 7.630357601887093, 23.823233648808344 7.893275190886679 C23.66646041199466 8.218818171540198, 23.509687175180975 8.544361152193718, 23.280873974273504 9.019496659696284 C23.05690266253804 9.417180403237197, 22.83293135080258 9.81486414677811, 22.66747137860425 10.108655082055236 C22.441034844892354 10.456522404559758, 22.214598311180453 10.804389727064278, 21.98554646464064 11.156274872382301 C21.715813987144095 11.517691819093457, 21.44608150964755 11.879108765804613, 21.237901408126582 12.158051136245302 C20.949383804402853 12.496960330695922, 20.660866200679123 12.835869525146542, 20.42760844296866 13.10986736009567 C20.146891034855788 13.399731131300037, 19.86617362674292 13.689594902504403, 19.55799723676799 14.007812326905684 C19.250878797720638 14.286729167339878, 18.943760358673284 14.565646007774074, 18.632641208501887 14.848196188198111 C18.406930740959723 15.028194279655194, 18.18122027341756 15.208192371112276, 17.655342844578715 15.627565626425152 C17.27141881589271 15.895374409033172, 16.887494787206705 16.163183191641192, 16.630118073605708 16.34271804539089 C16.34445014356695 16.515891623351482, 16.05878221352819 16.689065201312076, 15.561179764076787 16.990714730406093 C15.281164170657808 17.136798686134227, 15.00114857723883 17.28288264186236, 14.452920412792386 17.56889292409717 C14.047285132241486 17.748455630053982, 13.641649851690588 17.92801833601079, 13.309894095147804 18.07487676824742 C13.047153400373055 18.171567772672887, 12.784412705598307 18.268258777098353, 12.136797751460616 18.506587066708033 C11.753528922044822 18.6203392434595, 11.37026009262903 18.734091420210973, 10.938451886235413 18.86224982926107 C10.582804654789873 18.943423989023437, 10.227157423344332 19.024598148785806, 9.719780759676766 19.140403561325773 C9.435792177816191 19.186316632876647, 9.151803595955618 19.232229704427517, 8.485792152847878 19.3399052695533 C8.051076658182952 19.38184175050175, 7.616361163518024 19.423778231450203, 7.241556789623901 19.45993515863156 C6.903631513801741 19.470771764495527, 6.565706237979581 19.4816083703595, 5.9921875000000036 19.5 C5.992187500000003 19.5, 5.992187500000001 19.5, 5.9921875 19.5 C2.334317315406954 19.5, -1.3235528691860923 19.5, -5.9921874999999964 19.5 C-6.352281761705501 19.488452477908066, -6.7123760234110055 19.47690495581613, -7.2415567896238935 19.45993515863156 C-7.627485706436077 19.422705060174117, -8.013414623248261 19.385474961716675, -8.485792152847871 19.3399052695533 C-8.958353906800179 19.263505149945424, -9.430915660752486 19.18710503033755, -9.719780759676759 19.140403561325773 C-10.062375636503564 19.062208516330557, -10.404970513330369 18.98401347133534, -10.938451886235388 18.862249829261074 C-11.234304006482196 18.77444247293129, -11.530156126729004 18.686635116601508, -12.136797751460593 18.506587066708043 C-12.43868853348982 18.39548846827349, -12.740579315519048 18.284389869838936, -13.309894095147797 18.074876768247425 C-13.631806435997877 17.9323757241434, -13.953718776847957 17.78987468003938, -14.45292041279238 17.568892924097174 C-14.682908107953125 17.448908490845962, -14.91289580311387 17.32892405759475, -15.56117976407678 16.990714730406097 C-15.867444310511747 16.80505536254697, -16.173708856946714 16.619395994687842, -16.630118073605686 16.3427180453909 C-17.002798199666678 16.08275252251339, -17.375478325727673 15.82278699963588, -17.655342844578712 15.627565626425156 C-17.94554527744953 15.396136908821745, -18.23574771032035 15.164708191218335, -18.63264120850187 14.848196188198125 C-18.93356043950621 14.574909304486539, -19.234479670510545 14.301622420774953, -19.557997236767974 14.007812326905697 C-19.792141746752204 13.766038896725199, -20.026286256736437 13.524265466544701, -20.427608442968655 13.109867360095677 C-20.624586465551104 12.878485766403326, -20.821564488133557 12.647104172710975, -21.23790140812658 12.158051136245307 C-21.416922481435396 11.918179207166784, -21.59594355474421 11.67830727808826, -21.985546464640635 11.156274872382316 C-22.226553732799694 10.786022988976917, -22.46756100095875 10.415771105571517, -22.667471378604244 10.108655082055249 C-22.902360808057526 9.69158511492704, -23.13725023751081 9.274515147798834, -23.2808739742735 9.019496659696289 C-23.494583808508064 8.575723616250288, -23.708293642742632 8.131950572804287, -23.82323364880834 7.893275190886686 C-23.950712049027597 7.57840107771792, -24.078190449246858 7.263526964549152, -24.292321729970325 6.73461856121551 C-24.431077581028763 6.3167080455700715, -24.569833432087197 5.898797529924632, -24.68621063421488 5.5482879393051325 C-24.77528387525826 5.2086130666198525, -24.864357116301644 4.868938193934572, -25.003281787545557 4.339158212148136 C-25.06149099359846 4.040266241586529, -25.119700199651366 3.741374271024924, -25.242232276581777 3.112197953150904 C-25.282516063209822 2.7997648589972295, -25.322799849837864 2.4873317648435553, -25.402080202509364 1.872449005199809 C-25.42437319838902 1.5252175997917687, -25.446666194268676 1.1779861943837284, -25.482168715913414 0.6250057626472781 C-25.482168715913414 0.23833147164674123, -25.482168715913414 -0.14834281935379567, -25.482168715913414 -0.6250057626472687 C-25.460667967021834 -0.9598972817257447, -25.439167218130258 -1.2947888008042208, -25.402080202509367 -1.8724490051997822 C-25.34807550146955 -2.291298802030176, -25.29407080042973 -2.7101485988605702, -25.242232276581777 -3.112197953150895 C-25.146753526190864 -3.6024611569672045, -25.051274775799946 -4.092724360783514, -25.00328178754556 -4.339158212148126 C-24.891056228639734 -4.767122907120942, -24.77883066973391 -5.19508760209376, -24.686210634214884 -5.548287939305123 C-24.564328783859647 -5.915376653339432, -24.442446933504407 -6.282465367373741, -24.292321729970332 -6.734618561215485 C-24.128863565660247 -7.138363387310012, -23.965405401350164 -7.542108213404538, -23.823233648808344 -7.893275190886676 C-23.655386767533706 -8.2418128312014, -23.487539886259068 -8.590350471516125, -23.280873974273504 -9.019496659696282 C-23.139967311955676 -9.269690706988353, -22.999060649637848 -9.519884754280426, -22.667471378604247 -10.108655082055243 C-22.518079402220057 -10.338161275143982, -22.368687425835866 -10.56766746823272, -21.98554646464064 -11.156274872382308 C-21.778331818508757 -11.433923620556419, -21.571117172376876 -11.71157236873053, -21.237901408126586 -12.158051136245302 C-20.987958897881782 -12.451647830910575, -20.73801638763698 -12.745244525575849, -20.427608442968662 -13.10986736009567 C-20.098793645439958 -13.449395634740995, -19.76997884791125 -13.78892390938632, -19.557997236767996 -14.007812326905677 C-19.35627322160444 -14.191012740152255, -19.15454920644088 -14.374213153398834, -18.632641208501887 -14.848196188198107 C-18.246608588875077 -15.156046929591053, -17.86057596924827 -15.463897670983997, -17.65534284457872 -15.627565626425149 C-17.319004402350643 -15.862180763866956, -16.982665960122564 -16.096795901308763, -16.63011807360571 -16.342718045390885 C-16.280945757426156 -16.554388355423225, -15.931773441246605 -16.766058665455564, -15.561179764076789 -16.99071473040609 C-15.136238998657694 -17.21240605553768, -14.711298233238601 -17.434097380669275, -14.45292041279239 -17.56889292409717 C-14.19483035891404 -17.683141734979685, -13.93674030503569 -17.7973905458622, -13.309894095147806 -18.07487676824742 C-12.925263149338964 -18.21642451179456, -12.54063220353012 -18.357972255341704, -12.136797751460618 -18.506587066708033 C-11.849539640155173 -18.591843766294893, -11.562281528849729 -18.677100465881754, -10.938451886235413 -18.862249829261067 C-10.56760080085747 -18.946894169469086, -10.196749715479527 -19.03153850967711, -9.719780759676768 -19.140403561325773 C-9.2823917791267 -19.211117219698906, -8.84500279857663 -19.281830878072036, -8.48579215284788 -19.3399052695533 C-8.181161827874869 -19.36929259063188, -7.876531502901855 -19.398679911710456, -7.241556789623903 -19.45993515863156 C-6.798982480956045 -19.474127655291905, -6.356408172288187 -19.488320151952248, -5.992187500000006 -19.5 C-5.9921875000000036 -19.5, -5.992187500000002 -19.5, -5.9921875 -19.5" stroke="none" stroke-width="0" fill="#ECECFF" style=""></path><path d="M-5.9921875 -19.5 C-1.8428278468929005 -19.5, 2.306531806214199 -19.5, 5.9921875 -19.5 M-5.9921875 -19.5 C-2.264917417853908 -19.5, 1.462352664292184 -19.5, 5.9921875 -19.5 M5.9921875 -19.5 C5.9921875 -19.5, 5.992187499999999 -19.5, 5.992187499999999 -19.5 M5.9921875 -19.5 C5.9921875 -19.5, 5.992187499999999 -19.5, 5.992187499999999 -19.5 M5.992187499999999 -19.5 C6.438765734672774 -19.485679105225845, 6.88534396934555 -19.471358210451694, 7.2415567896239 -19.45993515863156 M5.992187499999999 -19.5 C6.355624420891942 -19.48834528533405, 6.7190613417838865 -19.476690570668094, 7.2415567896239 -19.45993515863156 M7.2415567896239 -19.45993515863156 C7.610776437466847 -19.424316983255743, 7.979996085309795 -19.388698807879926, 8.485792152847864 -19.3399052695533 M7.2415567896239 -19.45993515863156 C7.496539728982919 -19.435337261133444, 7.751522668341937 -19.41073936363533, 8.485792152847864 -19.3399052695533 M8.485792152847864 -19.3399052695533 C8.732840021328904 -19.29996448606212, 8.979887889809943 -19.260023702570937, 9.719780759676757 -19.140403561325776 M8.485792152847864 -19.3399052695533 C8.854173461599775 -19.28034823639401, 9.222554770351685 -19.220791203234715, 9.719780759676757 -19.140403561325776 M9.719780759676757 -19.140403561325776 C10.032897926922248 -19.068936611182462, 10.346015094167738 -18.99746966103915, 10.93845188623539 -18.862249829261074 M9.719780759676757 -19.140403561325776 C10.042615770116585 -19.06671857688821, 10.365450780556413 -18.99303359245064, 10.93845188623539 -18.862249829261074 M10.93845188623539 -18.862249829261074 C11.364750615876897 -18.73572660399117, 11.791049345518402 -18.609203378721265, 12.136797751460602 -18.50658706670804 M10.93845188623539 -18.862249829261074 C11.220938894227997 -18.778409168093432, 11.503425902220604 -18.69456850692579, 12.136797751460602 -18.50658706670804 M12.136797751460602 -18.50658706670804 C12.492866218555422 -18.375550579356318, 12.848934685650242 -18.244514092004593, 13.309894095147794 -18.074876768247425 M12.136797751460602 -18.50658706670804 C12.530491289470506 -18.361704205457222, 12.924184827480412 -18.216821344206405, 13.309894095147794 -18.074876768247425 M13.309894095147794 -18.074876768247425 C13.729475987791668 -17.889140310828605, 14.149057880435542 -17.703403853409785, 14.452920412792382 -17.568892924097174 M13.309894095147794 -18.074876768247425 C13.67319070446139 -17.91405613611531, 14.036487313774986 -17.7532355039832, 14.452920412792382 -17.568892924097174 M14.452920412792382 -17.568892924097174 C14.88938628929775 -17.34118895589406, 15.325852165803118 -17.113484987690946, 15.561179764076783 -16.990714730406097 M14.452920412792382 -17.568892924097174 C14.885162488964381 -17.343392509822504, 15.317404565136382 -17.117892095547838, 15.561179764076783 -16.990714730406097 M15.561179764076783 -16.990714730406097 C15.919040222976815 -16.773777617199407, 16.276900681876846 -16.55684050399272, 16.630118073605697 -16.342718045390892 M15.561179764076783 -16.990714730406097 C15.784003881697032 -16.855637440844838, 16.00682799931728 -16.720560151283582, 16.630118073605697 -16.342718045390892 M16.630118073605697 -16.342718045390892 C16.991378537276525 -16.090718384647545, 17.352639000947352 -15.838718723904195, 17.655342844578712 -15.627565626425154 M16.630118073605697 -16.342718045390892 C16.859960078349204 -16.182390212581847, 17.08980208309271 -16.0220623797728, 17.655342844578712 -15.627565626425154 M17.655342844578712 -15.627565626425154 C17.93969372822435 -15.400803363612562, 18.224044611869985 -15.17404110079997, 18.63264120850187 -14.848196188198123 M17.655342844578712 -15.627565626425154 C17.905494393207775 -15.428076423205754, 18.155645941836838 -15.228587219986354, 18.63264120850187 -14.848196188198123 M18.63264120850187 -14.848196188198123 C18.921485826684787 -14.585875148374203, 19.210330444867708 -14.323554108550283, 19.557997236767985 -14.007812326905688 M18.63264120850187 -14.848196188198123 C18.99773607842489 -14.516626687214952, 19.362830948347906 -14.18505718623178, 19.557997236767985 -14.007812326905688 M19.557997236767985 -14.007812326905688 C19.834250780844382 -13.722557861809033, 20.110504324920775 -13.43730339671238, 20.427608442968648 -13.10986736009568 M19.557997236767985 -14.007812326905688 C19.777413701783484 -13.781246812350384, 19.996830166798983 -13.55468129779508, 20.427608442968648 -13.10986736009568 M20.427608442968648 -13.10986736009568 C20.596941689666505 -12.910958893189683, 20.766274936364365 -12.712050426283685, 21.237901408126582 -12.158051136245305 M20.427608442968648 -13.10986736009568 C20.692674967160922 -12.798505138066936, 20.957741491353197 -12.48714291603819, 21.237901408126582 -12.158051136245305 M21.237901408126582 -12.158051136245305 C21.430248552737616 -11.90032348565188, 21.622595697348647 -11.642595835058454, 21.985546464640635 -11.156274872382312 M21.237901408126582 -12.158051136245305 C21.473036846797925 -11.842991069704844, 21.708172285469267 -11.527931003164385, 21.985546464640635 -11.156274872382312 M21.985546464640635 -11.156274872382312 C22.136046976550947 -10.925065671041986, 22.28654748846126 -10.69385646970166, 22.667471378604247 -10.108655082055241 M21.985546464640635 -11.156274872382312 C22.156053320700835 -10.89433055397214, 22.32656017676103 -10.632386235561968, 22.667471378604247 -10.108655082055241 M22.667471378604247 -10.108655082055241 C22.848845586673164 -9.786606809498759, 23.03021979474208 -9.464558536942274, 23.2808739742735 -9.019496659696287 M22.667471378604247 -10.108655082055241 C22.889639127421447 -9.714173747106253, 23.111806876238646 -9.319692412157266, 23.2808739742735 -9.019496659696287 M23.2808739742735 -9.019496659696287 C23.46086409706445 -8.645743318549194, 23.640854219855402 -8.271989977402102, 23.82323364880834 -7.893275190886684 M23.2808739742735 -9.019496659696287 C23.47216905419837 -8.622268333173277, 23.66346413412324 -8.225040006650266, 23.82323364880834 -7.893275190886684 M23.82323364880834 -7.893275190886684 C23.953659010087808 -7.571122026923582, 24.084084371367275 -7.248968862960481, 24.292321729970325 -6.734618561215508 M23.82323364880834 -7.893275190886684 C23.98587081283834 -7.491558251356936, 24.148507976868334 -7.089841311827187, 24.292321729970325 -6.734618561215508 M24.292321729970325 -6.734618561215508 C24.40010627212717 -6.409988693373717, 24.50789081428402 -6.085358825531927, 24.68621063421488 -5.548287939305138 M24.292321729970325 -6.734618561215508 C24.43478872664767 -6.305530666256673, 24.577255723325017 -5.876442771297838, 24.68621063421488 -5.548287939305138 M24.68621063421488 -5.548287939305138 C24.78652708446067 -5.165737837093387, 24.886843534706458 -4.783187734881635, 25.00328178754556 -4.339158212148133 M24.68621063421488 -5.548287939305138 C24.752536598652267 -5.295358291050566, 24.81886256308965 -5.042428642795994, 25.00328178754556 -4.339158212148133 M25.00328178754556 -4.339158212148133 C25.09831702165872 -3.8511723706809065, 25.193352255771877 -3.3631865292136798, 25.242232276581777 -3.1121979531509023 M25.00328178754556 -4.339158212148133 C25.05717117371143 -4.062447603712186, 25.111060559877302 -3.785736995276238, 25.242232276581777 -3.1121979531509023 M25.242232276581777 -3.1121979531509023 C25.286727668850517 -2.7671004773236025, 25.331223061119253 -2.4220030014963028, 25.402080202509367 -1.872449005199798 M25.242232276581777 -3.1121979531509023 C25.27426035508863 -2.8637945009112453, 25.306288433595476 -2.6153910486715883, 25.402080202509367 -1.872449005199798 M25.402080202509367 -1.872449005199798 C25.42367565212087 -1.5360824459674658, 25.44527110173237 -1.1997158867351336, 25.482168715913414 -0.6250057626472757 M25.402080202509367 -1.872449005199798 C25.42592838805912 -1.5009942653535011, 25.449776573608872 -1.1295395255072043, 25.482168715913414 -0.6250057626472757 M25.482168715913414 -0.6250057626472757 C25.482168715913414 -0.33580943369680716, 25.482168715913414 -0.04661310474633862, 25.482168715913414 0.625005762647271 M25.482168715913414 -0.6250057626472757 C25.482168715913414 -0.31159505807525634, 25.482168715913414 0.0018156464967630237, 25.482168715913414 0.625005762647271 M25.482168715913414 0.625005762647271 C25.452027510479905 1.0944793668173252, 25.421886305046392 1.5639529709873794, 25.402080202509367 1.8724490051997846 M25.482168715913414 0.625005762647271 C25.464847592049697 0.8947962481842001, 25.44752646818598 1.164586733721129, 25.402080202509367 1.8724490051997846 M25.402080202509367 1.8724490051997846 C25.354392631549658 2.2423043885872813, 25.306705060589945 2.612159771974778, 25.242232276581777 3.1121979531508885 M25.402080202509367 1.8724490051997846 C25.36749264623937 2.140703261544354, 25.332905089969376 2.4089575178889233, 25.242232276581777 3.1121979531508885 M25.242232276581777 3.1121979531508885 C25.171499252035122 3.47539708476794, 25.100766227488464 3.838596216384991, 25.00328178754556 4.339158212148129 M25.242232276581777 3.1121979531508885 C25.16560152877215 3.505680647239036, 25.088970780962526 3.8991633413271836, 25.00328178754556 4.339158212148129 M25.00328178754556 4.339158212148129 C24.938987282368412 4.5843410258034085, 24.874692777191264 4.829523839458689, 24.686210634214884 5.548287939305125 M25.00328178754556 4.339158212148129 C24.89515027955249 4.751510516617733, 24.787018771559413 5.163862821087337, 24.686210634214884 5.548287939305125 M24.686210634214884 5.548287939305125 C24.553204050020675 5.948882579176782, 24.42019746582647 6.349477219048438, 24.29232172997033 6.734618561215495 M24.686210634214884 5.548287939305125 C24.53339445818691 6.008545913550254, 24.380578282158933 6.468803887795382, 24.29232172997033 6.734618561215495 M24.29232172997033 6.734618561215495 C24.17079734505616 7.034786141467637, 24.04927296014199 7.33495372171978, 23.823233648808344 7.893275190886679 M24.29232172997033 6.734618561215495 C24.164960047850894 7.0492043784211145, 24.037598365731455 7.363790195626734, 23.823233648808344 7.893275190886679 M23.823233648808344 7.893275190886679 C23.698863790742216 8.151531862249659, 23.574493932676088 8.409788533612637, 23.280873974273504 9.019496659696284 M23.823233648808344 7.893275190886679 C23.70531752508541 8.138130544798226, 23.58740140136247 8.382985898709775, 23.280873974273504 9.019496659696284 M23.280873974273504 9.019496659696284 C23.12077779134096 9.303763643989452, 22.960681608408414 9.588030628282619, 22.66747137860425 10.108655082055236 M23.280873974273504 9.019496659696284 C23.097273097709717 9.345498607640042, 22.91367222114593 9.671500555583801, 22.66747137860425 10.108655082055236 M22.66747137860425 10.108655082055236 C22.530143706474345 10.319627264090096, 22.39281603434444 10.530599446124956, 21.98554646464064 11.156274872382301 M22.66747137860425 10.108655082055236 C22.444238000913703 10.451601496743134, 22.22100462322316 10.794547911431032, 21.98554646464064 11.156274872382301 M21.98554646464064 11.156274872382301 C21.699029809454736 11.540181088127156, 21.41251315426883 11.924087303872012, 21.237901408126582 12.158051136245302 M21.98554646464064 11.156274872382301 C21.827466107065227 11.368088150116519, 21.66938574948981 11.579901427850736, 21.237901408126582 12.158051136245302 M21.237901408126582 12.158051136245302 C21.018176528997287 12.41615248197038, 20.798451649867992 12.674253827695459, 20.42760844296866 13.10986736009567 M21.237901408126582 12.158051136245302 C21.061802415600464 12.364907033183018, 20.885703423074347 12.571762930120732, 20.42760844296866 13.10986736009567 M20.42760844296866 13.10986736009567 C20.171925054805072 13.373881450371139, 19.916241666641486 13.637895540646607, 19.55799723676799 14.007812326905684 M20.42760844296866 13.10986736009567 C20.085263441901336 13.463366680744988, 19.742918440834014 13.816866001394306, 19.55799723676799 14.007812326905684 M19.55799723676799 14.007812326905684 C19.305439622020614 14.237178470310942, 19.05288200727324 14.466544613716202, 18.632641208501887 14.848196188198111 M19.55799723676799 14.007812326905684 C19.209676564707646 14.324147945210932, 18.861355892647303 14.640483563516177, 18.632641208501887 14.848196188198111 M18.632641208501887 14.848196188198111 C18.27443135930019 15.133859010572042, 17.9162215100985 15.419521832945971, 17.655342844578715 15.627565626425152 M18.632641208501887 14.848196188198111 C18.375861046131778 15.052971534481177, 18.119080883761665 15.257746880764245, 17.655342844578715 15.627565626425152 M17.655342844578715 15.627565626425152 C17.29789494665995 15.876905806343174, 16.940447048741188 16.126245986261196, 16.630118073605708 16.34271804539089 M17.655342844578715 15.627565626425152 C17.373118979443298 15.824432777469406, 17.09089511430788 16.02129992851366, 16.630118073605708 16.34271804539089 M16.630118073605708 16.34271804539089 C16.225783521417373 16.587828027061033, 15.821448969229037 16.832938008731176, 15.561179764076787 16.990714730406093 M16.630118073605708 16.34271804539089 C16.326773706946536 16.52660718310905, 16.02342934028736 16.710496320827207, 15.561179764076787 16.990714730406093 M15.561179764076787 16.990714730406093 C15.199884077820775 17.17920245850492, 14.838588391564764 17.367690186603753, 14.452920412792386 17.56889292409717 M15.561179764076787 16.990714730406093 C15.13655828445719 17.2122394843406, 14.711936804837592 17.433764238275103, 14.452920412792386 17.56889292409717 M14.452920412792386 17.56889292409717 C14.076791063572285 17.735394229516192, 13.700661714352185 17.90189553493521, 13.309894095147804 18.07487676824742 M14.452920412792386 17.56889292409717 C14.202704792948929 17.679655956619225, 13.95248917310547 17.79041898914128, 13.309894095147804 18.07487676824742 M13.309894095147804 18.07487676824742 C12.924706935596966 18.2166292035932, 12.539519776046127 18.35838163893898, 12.136797751460616 18.506587066708033 M13.309894095147804 18.07487676824742 C13.036780081633331 18.175385249859012, 12.763666068118859 18.275893731470603, 12.136797751460616 18.506587066708033 M12.136797751460616 18.506587066708033 C11.659241770269121 18.648323175183172, 11.181685789077624 18.790059283658312, 10.938451886235413 18.86224982926107 M12.136797751460616 18.506587066708033 C11.729513772484406 18.627466813790942, 11.322229793508196 18.748346560873852, 10.938451886235413 18.86224982926107 M10.938451886235413 18.86224982926107 C10.477427262708654 18.967475691114227, 10.016402639181894 19.072701552967388, 9.719780759676766 19.140403561325773 M10.938451886235413 18.86224982926107 C10.548037230894627 18.951359426648885, 10.157622575553841 19.040469024036696, 9.719780759676766 19.140403561325773 M9.719780759676766 19.140403561325773 C9.306607825850538 19.20720215706284, 8.893434892024311 19.27400075279991, 8.485792152847878 19.3399052695533 M9.719780759676766 19.140403561325773 C9.235887379114205 19.218635690445915, 8.751993998551644 19.29686781956606, 8.485792152847878 19.3399052695533 M8.485792152847878 19.3399052695533 C8.188955211974871 19.368540772240667, 7.8921182711018645 19.397176274928032, 7.241556789623901 19.45993515863156 M8.485792152847878 19.3399052695533 C8.019505105218105 19.38488742024592, 7.553218057588333 19.429869570938543, 7.241556789623901 19.45993515863156 M7.241556789623901 19.45993515863156 C6.842075432034819 19.47274574822615, 6.442594074445738 19.48555633782074, 5.9921875000000036 19.5 M7.241556789623901 19.45993515863156 C6.923657042964671 19.470129584752602, 6.605757296305441 19.480324010873645, 5.9921875000000036 19.5 M5.9921875000000036 19.5 C5.992187500000003 19.5, 5.992187500000001 19.5, 5.9921875 19.5 M5.9921875000000036 19.5 C5.992187500000003 19.5, 5.992187500000001 19.5, 5.9921875 19.5 M5.9921875 19.5 C1.6623219660710946 19.5, -2.6675435678578108 19.5, -5.9921874999999964 19.5 M5.9921875 19.5 C3.2760100089028192 19.5, 0.5598325178056385 19.5, -5.9921874999999964 19.5 M-5.9921874999999964 19.5 C-6.4399585807418855 19.485640852974143, -6.8877296614837755 19.471281705948286, -7.2415567896238935 19.45993515863156 M-5.9921874999999964 19.5 C-6.3819800609635795 19.48750011125509, -6.771772621927163 19.475000222510182, -7.2415567896238935 19.45993515863156 M-7.2415567896238935 19.45993515863156 C-7.546765556178614 19.43049203598927, -7.851974322733335 19.401048913346983, -8.485792152847871 19.3399052695533 M-7.2415567896238935 19.45993515863156 C-7.6978568675983565 19.415916438890495, -8.154156945572819 19.371897719149434, -8.485792152847871 19.3399052695533 M-8.485792152847871 19.3399052695533 C-8.944138679264613 19.26580335769264, -9.402485205681357 19.191701445831978, -9.719780759676759 19.140403561325773 M-8.485792152847871 19.3399052695533 C-8.782537675576652 19.291929754734408, -9.079283198305431 19.243954239915517, -9.719780759676759 19.140403561325773 M-9.719780759676759 19.140403561325773 C-10.190683715804306 19.032923034518628, -10.661586671931852 18.925442507711487, -10.938451886235388 18.862249829261074 M-9.719780759676759 19.140403561325773 C-10.117109829805742 19.049715793883326, -10.514438899934724 18.95902802644088, -10.938451886235388 18.862249829261074 M-10.938451886235388 18.862249829261074 C-11.180459650944957 18.790423195019955, -11.422467415654527 18.718596560778835, -12.136797751460593 18.506587066708043 M-10.938451886235388 18.862249829261074 C-11.367973865773179 18.734769960341136, -11.797495845310968 18.607290091421202, -12.136797751460593 18.506587066708043 M-12.136797751460593 18.506587066708043 C-12.522074108419934 18.364801805891403, -12.907350465379277 18.223016545074763, -13.309894095147797 18.074876768247425 M-12.136797751460593 18.506587066708043 C-12.561509987516661 18.350289037842536, -12.986222223572732 18.19399100897703, -13.309894095147797 18.074876768247425 M-13.309894095147797 18.074876768247425 C-13.735814787423692 17.88633431226532, -14.161735479699585 17.69779185628321, -14.45292041279238 17.568892924097174 M-13.309894095147797 18.074876768247425 C-13.711516339236887 17.89709051448976, -14.113138583325977 17.719304260732095, -14.45292041279238 17.568892924097174 M-14.45292041279238 17.568892924097174 C-14.877919376273445 17.34717123707393, -15.30291833975451 17.12544955005069, -15.56117976407678 16.990714730406097 M-14.45292041279238 17.568892924097174 C-14.8281206897196 17.373151179951492, -15.203320966646821 17.177409435805806, -15.56117976407678 16.990714730406097 M-15.56117976407678 16.990714730406097 C-15.836140875905535 16.824031688564656, -16.11110198773429 16.657348646723214, -16.630118073605686 16.3427180453909 M-15.56117976407678 16.990714730406097 C-15.963273713517813 16.74696301528861, -16.365367662958846 16.503211300171124, -16.630118073605686 16.3427180453909 M-16.630118073605686 16.3427180453909 C-16.951668409711456 16.11841845061322, -17.27321874581722 15.894118855835544, -17.655342844578712 15.627565626425156 M-16.630118073605686 16.3427180453909 C-16.872864566081805 16.173388600565854, -17.115611058557924 16.00405915574081, -17.655342844578712 15.627565626425156 M-17.655342844578712 15.627565626425156 C-18.009602520923885 15.345052961785788, -18.363862197269057 15.06254029714642, -18.63264120850187 14.848196188198125 M-17.655342844578712 15.627565626425156 C-17.931986383450212 15.40694976596888, -18.20862992232171 15.186333905512605, -18.63264120850187 14.848196188198125 M-18.63264120850187 14.848196188198125 C-18.85919681272901 14.642444382771844, -19.085752416956154 14.436692577345562, -19.557997236767974 14.007812326905697 M-18.63264120850187 14.848196188198125 C-18.872663451353763 14.630214337880577, -19.112685694205656 14.412232487563031, -19.557997236767974 14.007812326905697 M-19.557997236767974 14.007812326905697 C-19.74062066365913 13.81923864497839, -19.92324409055028 13.630664963051084, -20.427608442968655 13.109867360095677 M-19.557997236767974 14.007812326905697 C-19.902199438178226 13.652395294423322, -20.24640163958848 13.296978261940945, -20.427608442968655 13.109867360095677 M-20.427608442968655 13.109867360095677 C-20.68456470629193 12.808031911970573, -20.941520969615205 12.50619646384547, -21.23790140812658 12.158051136245307 M-20.427608442968655 13.109867360095677 C-20.629360787725343 12.872877575910838, -20.83111313248203 12.635887791725999, -21.23790140812658 12.158051136245307 M-21.23790140812658 12.158051136245307 C-21.499556519363292 11.807457124459123, -21.76121163060001 11.45686311267294, -21.985546464640635 11.156274872382316 M-21.23790140812658 12.158051136245307 C-21.527131557202715 11.770509085891925, -21.81636170627885 11.382967035538542, -21.985546464640635 11.156274872382316 M-21.985546464640635 11.156274872382316 C-22.229299954113415 10.781804055575359, -22.4730534435862 10.407333238768404, -22.667471378604244 10.108655082055249 M-21.985546464640635 11.156274872382316 C-22.222165262305595 10.792764858125178, -22.458784059970558 10.42925484386804, -22.667471378604244 10.108655082055249 M-22.667471378604244 10.108655082055249 C-22.795675558187973 9.881015579123424, -22.923879737771706 9.6533760761916, -23.2808739742735 9.019496659696289 M-22.667471378604244 10.108655082055249 C-22.798424161013536 9.876135156480427, -22.929376943422824 9.643615230905604, -23.2808739742735 9.019496659696289 M-23.2808739742735 9.019496659696289 C-23.45109522965629 8.666028580742525, -23.621316485039078 8.312560501788761, -23.82323364880834 7.893275190886686 M-23.2808739742735 9.019496659696289 C-23.458604445574544 8.650435533216784, -23.63633491687559 8.28137440673728, -23.82323364880834 7.893275190886686 M-23.82323364880834 7.893275190886686 C-23.994605834321586 7.469982579413164, -24.16597801983483 7.046689967939642, -24.292321729970325 6.73461856121551 M-23.82323364880834 7.893275190886686 C-23.944413114168704 7.593959568601012, -24.065592579529063 7.294643946315338, -24.292321729970325 6.73461856121551 M-24.292321729970325 6.73461856121551 C-24.421827013722474 6.344569280418865, -24.551332297474623 5.954519999622219, -24.68621063421488 5.5482879393051325 M-24.292321729970325 6.73461856121551 C-24.429579653414148 6.321219564882938, -24.566837576857967 5.907820568550367, -24.68621063421488 5.5482879393051325 M-24.68621063421488 5.5482879393051325 C-24.772276000298465 5.2200833974628065, -24.858341366382053 4.8918788556204795, -25.003281787545557 4.339158212148136 M-24.68621063421488 5.5482879393051325 C-24.78143594108695 5.185152573292865, -24.87666124795902 4.822017207280599, -25.003281787545557 4.339158212148136 M-25.003281787545557 4.339158212148136 C-25.069015964679426 4.001627105488971, -25.1347501418133 3.664095998829807, -25.242232276581777 3.112197953150904 M-25.003281787545557 4.339158212148136 C-25.084994329771643 3.919581577769106, -25.16670687199773 3.5000049433900764, -25.242232276581777 3.112197953150904 M-25.242232276581777 3.112197953150904 C-25.294453217141086 2.7071826503639898, -25.3466741577004 2.302167347577075, -25.402080202509364 1.872449005199809 M-25.242232276581777 3.112197953150904 C-25.279992892709526 2.819334071141135, -25.317753508837278 2.5264701891313663, -25.402080202509364 1.872449005199809 M-25.402080202509364 1.872449005199809 C-25.430833126768494 1.424599000921132, -25.459586051027625 0.9767489966424551, -25.482168715913414 0.6250057626472781 M-25.402080202509364 1.872449005199809 C-25.42412394245081 1.5290999622251977, -25.446167682392254 1.1857509192505864, -25.482168715913414 0.6250057626472781 M-25.482168715913414 0.6250057626472781 C-25.482168715913414 0.3109330275671834, -25.482168715913414 -0.0031397075129113716, -25.482168715913414 -0.6250057626472687 M-25.482168715913414 0.6250057626472781 C-25.482168715913414 0.2381113594378187, -25.482168715913414 -0.14878304377164076, -25.482168715913414 -0.6250057626472687 M-25.482168715913414 -0.6250057626472687 C-25.45906122089253 -0.984923649631816, -25.435953725871645 -1.3448415366163633, -25.402080202509367 -1.8724490051997822 M-25.482168715913414 -0.6250057626472687 C-25.45249767852871 -1.0871561199443212, -25.42282664114401 -1.5493064772413736, -25.402080202509367 -1.8724490051997822 M-25.402080202509367 -1.8724490051997822 C-25.350241801380268 -2.2744974077069324, -25.298403400251168 -2.676545810214083, -25.242232276581777 -3.112197953150895 M-25.402080202509367 -1.8724490051997822 C-25.351585210033576 -2.264078195477917, -25.301090217557785 -2.6557073857560516, -25.242232276581777 -3.112197953150895 M-25.242232276581777 -3.112197953150895 C-25.169270257284698 -3.486842501713161, -25.096308237987618 -3.8614870502754264, -25.00328178754556 -4.339158212148126 M-25.242232276581777 -3.112197953150895 C-25.186561291112177 -3.398056697470349, -25.130890305642577 -3.683915441789803, -25.00328178754556 -4.339158212148126 M-25.00328178754556 -4.339158212148126 C-24.888294133563797 -4.777655972745077, -24.773306479582033 -5.216153733342028, -24.686210634214884 -5.548287939305123 M-25.00328178754556 -4.339158212148126 C-24.89290284314295 -4.760080965692401, -24.782523898740337 -5.181003719236677, -24.686210634214884 -5.548287939305123 M-24.686210634214884 -5.548287939305123 C-24.536021056175485 -6.000635018900214, -24.38583147813609 -6.452982098495306, -24.292321729970332 -6.734618561215485 M-24.686210634214884 -5.548287939305123 C-24.548446045560944 -5.96321293052443, -24.410681456907007 -6.378137921743738, -24.292321729970332 -6.734618561215485 M-24.292321729970332 -6.734618561215485 C-24.10958399535107 -7.1859842987188145, -23.926846260731807 -7.637350036222144, -23.823233648808344 -7.893275190886676 M-24.292321729970332 -6.734618561215485 C-24.16185790447539 -7.056866732534469, -24.031394078980444 -7.379114903853452, -23.823233648808344 -7.893275190886676 M-23.823233648808344 -7.893275190886676 C-23.691870720474174 -8.16605312228898, -23.560507792140005 -8.438831053691283, -23.280873974273504 -9.019496659696282 M-23.823233648808344 -7.893275190886676 C-23.692580686818008 -8.164578861985161, -23.561927724827672 -8.435882533083648, -23.280873974273504 -9.019496659696282 M-23.280873974273504 -9.019496659696282 C-23.057686402594154 -9.415788793405284, -22.8344988309148 -9.812080927114287, -22.667471378604247 -10.108655082055243 M-23.280873974273504 -9.019496659696282 C-23.071246281980354 -9.3917118544684, -22.861618589687208 -9.763927049240518, -22.667471378604247 -10.108655082055243 M-22.667471378604247 -10.108655082055243 C-22.522496583967055 -10.33137529780121, -22.37752178932986 -10.554095513547178, -21.98554646464064 -11.156274872382308 M-22.667471378604247 -10.108655082055243 C-22.486384506210385 -10.386853146686107, -22.30529763381652 -10.665051211316971, -21.98554646464064 -11.156274872382308 M-21.98554646464064 -11.156274872382308 C-21.700424696657702 -11.538312066352024, -21.415302928674766 -11.92034926032174, -21.237901408126586 -12.158051136245302 M-21.98554646464064 -11.156274872382308 C-21.718893907663844 -11.513565006183534, -21.452241350687046 -11.870855139984757, -21.237901408126586 -12.158051136245302 M-21.237901408126586 -12.158051136245302 C-21.026200756517536 -12.406726767733618, -20.81450010490849 -12.655402399221934, -20.427608442968662 -13.10986736009567 M-21.237901408126586 -12.158051136245302 C-21.034758010105403 -12.396674930747787, -20.83161461208422 -12.635298725250273, -20.427608442968662 -13.10986736009567 M-20.427608442968662 -13.10986736009567 C-20.17972638577287 -13.365825935645706, -19.931844328577082 -13.62178451119574, -19.557997236767996 -14.007812326905677 M-20.427608442968662 -13.10986736009567 C-20.23015109818687 -13.31375828013237, -20.032693753405077 -13.517649200169071, -19.557997236767996 -14.007812326905677 M-19.557997236767996 -14.007812326905677 C-19.201061274574542 -14.331972123761728, -18.844125312381088 -14.656131920617778, -18.632641208501887 -14.848196188198107 M-19.557997236767996 -14.007812326905677 C-19.32492428546557 -14.219483014506176, -19.09185133416315 -14.431153702106673, -18.632641208501887 -14.848196188198107 M-18.632641208501887 -14.848196188198107 C-18.42951668490637 -15.010182590394948, -18.226392161310855 -15.17216899259179, -17.65534284457872 -15.627565626425149 M-18.632641208501887 -14.848196188198107 C-18.409750083925942 -15.025945928665498, -18.186858959349994 -15.20369566913289, -17.65534284457872 -15.627565626425149 M-17.65534284457872 -15.627565626425149 C-17.29150355908877 -15.88136416163412, -16.92766427359882 -16.135162696843093, -16.63011807360571 -16.342718045390885 M-17.65534284457872 -15.627565626425149 C-17.26368359417234 -15.90077016485295, -16.87202434376596 -16.173974703280752, -16.63011807360571 -16.342718045390885 M-16.63011807360571 -16.342718045390885 C-16.283140503295073 -16.55305788757973, -15.936162932984434 -16.763397729768574, -15.561179764076789 -16.99071473040609 M-16.63011807360571 -16.342718045390885 C-16.280168759127726 -16.554859376357882, -15.930219444649744 -16.76700070732488, -15.561179764076789 -16.99071473040609 M-15.561179764076789 -16.99071473040609 C-15.266846535881223 -17.144268187026288, -14.972513307685658 -17.297821643646483, -14.45292041279239 -17.56889292409717 M-15.561179764076789 -16.99071473040609 C-15.289511494803119 -17.13244389247433, -15.01784322552945 -17.274173054542576, -14.45292041279239 -17.56889292409717 M-14.45292041279239 -17.56889292409717 C-14.212197687054493 -17.67545373399539, -13.971474961316597 -17.78201454389361, -13.309894095147806 -18.07487676824742 M-14.45292041279239 -17.56889292409717 C-14.1411433392932 -17.706907385996978, -13.829366265794008 -17.844921847896785, -13.309894095147806 -18.07487676824742 M-13.309894095147806 -18.07487676824742 C-12.98461280299252 -18.194583290627868, -12.659331510837236 -18.314289813008315, -12.136797751460618 -18.506587066708033 M-13.309894095147806 -18.07487676824742 C-12.91147323650614 -18.221499327189598, -12.513052377864472 -18.368121886131775, -12.136797751460618 -18.506587066708033 M-12.136797751460618 -18.506587066708033 C-11.758957076263453 -18.618728195780374, -11.381116401066286 -18.73086932485272, -10.938451886235413 -18.862249829261067 M-12.136797751460618 -18.506587066708033 C-11.716069488433265 -18.631457006726833, -11.295341225405911 -18.75632694674563, -10.938451886235413 -18.862249829261067 M-10.938451886235413 -18.862249829261067 C-10.648541200763656 -18.928420051375973, -10.3586305152919 -18.994590273490875, -9.719780759676768 -19.140403561325773 M-10.938451886235413 -18.862249829261067 C-10.648563239615747 -18.9284150211518, -10.358674592996081 -18.99458021304253, -9.719780759676768 -19.140403561325773 M-9.719780759676768 -19.140403561325773 C-9.283222418647282 -19.210982928342922, -8.846664077617797 -19.28156229536007, -8.48579215284788 -19.3399052695533 M-9.719780759676768 -19.140403561325773 C-9.307824088618627 -19.207005521130757, -8.895867417560485 -19.273607480935738, -8.48579215284788 -19.3399052695533 M-8.48579215284788 -19.3399052695533 C-8.162030606439298 -19.371138156555105, -7.838269060030717 -19.402371043556915, -7.241556789623903 -19.45993515863156 M-8.48579215284788 -19.3399052695533 C-8.001352766696689 -19.386638554511702, -7.5169133805455 -19.433371839470105, -7.241556789623903 -19.45993515863156 M-7.241556789623903 -19.45993515863156 C-6.948968152515925 -19.46931790673438, -6.656379515407947 -19.478700654837198, -5.992187500000006 -19.5 M-7.241556789623903 -19.45993515863156 C-6.826399494449566 -19.473248445033146, -6.41124219927523 -19.486561731434733, -5.992187500000006 -19.5 M-5.992187500000006 -19.5 C-5.9921875000000036 -19.5, -5.992187500000002 -19.5, -5.9921875 -19.5 M-5.992187500000006 -19.5 C-5.992187500000005 -19.5, -5.9921875000000036 -19.5, -5.9921875 -19.5" stroke="#9370DB" stroke-width="1.3" fill="none" stroke-dasharray="0 0" style=""></path></g><g class="label" style="" transform="translate(-13.1171875, -12)"><rect></rect><foreignobject width="26.234375" height="24">
+<div data-xmlns="http://www.w3.org/1999/xhtml" style="display: table-cell; white-space: nowrap; line-height: 1.5; max-width: 200px; text-align: center;">
+<span class="nodeLabel">
+<p>
+End
+</p>
+</span>
+</div>
+</foreignobject></g></g></g></g></g>
+</svg>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-minibus-flow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Decision flow for one booking request
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="exercises-and-solutions" class="level2">
+<h2 class="anchored" data-anchor-id="exercises-and-solutions">Exercises and solutions</h2>
+<p>A label inside a heading gets a copy-reference button. A callout titled <code>Solution [-@exr-id]</code> is retitled with the exercise identifier.</p>
+<section id="e2.3-trace-a-running-total" class="level3 exercise-heading">
+<h3 class="exercise-heading anchored" data-anchor-id="e2.3-trace-a-running-total"><span class="exercise-label" data-exercise-id="E2.3">E2.3</span> Trace a running total</h3>
+<div id="exr-running-total" class="theorem exercise" data-exercise-id="E2.3">
+<p><span class="theorem-title"><strong>Exercise 1</strong></span> Trace <code>running_total([4, 7, 3])</code> and record <code>total</code> after each iteration.</p>
+</div>
+<div class="callout callout-style-default callout-tip callout-titled" title="Solution [-@exr-running-total]">
+<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Tip</span>Solution <a href="#exr-running-total" class="quarto-xref">1</a>
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>After each iteration <code>total</code> holds 4, 11, and 14, so the function returns <code>[4, 11, 14]</code>.</p>
+</div>
+</div>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb4"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">### [E2.3]{.exercise-label data-exercise-id="E2.3"} Trace a running total {.exercise-heading}</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a></span>
+<span id="cb4-3"><a href="#cb4-3"></a>::: {#exr-running-total data-exercise-id="E2.3"}</span>
+<span id="cb4-4"><a href="#cb4-4"></a>Trace <span class="in">`running_total([4, 7, 3])`</span> ...</span>
+<span id="cb4-5"><a href="#cb4-5"></a>:::</span>
+<span id="cb4-6"><a href="#cb4-6"></a></span>
+<span id="cb4-7"><a href="#cb4-7"></a>::: {.callout-tip collapse="true" title="Solution <span class="co">[</span><span class="ot">-@exr-running-total</span><span class="co">]</span>"}</span>
+<span id="cb4-8"><a href="#cb4-8"></a>...</span>
+<span id="cb4-9"><a href="#cb4-9"></a>:::</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+</section>
+<section id="scope-notes" class="level2">
+<h2 class="anchored" data-anchor-id="scope-notes">Scope notes</h2>
+<details class="scope-note optional">
+<summary><strong>Optional extension: weighted totals</strong></summary>
+<p>Multiply each value by its weight before adding it. The loop structure does not change.</p>
+</details>
+<details class="scope-note preview">
+<summary><strong>Preview: files and records</strong></summary>
+<p>The next module reads these values from a CSV file instead of a list.</p>
+</details>
+</section>
+<section id="worksheets" class="level2">
+<h2 class="anchored" data-anchor-id="worksheets">Worksheets</h2>
+<section id="spreadsheet-preview" class="level3">
+<h3 class="anchored" data-anchor-id="spreadsheet-preview">Spreadsheet preview</h3>
+<table class="excel-table" data-quarto-disable-processing="true">
+  <tbody><tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+  <tr><td>1</td><td>Region</td><td>Orders</td><td>Revenue</td></tr>
+  <tr><td>2</td><td>North</td><td>1204</td><td>=B2*40</td></tr>
+  <tr><td>3</td><td>East</td><td>986</td><td>=B3*40</td></tr>
+</tbody></table>
+</section>
+<section id="lettered-answers" class="level3">
+<h3 class="anchored" data-anchor-id="lettered-answers">Lettered answers</h3>
+<div class="alpha-list">
+<ul>
+<li><code>total</code> is 14 after the loop.</li>
+<li><code>total</code> is 11 after the loop.</li>
+<li>The loop never runs.</li>
+<li>The function raises an error.</li>
+</ul>
+</div>
+</section>
+<section id="answers-written-by-hand" class="level3">
+<h3 class="anchored" data-anchor-id="answers-written-by-hand">Answers written by hand</h3>
+<table class="handwritten-table" data-quarto-disable-processing="true">
+  <tbody><tr><th>Iteration</th><th>value</th><th>total</th></tr>
+  <tr><td>1</td><td></td><td></td></tr>
+  <tr><td>2</td><td></td><td></td></tr>
+</tbody></table>
+</section>
+<section id="notice" class="level3">
+<h3 class="anchored" data-anchor-id="notice">Notice</h3>
+<div class="warningbox">
+<p>Submit the paper before you leave the room.</p>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/brenobeirigo\.github\.io\/quarto-themes\/");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      &nbsp;
+    </div>   
+    <div class="nav-footer-center">
+<p>Quarto themes · Breno Alves Beirigo</p>
+</div>
+    <div class="nav-footer-right">
+      &nbsp;
+    </div>
+  </div>
+</footer>
+
+
+
+
+<script src="../site_libs/quarto-contrib/lucid-1.0.0/flowcharts.js"></script>
+<script src="../site_libs/quarto-contrib/lucid-1.0.0/callouts.js"></script>
+<script src="../site_libs/quarto-contrib/lucid-1.0.0/copy-refs.js"></script>
+<script src="../site_libs/quarto-contrib/lucid-1.0.0/table-scroll.js"></script>
+</body></html>

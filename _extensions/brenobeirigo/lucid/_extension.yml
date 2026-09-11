@@ -1,0 +1,33 @@
+title: Lucid
+author: Breno Alves Beirigo
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    html:
+      # Shared layer first, palette second: Quarto reads SCSS defaults in
+      # reverse order, so the palette is defined before the shared layer uses it.
+      theme:
+        light:
+          - cosmo
+          - scss/lucid.scss
+          - scss/lucid-light.scss
+        dark:
+          - darkly
+          - scss/lucid.scss
+          - scss/lucid-dark.scss
+      css:
+        - css/layout.css
+        - css/tables.css
+        - css/pseudocode.css
+        - css/exercises.css
+        - css/worksheets.css
+        - css/landing.css
+        - css/course-outline.css
+        - css/print.css
+      mermaid-format: svg
+      code-copy: true
+      code-overflow: wrap
+      code-line-numbers: true
+      filters:
+        - lucid.lua

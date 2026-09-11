@@ -1,0 +1,47 @@
+/*-- scss:defaults --*/
+
+// Lucid light palette.
+//
+// Accents come from the viridis scale, which stays perceptually even and
+// distinguishable under common colour-vision deficiencies. Neutrals are
+// charcoal and paper. Override any token from a brand file listed after this one.
+
+$lucid-ink: #212529 !default;          // headings
+$lucid-text: #24272a !default;         // body text
+$lucid-muted: #626a70 !default;        // secondary text
+$lucid-paper: #ffffff !default;        // page and card surface
+$lucid-wash: #f7faf8 !default;         // faint tinted surface
+$lucid-soft: #f4f6f5 !default;         // quiet panels, code, captions
+$lucid-mist: #eaf4ef !default;         // accent-tinted panel
+$lucid-line: #dfe3e1 !default;         // hairlines
+
+$lucid-accent: #35b779 !default;       // viridis green
+$lucid-accent-strong: #187453 !default;
+$lucid-accent-light: #b1e35d !default;
+$lucid-blue: #31688e !default;         // viridis blue, links
+$lucid-violet: #443983 !default;       // viridis violet
+$lucid-danger: #b42318 !default;
+$lucid-on-accent: #ffffff !default;    // text on accent-strong fills
+
+$lucid-chrome: #212529 !default;       // navbar, footer, hero: dark in both modes
+$lucid-chrome-text: #ffffff !default;
+$lucid-chrome-muted: #dce3e5 !default;
+$lucid-chrome-line: #30393e !default;
+
+$lucid-table-head-bg: $lucid-chrome !default;
+$lucid-table-head-text: #ffffff !default;
+$lucid-table-frame: #cfd7d3 !default;
+$lucid-table-row-alt: #f3f8f5 !default;
+$lucid-table-row-hover: #e8f5ee !default;
+$lucid-table-row-head: #edf5f0 !default;
+$lucid-shadow: rgba(20, 30, 35, 0.12) !default;
+
+$lucid-diagram-bg: #ffffff !default;
+$lucid-diagram-node: #ffffff !default;
+$lucid-diagram-text: #111827 !default;
+$lucid-diagram-edge: #4b5563 !default;
+$lucid-diagram-cluster: #f9fafb !default;
+$lucid-diagram-cluster-line: #d1d5db !default;
+
+$lucid-callout-tint: 10% !default;
+$lucid-callout-line-tint: 28% !default;

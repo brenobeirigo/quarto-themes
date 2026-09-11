@@ -1,0 +1,162 @@
+---
+title: "Lucid"
+subtitle: "A clear, accessible theme for teaching and technical writing"
+description: "Principles, installation, options, customisation, and base typography."
+---
+
+Lucid is a Quarto format for material that people study rather than skim: textbooks, course sites, lab manuals, and technical reports. It favours legible type, a palette that stays distinguishable for colour-blind readers, restrained geometry, and interactions that work from a keyboard.
+
+## Principles
+
+Clarity first
+: Prose sits at a measure of 76 characters. Headings use Jost, body text uses Libre Franklin, and numbers in tables share one width so columns line up.
+
+Colour that works for every reader
+: Accents come from the viridis scale, which stays perceptually even and distinguishable under common colour-vision deficiencies. Neutrals are charcoal and paper.
+
+Restrained geometry
+: Corners are nearly square. A component gets one hairline frame and one coloured edge, never a heavy shadow.
+
+Accessible by default
+: Table headers carry `scope`, wide tables become focusable scroll regions, collapsible callouts respond to Enter and Space, and diagrams receive an SVG title and description.
+
+Faithful on paper
+: Print styles switch to black on white, hide navigation, and keep tables, pseudocode, and diagrams legible.
+
+## Install and use
+
+```bash
+quarto add brenobeirigo/quarto-themes
+```
+
+```yaml
+format:
+  lucid-html: default
+```
+
+Any ordinary HTML option still works under `lucid-html`. For a book, also set `reader-mode: true` under `book:` to enable the wide reading layout.
+
+## Options
+
+Each enhancement can be switched off under `lucid:` in document or project metadata.
+
+| Option | Default | Effect |
+|---|---|---|
+| `accessible-tables` | `true` | Adds `scope` to header cells and turns the first column of `.row-headers` tables into row headers |
+| `pseudocode` | `true` | Renders `.pseudocode` code blocks as a numbered terminal |
+| `flowcharts` | `true` | Keeps Mermaid diagrams at a readable size and adds an SVG title and description |
+| `callouts` | `true` | Makes collapsible callouts keyboard-operable and retitles solution callouts |
+| `copy-refs` | `true` | Adds a copy-reference button to numbered labels in headings |
+| `table-scroll` | `true` | Makes wide tables focusable scroll regions with a hint on small screens |
+| `page-references` | `false` | Keeps the page-local bibliography visible on every citing page |
+
+: Options read by the Lucid filter {#tbl-lucid-options .data-table}
+
+```yaml
+lucid:
+  copy-refs: false
+  page-references: true
+```
+
+## Customise
+
+### Colours and fonts
+
+Every token in `lucid-light.scss` and `lucid-dark.scss` is a `!default` Sass variable. Put your values in a brand file and list it after the palette. Listing a theme replaces the one the format supplies, so name the Lucid layers too.
+
+```scss
+/*-- scss:defaults --*/
+$lucid-accent: #2a9d8f;
+$lucid-accent-strong: #1d6f65;
+$lucid-font-heading: "Source Serif 4", Georgia, serif;
+```
+
+```yaml
+format:
+  lucid-html:
+    theme:
+      light:
+        - cosmo
+        - _extensions/brenobeirigo/lucid/scss/lucid.scss
+        - _extensions/brenobeirigo/lucid/scss/lucid-light.scss
+        - brand.scss
+      dark:
+        - darkly
+        - _extensions/brenobeirigo/lucid/scss/lucid.scss
+        - _extensions/brenobeirigo/lucid/scss/lucid-dark.scss
+        - brand.scss
+```
+
+### One component
+
+Components read CSS custom properties, so a small stylesheet can adjust them without recompiling the theme.
+
+```css
+.landing-page {
+  --lucid-accent-light: #ffd166;
+}
+```
+
+## Typography
+
+### A third-level heading
+
+Body text carries **strong emphasis**, *emphasis*, `inline code`, and [a link](components.qmd). Footnotes appear in the margin or at the end of the page.^[Footnotes use the body typeface at a smaller size.]
+
+> A block quotation keeps the reading measure and sets itself apart with a rule.
+
+#### A fourth-level heading
+
+1. Ordered lists keep their numbers aligned.
+2. Nested content stays within the measure.
+   - Unordered items use the body colour.
+
+## Callouts
+
+::: {.callout-note}
+A note uses the viridis blue edge.
+:::
+
+::: {.callout-tip}
+A tip uses the strong green edge.
+:::
+
+::: {.callout-warning}
+A warning uses the light green edge.
+:::
+
+::: {.callout-important}
+Important and caution callouts use the ink colour.
+:::
+
+::: {.callout-caution collapse="true"}
+## A collapsed callout
+
+Focus the header and press Enter or Space to open it.
+:::
+
+## Code
+
+```python
+def running_total(values):
+    """Return the cumulative sum after each value."""
+    total = 0
+    totals = []
+    for value in values:
+        total += value
+        totals.append(total)
+    return totals
+```
+
+## Tables
+
+An ordinary Markdown table receives quiet banding.
+
+| Region | Orders | Revenue (€) |
+|---|---:|---:|
+| North | 1,204 | 48,160 |
+| East | 986 | 39,440 |
+| South | 1,532 | 61,280 |
+| West | 743 | 29,720 |
+
+: Orders and revenue by region {#tbl-regions}

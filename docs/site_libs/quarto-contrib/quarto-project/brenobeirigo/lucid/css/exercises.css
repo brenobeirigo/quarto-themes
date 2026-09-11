@@ -1,0 +1,133 @@
+/* Lucid exercises: numbered labels, copy-reference buttons, and scope notes.
+
+   Labels
+     <span class="exercise-label" data-exercise-id="E1.2">E1.2</span>
+     <span class="question-group-label" data-question-group-id="Q3">Q3</span>
+     <span data-copy-ref="2.4">2.4</span>          any other numbered label
+   A label inside a heading receives a copy-reference button (js/copy-refs.js).
+
+   Scope notes
+     <details class="scope-note preview">   content that continues elsewhere
+     <details class="scope-note optional">  optional extension material */
+
+.exercise-label,
+.question-label,
+.question-group-label,
+[data-copy-ref],
+[data-page-id],
+[data-section-id] {
+  color: var(--bs-primary);
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.exercise-label,
+.question-group-label,
+[data-copy-ref],
+[data-page-id],
+[data-section-id] {
+  scroll-margin-top: 5rem;
+}
+
+/* The label replaces the automatic section number in headings and the TOC. */
+.exercise-heading > .header-section-number,
+.question-group-heading > .header-section-number,
+#TOC a:has(.question-group-label) > .header-section-number,
+#TOC a:has(.exercise-label) > .header-section-number {
+  display: none;
+}
+
+h3.exercise-heading,
+h4.exercise-heading,
+h5.exercise-heading {
+  color: color-mix(in srgb, var(--lucid-text) 60%, var(--lucid-muted));
+}
+
+h3.exercise-heading {
+  font-size: 1.25rem;
+}
+
+h4.exercise-heading {
+  font-size: 1.1rem;
+}
+
+h5.exercise-heading {
+  font-size: 1rem;
+  font-style: normal;
+}
+
+.copy-ref-button {
+  align-items: center;
+  background: transparent;
+  border: 0;
+  border-radius: 0.25rem;
+  color: var(--bs-secondary-color);
+  display: inline-flex;
+  font-size: 0.72em;
+  justify-content: center;
+  margin-left: 0.35rem;
+  opacity: 0.45;
+  padding: 0.15rem 0.25rem;
+  vertical-align: middle;
+}
+
+.copy-ref-button:hover,
+.copy-ref-button:focus-visible,
+.copy-ref-button.copied {
+  background: color-mix(in srgb, var(--bs-primary) 10%, transparent);
+  color: var(--bs-primary);
+  opacity: 1;
+}
+
+.copy-ref-button:focus-visible {
+  outline: 2px solid var(--bs-primary);
+  outline-offset: 2px;
+}
+
+details.scope-note {
+  border: 1px solid var(--lucid-line);
+  border-radius: 0.4rem;
+  margin: 1.25rem 0;
+  padding: 0.75rem 1rem;
+}
+
+details.scope-note > summary {
+  color: var(--lucid-muted);
+  cursor: pointer;
+  line-height: 1.4;
+}
+
+details.scope-note[open] > summary {
+  border-bottom: 1px solid var(--lucid-line);
+  margin-bottom: 0.9rem;
+  padding-bottom: 0.65rem;
+}
+
+details.scope-note.preview {
+  background: color-mix(in srgb, var(--bs-primary) 4%, transparent);
+}
+
+details.scope-note.optional {
+  background: color-mix(in srgb, var(--lucid-muted) 6%, transparent);
+}
+
+/* "Solution [-@exr-id]" callouts are retitled by js/callouts.js. */
+.callout[title^="Solution [-@"] .callout-title-container .quarto-xref {
+  display: none;
+}
+
+@media print {
+  .copy-ref-button {
+    display: none !important;
+  }
+
+  details.scope-note {
+    border: 0;
+    padding: 0;
+  }
+
+  details.scope-note > summary {
+    font-weight: 700;
+  }
+}

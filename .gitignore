@@ -1,7 +1,5 @@
 /.quarto/
 /_site/
-/_book/
-/example/_book/
-/example/.quarto/
 *_files/
-*.html
+
+**/*.quarto_ipynb

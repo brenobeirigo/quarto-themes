@@ -1,0 +1,240 @@
+[
+  {
+    "objectID": "lucid/landing.html",
+    "href": "lucid/landing.html",
+    "title": "Reasoning with data",
+    "section": "",
+    "text": "Open course | 6 modules | Self-paced\n\n\nReasoning with data\n\n\nTurn an unclear question into an analysis that another person can inspect, test, and improve.\n\n\nEach module pairs a short reading with worked examples, a traced algorithm, and a practice set with solutions.\n\n\nStart the course Browse the components"
+  },
+  {
+    "objectID": "lucid/landing.html#what-you-will-be-able-to-do",
+    "href": "lucid/landing.html#what-you-will-be-able-to-do",
+    "title": "Reasoning with data",
+    "section": "What you will be able to do",
+    "text": "What you will be able to do\n\n\n01\n\nFrame the problem\nState the decision, the inputs, the constraints, and what would count as a correct answer before touching data.\n\n\n\n02\n\nTrace before you run\nFollow an algorithm step by step on paper so that surprises in code become questions you can answer.\n\n\n\n\nEvery result in this course comes with the evidence that supports it and the assumptions that limit it."
+  },
+  {
+    "objectID": "lucid/landing.html#modules",
+    "href": "lucid/landing.html#modules",
+    "title": "Reasoning with data",
+    "section": "Modules",
+    "text": "Modules\n\n\nModule 1\n\nProblems and algorithms\nFormulate computational problems and design, trace, and test algorithms before programming.\n\n\n\nModule 2\n\nTabular analysis\nStructure, calculate with, summarise, and communicate changing tables of data.\n\n\n\nModule 3\n\nPython foundations\nTranslate algorithms into programs and explain their values, calculations, and state."
+  },
+  {
+    "objectID": "lucid/landing.html#how-a-week-works",
+    "href": "lucid/landing.html#how-a-week-works",
+    "title": "Reasoning with data",
+    "section": "How a week works",
+    "text": "How a week works\n\n\nRead → Trace → Practise → Check → Reflect\n\n\n\n\nMonday\n\nLaunch\nMeet the problem of the week and make a first attempt.\n\n\n\nMidweek\n\nStudy\nWork through readings and short checks at your own pace.\n\n\n\nFriday\n\nConsolidate\nSolve a paper exercise and discuss the difficult cases."
+  },
+  {
+    "objectID": "lucid/landing.html#where-to-go-next",
+    "href": "lucid/landing.html#where-to-go-next",
+    "title": "Reasoning with data",
+    "section": "Where to go next",
+    "text": "Where to go next\n\nCourse outline Component gallery Theme overview Source on GitHub\n\n\nReady to begin?\nOpen the course outline and start with the first module."
+  },
+  {
+    "objectID": "lucid/course-outline.html",
+    "href": "lucid/course-outline.html",
+    "title": "Course outline",
+    "section": "",
+    "text": "COURSE OUTLINE · 2026–2027\n\n\nReasoning with data\n\nLearn to turn an unclear question into an analysis that another person can inspect, test, and improve.\n\n\n6 modules One cumulative learning path\n\n\nAbout 84 hours Including independent study\n\n\nNo prerequisites Starts from problem formulation\n\n\n\nStart module 1 See the components"
+  },
+  {
+    "objectID": "lucid/course-outline.html#getting-started",
+    "href": "lucid/course-outline.html#getting-started",
+    "title": "Course outline",
+    "section": "Getting started",
+    "text": "Getting started\n\n\nIf you are enrolled\nOpen the course space, check this week’s release, and join the launch session.\n\n\nIf you are studying independently\nFollow the modules in order and use the checks at the end of each page.\n\n\n\n\nFrame problems and evidence Define problems, design algorithms, and check tabular data.\n\n\nBuild executable solutions Translate algorithms into programs and organise decisions in functions.\n\n\nIntegrate and assure results Test, validate, and improve a complete solution."
+  },
+  {
+    "objectID": "lucid/course-outline.html#dates",
+    "href": "lucid/course-outline.html#dates",
+    "title": "Course outline",
+    "section": "Planned dates",
+    "text": "Planned dates\n\n\nIntroduction 31 August 2026 First problem launch\n\n\nReview 20 October 2026 Integration and practice\n\n\nExamination 21 October 2026 Written, closed book\n\n\nResit 4 November 2026 Same content blueprint"
+  },
+  {
+    "objectID": "lucid/course-outline.html#modules",
+    "href": "lucid/course-outline.html#modules",
+    "title": "Course outline",
+    "section": "Modules",
+    "text": "Modules\n\n\n\n\n01\n\n\nMODULE 1\n\nProblems and algorithms\nFormulate before you program.\n\n\nAbout 12 hours\n\n\nOutcome: you can state a computational problem precisely and trace an algorithm that solves it.\n\n\n\nYou will learn\n\nInputs, outputs, and state\nPseudocode and flowcharts\n\n\n\nYou will do\n\nTrace a booking algorithm by hand\nDesign tests at and around a threshold\n\n\n\n\nCompletion check: you can explain why an exact-fit request fails a strict comparison."
+  },
+  {
+    "objectID": "lucid/course-outline.html#success",
+    "href": "lucid/course-outline.html#success",
+    "title": "Course outline",
+    "section": "What success looks like",
+    "text": "What success looks like\n\n\nExplain\nYou can say what a result means and what it cannot support.\n\n\nVerify\nYou can choose tests that would reveal a wrong answer."
+  },
+  {
+    "objectID": "lucid/course-outline.html#rhythm",
+    "href": "lucid/course-outline.html#rhythm",
+    "title": "Course outline",
+    "section": "Weekly rhythm",
+    "text": "Weekly rhythm\n\nEach week follows the same three moves, so you always know what comes next.\n\n\n\nLaunch\nA short problem introduces the week.\n\n\nStudy\nReadings and checks build the ideas.\n\n\nConsolidate\nA paper exercise brings them together.\n\n\n\n\nRead the problem and write down what you already know.\nTrace the worked example.\nAttempt the practice set before opening solutions.\n\n\n\nWorkload\nPlan about 12 hours per module, spread over at least three days."
+  },
+  {
+    "objectID": "lucid/course-outline.html#support",
+    "href": "lucid/course-outline.html#support",
+    "title": "Course outline",
+    "section": "Support",
+    "text": "Support\n\n\nQuestions about content\nAsk in the discussion forum so that others benefit from the answer.\n\n\nPersonal circumstances\nContact the course coordinator directly and in confidence.\n\n\n\n\nPython\nThe reference language for every programming exercise. Any recent version works.\n\n\nSpreadsheet\nUsed for checking results and communicating them.\n\n\nPaper\nTracing by hand remains the fastest way to find a logic error."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Quarto themes",
+    "section": "",
+    "text": "Each theme in this collection is a Quarto format extension. Install the collection once, then choose a theme for a project by naming its format."
+  },
+  {
+    "objectID": "index.html#themes",
+    "href": "index.html#themes",
+    "title": "Quarto themes",
+    "section": "Themes",
+    "text": "Themes\n\n\nLUCID-HTML\n\nLucid\nClear, accessible, and restrained. Viridis accents on charcoal and paper, square edges, and keyboard-friendly interactions, for material that people study rather than skim.\nOverview · Components · Landing page · Course outline"
+  },
+  {
+    "objectID": "index.html#how-a-theme-is-built",
+    "href": "index.html#how-a-theme-is-built",
+    "title": "Quarto themes",
+    "section": "How a theme is built",
+    "text": "How a theme is built\nA theme lives in _extensions/brenobeirigo/&lt;name&gt;/ and declares one HTML format. Its SCSS layers set Bootstrap variables and publish colour tokens as CSS custom properties. Component stylesheets read only those tokens, so light and dark modes need no duplicated rules. A Lua filter adds build-time accessibility fixes and loads optional browser enhancements.\nThe repository README explains how to customise a theme and how to add a new one."
+  },
+  {
+    "objectID": "lucid/components.html",
+    "href": "lucid/components.html",
+    "title": "Components",
+    "section": "",
+    "text": "Add .data-table to a captioned table for a dark header, banded rows, and a frame. Add .row-headers when the first column names each row.\n\n\n\nTable 1: Planned tests for a 10-seat minibus\n\n\n\n\n\nTest\nCapacity\nRequests\nExpected\nResult\n\n\n\n\nOrdinary\n10\n4, 3\nBoth booked\nPass\n\n\nExact fit\n10\n4, 6\nBoth booked\nFail\n\n\nOver capacity\n10\n4, 7\nSecond rejected\nPass\n\n\nEmpty\n10\nnone\nNothing booked\nPass\n\n\n\n\n\n\n: Planned tests for a 10-seat minibus {#tbl-minibus-tests .data-table .row-headers}"
+  },
+  {
+    "objectID": "lucid/components.html#data-tables",
+    "href": "lucid/components.html#data-tables",
+    "title": "Components",
+    "section": "",
+    "text": "Add .data-table to a captioned table for a dark header, banded rows, and a frame. Add .row-headers when the first column names each row.\n\n\n\nTable 1: Planned tests for a 10-seat minibus\n\n\n\n\n\nTest\nCapacity\nRequests\nExpected\nResult\n\n\n\n\nOrdinary\n10\n4, 3\nBoth booked\nPass\n\n\nExact fit\n10\n4, 6\nBoth booked\nFail\n\n\nOver capacity\n10\n4, 7\nSecond rejected\nPass\n\n\nEmpty\n10\nnone\nNothing booked\nPass\n\n\n\n\n\n\n: Planned tests for a 10-seat minibus {#tbl-minibus-tests .data-table .row-headers}"
+  },
+  {
+    "objectID": "lucid/components.html#trace-tables",
+    "href": "lucid/components.html#trace-tables",
+    "title": "Components",
+    "section": "Trace tables",
+    "text": "Trace tables\nA .trace-table keeps its first column visible while the rest scrolls, so each step stays next to its state.\n\n\n\nTable 2: Trace of the minibus algorithm for requests of 4, 7, and 3 seats\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStep\nRequest\nCondition\nBooked before\nBooked after\nSeats left\nDecision\nNote\n\n\n\n\n1\n4\n0 + 4 &lt; 10\n0\n4\n6\nBook\nOrdinary request\n\n\n2\n7\n4 + 7 &lt; 10\n4\n4\n6\nReject\nWould exceed capacity\n\n\n3\n3\n4 + 3 &lt; 10\n4\n7\n3\nBook\nFits with room to spare"
+  },
+  {
+    "objectID": "lucid/components.html#great-tables",
+    "href": "lucid/components.html#great-tables",
+    "title": "Components",
+    "section": "Great Tables",
+    "text": "Great Tables\nOutput from the Great Tables package is framed automatically. Grids with a stub column give it room and keep it in view on small screens.\n\n\n\nTable 3: Library loan decision table\n\n\n\n\n  \n    \n      Rule\n      R1\n      R2\n      R3\n      R4\n    \n  \n  \n    Conditions\n    Is a memberYYYN\n    Has overdue itemsNNY–\n    Under the loan limitYN––\n    Actions\n    Lend the book✓\n    Refuse the loan✓✓✓\n  \n  \n    Y means yes, N means no, and a dash means the condition does not matter."
+  },
+  {
+    "objectID": "lucid/components.html#pseudocode",
+    "href": "lucid/components.html#pseudocode",
+    "title": "Components",
+    "section": "Pseudocode",
+    "text": "Pseudocode\nA fenced block with the .pseudocode class becomes a numbered terminal. Readers can link to a line.\nbooked ← 0\nfor each request in requests\n    if booked + request ≤ capacity then\n        booked ← booked + request\n        record \"book\"\n    else\n        record \"reject\"\n    end if\nend for\nreturn booked\n```{.pseudocode}\nbooked ← 0\n...\n```"
+  },
+  {
+    "objectID": "lucid/components.html#flowcharts",
+    "href": "lucid/components.html#flowcharts",
+    "title": "Components",
+    "section": "Flowcharts",
+    "text": "Flowcharts\nMermaid diagrams keep their natural size and scroll when wider than the column. Lucid adds an SVG title and description taken from the caption.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nyes\n\n\n\n\n\n\n\nno\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nStart\n\n\n\n\n\n\n\nRead capacity, booked, and request\n\n\n\n\n\n\n\nbooked + request ≤ capacity?\n\n\n\n\n\n\n\nAdd request to booked\n\n\n\n\n\n\n\nReject request\n\n\n\n\n\n\n\nEnd\n\n\n\n\n\n\n\n\nFigure 1: Decision flow for one booking request"
+  },
+  {
+    "objectID": "lucid/components.html#exercises-and-solutions",
+    "href": "lucid/components.html#exercises-and-solutions",
+    "title": "Components",
+    "section": "Exercises and solutions",
+    "text": "Exercises and solutions\nA label inside a heading gets a copy-reference button. A callout titled Solution [-@exr-id] is retitled with the exercise identifier.\n\nE2.3 Trace a running total\n\nExercise 1 Trace running_total([4, 7, 3]) and record total after each iteration.\n\n\n\n\n\n\n\nTipSolution 1\n\n\n\n\n\nAfter each iteration total holds 4, 11, and 14, so the function returns [4, 11, 14].\n\n\n\n### [E2.3]{.exercise-label data-exercise-id=\"E2.3\"} Trace a running total {.exercise-heading}\n\n::: {#exr-running-total data-exercise-id=\"E2.3\"}\nTrace `running_total([4, 7, 3])` ...\n:::\n\n::: {.callout-tip collapse=\"true\" title=\"Solution [-@exr-running-total]\"}\n...\n:::"
+  },
+  {
+    "objectID": "lucid/components.html#scope-notes",
+    "href": "lucid/components.html#scope-notes",
+    "title": "Components",
+    "section": "Scope notes",
+    "text": "Scope notes\n\nOptional extension: weighted totals\nMultiply each value by its weight before adding it. The loop structure does not change.\n\n\nPreview: files and records\nThe next module reads these values from a CSV file instead of a list."
+  },
+  {
+    "objectID": "lucid/components.html#worksheets",
+    "href": "lucid/components.html#worksheets",
+    "title": "Components",
+    "section": "Worksheets",
+    "text": "Worksheets\n\nSpreadsheet preview\n\n  ABC\n  1RegionOrdersRevenue\n  2North1204=B2*40\n  3East986=B3*40\n\n\n\nLettered answers\n\n\ntotal is 14 after the loop.\ntotal is 11 after the loop.\nThe loop never runs.\nThe function raises an error.\n\n\n\n\nAnswers written by hand\n\n  Iterationvaluetotal\n  1\n  2\n\n\n\nNotice\n\nSubmit the paper before you leave the room."
+  },
+  {
+    "objectID": "lucid/index.html",
+    "href": "lucid/index.html",
+    "title": "Lucid",
+    "section": "",
+    "text": "Lucid is a Quarto format for material that people study rather than skim: textbooks, course sites, lab manuals, and technical reports. It favours legible type, a palette that stays distinguishable for colour-blind readers, restrained geometry, and interactions that work from a keyboard."
+  },
+  {
+    "objectID": "lucid/index.html#principles",
+    "href": "lucid/index.html#principles",
+    "title": "Lucid",
+    "section": "Principles",
+    "text": "Principles\n\nClarity first\n\nProse sits at a measure of 76 characters. Headings use Jost, body text uses Libre Franklin, and numbers in tables share one width so columns line up.\n\nColour that works for every reader\n\nAccents come from the viridis scale, which stays perceptually even and distinguishable under common colour-vision deficiencies. Neutrals are charcoal and paper.\n\nRestrained geometry\n\nCorners are nearly square. A component gets one hairline frame and one coloured edge, never a heavy shadow.\n\nAccessible by default\n\nTable headers carry scope, wide tables become focusable scroll regions, collapsible callouts respond to Enter and Space, and diagrams receive an SVG title and description.\n\nFaithful on paper\n\nPrint styles switch to black on white, hide navigation, and keep tables, pseudocode, and diagrams legible."
+  },
+  {
+    "objectID": "lucid/index.html#install-and-use",
+    "href": "lucid/index.html#install-and-use",
+    "title": "Lucid",
+    "section": "Install and use",
+    "text": "Install and use\nquarto add brenobeirigo/quarto-themes\nformat:\n  lucid-html: default\nAny ordinary HTML option still works under lucid-html. For a book, also set reader-mode: true under book: to enable the wide reading layout."
+  },
+  {
+    "objectID": "lucid/index.html#options",
+    "href": "lucid/index.html#options",
+    "title": "Lucid",
+    "section": "Options",
+    "text": "Options\nEach enhancement can be switched off under lucid: in document or project metadata.\n\n\n\nTable 1: Options read by the Lucid filter\n\n\n\n\n\n\n\n\n\n\nOption\nDefault\nEffect\n\n\n\n\naccessible-tables\ntrue\nAdds scope to header cells and turns the first column of .row-headers tables into row headers\n\n\npseudocode\ntrue\nRenders .pseudocode code blocks as a numbered terminal\n\n\nflowcharts\ntrue\nKeeps Mermaid diagrams at a readable size and adds an SVG title and description\n\n\ncallouts\ntrue\nMakes collapsible callouts keyboard-operable and retitles solution callouts\n\n\ncopy-refs\ntrue\nAdds a copy-reference button to numbered labels in headings\n\n\ntable-scroll\ntrue\nMakes wide tables focusable scroll regions with a hint on small screens\n\n\npage-references\nfalse\nKeeps the page-local bibliography visible on every citing page\n\n\n\n\n\n\nlucid:\n  copy-refs: false\n  page-references: true"
+  },
+  {
+    "objectID": "lucid/index.html#customise",
+    "href": "lucid/index.html#customise",
+    "title": "Lucid",
+    "section": "Customise",
+    "text": "Customise\n\nColours and fonts\nEvery token in lucid-light.scss and lucid-dark.scss is a !default Sass variable. Put your values in a brand file and list it after the palette. Listing a theme replaces the one the format supplies, so name the Lucid layers too.\n/*-- scss:defaults --*/\n$lucid-accent: #2a9d8f;\n$lucid-accent-strong: #1d6f65;\n$lucid-font-heading: \"Source Serif 4\", Georgia, serif;\nformat:\n  lucid-html:\n    theme:\n      light:\n        - cosmo\n        - _extensions/brenobeirigo/lucid/scss/lucid.scss\n        - _extensions/brenobeirigo/lucid/scss/lucid-light.scss\n        - brand.scss\n      dark:\n        - darkly\n        - _extensions/brenobeirigo/lucid/scss/lucid.scss\n        - _extensions/brenobeirigo/lucid/scss/lucid-dark.scss\n        - brand.scss\n\n\nOne component\nComponents read CSS custom properties, so a small stylesheet can adjust them without recompiling the theme.\n.landing-page {\n  --lucid-accent-light: #ffd166;\n}"
+  },
+  {
+    "objectID": "lucid/index.html#typography",
+    "href": "lucid/index.html#typography",
+    "title": "Lucid",
+    "section": "Typography",
+    "text": "Typography\n\nA third-level heading\nBody text carries strong emphasis, emphasis, inline code, and a link. Footnotes appear in the margin or at the end of the page.1\n\nA block quotation keeps the reading measure and sets itself apart with a rule.\n\n\nA fourth-level heading\n\nOrdered lists keep their numbers aligned.\nNested content stays within the measure.\n\nUnordered items use the body colour."
+  },
+  {
+    "objectID": "lucid/index.html#callouts",
+    "href": "lucid/index.html#callouts",
+    "title": "Lucid",
+    "section": "Callouts",
+    "text": "Callouts\n\n\n\n\n\n\nNote\n\n\n\nA note uses the viridis blue edge.\n\n\n\n\n\n\n\n\nTip\n\n\n\nA tip uses the strong green edge.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nA warning uses the light green edge.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nImportant and caution callouts use the ink colour.\n\n\n\n\n\n\n\n\nCautionA collapsed callout\n\n\n\n\n\nFocus the header and press Enter or Space to open it."
+  },
+  {
+    "objectID": "lucid/index.html#code",
+    "href": "lucid/index.html#code",
+    "title": "Lucid",
+    "section": "Code",
+    "text": "Code\ndef running_total(values):\n    \"\"\"Return the cumulative sum after each value.\"\"\"\n    total = 0\n    totals = []\n    for value in values:\n        total += value\n        totals.append(total)\n    return totals"
+  },
+  {
+    "objectID": "lucid/index.html#tables",
+    "href": "lucid/index.html#tables",
+    "title": "Lucid",
+    "section": "Tables",
+    "text": "Tables\nAn ordinary Markdown table receives quiet banding.\n\n\n\nTable 2: Orders and revenue by region\n\n\n\n\n\nRegion\nOrders\nRevenue (€)\n\n\n\n\nNorth\n1,204\n48,160\n\n\nEast\n986\n39,440\n\n\nSouth\n1,532\n61,280\n\n\nWest\n743\n29,720"
+  },
+  {
+    "objectID": "lucid/index.html#footnotes",
+    "href": "lucid/index.html#footnotes",
+    "title": "Lucid",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nFootnotes use the body typeface at a smaller size.↩︎"
+  }
+]

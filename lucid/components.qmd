@@ -1,0 +1,200 @@
+---
+title: "Components"
+subtitle: "Tables, pseudocode, diagrams, exercises, and worksheets"
+description: "Every Lucid component with the markup that produces it."
+---
+
+## Data tables
+
+Add `.data-table` to a captioned table for a dark header, banded rows, and a frame. Add `.row-headers` when the first column names each row.
+
+| Test | Capacity | Requests | Expected | Result |
+|---|---:|---|---|---|
+| Ordinary | 10 | 4, 3 | Both booked | Pass |
+| Exact fit | 10 | 4, 6 | Both booked | Fail |
+| Over capacity | 10 | 4, 7 | Second rejected | Pass |
+| Empty | 10 | none | Nothing booked | Pass |
+
+: Planned tests for a 10-seat minibus {#tbl-minibus-tests .data-table .row-headers}
+
+```markdown
+: Planned tests for a 10-seat minibus {#tbl-minibus-tests .data-table .row-headers}
+```
+
+## Trace tables
+
+A `.trace-table` keeps its first column visible while the rest scrolls, so each step stays next to its state.
+
+| Step | Request | Condition | Booked before | Booked after | Seats left | Decision | Note |
+|---|---:|---|---:|---:|---:|---|---|
+| 1 | 4 | 0 + 4 < 10 | 0 | 4 | 6 | Book | Ordinary request |
+| 2 | 7 | 4 + 7 < 10 | 4 | 4 | 6 | Reject | Would exceed capacity |
+| 3 | 3 | 4 + 3 < 10 | 4 | 7 | 3 | Book | Fits with room to spare |
+
+: Trace of the minibus algorithm for requests of 4, 7, and 3 seats {#tbl-minibus-trace .data-table .trace-table .row-headers}
+
+## Great Tables
+
+Output from the Great Tables package is framed automatically. Grids with a stub column give it room and keep it in view on small screens.
+
+::: {#tbl-loan-decision}
+
+```{=html}
+<div id="loan-decision">
+<table class="gt_table" data-quarto-disable-processing="true">
+  <thead>
+    <tr>
+      <th class="gt_col_heading gt_left">Rule</th>
+      <th class="gt_col_heading gt_center">R1</th>
+      <th class="gt_col_heading gt_center">R2</th>
+      <th class="gt_col_heading gt_center">R3</th>
+      <th class="gt_col_heading gt_center">R4</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><th colspan="5" class="gt_group_heading">Conditions</th></tr>
+    <tr><th class="gt_row gt_left gt_stub">Is a member</th><td class="gt_row gt_center">Y</td><td class="gt_row gt_center">Y</td><td class="gt_row gt_center">Y</td><td class="gt_row gt_center">N</td></tr>
+    <tr><th class="gt_row gt_left gt_stub">Has overdue items</th><td class="gt_row gt_center">N</td><td class="gt_row gt_center">N</td><td class="gt_row gt_center">Y</td><td class="gt_row gt_center">–</td></tr>
+    <tr><th class="gt_row gt_left gt_stub">Under the loan limit</th><td class="gt_row gt_center">Y</td><td class="gt_row gt_center">N</td><td class="gt_row gt_center">–</td><td class="gt_row gt_center">–</td></tr>
+    <tr><th colspan="5" class="gt_group_heading">Actions</th></tr>
+    <tr><th class="gt_row gt_left gt_stub">Lend the book</th><td class="gt_row gt_center" style="background-color: #e8f5ee;">✓</td><td class="gt_row gt_center"></td><td class="gt_row gt_center"></td><td class="gt_row gt_center"></td></tr>
+    <tr><th class="gt_row gt_left gt_stub">Refuse the loan</th><td class="gt_row gt_center"></td><td class="gt_row gt_center" style="background-color: #e8f5ee;">✓</td><td class="gt_row gt_center" style="background-color: #e8f5ee;">✓</td><td class="gt_row gt_center" style="background-color: #e8f5ee;">✓</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr><td class="gt_sourcenote" colspan="5">Y means yes, N means no, and a dash means the condition does not matter.</td></tr>
+  </tfoot>
+</table>
+</div>
+```
+
+Library loan decision table
+
+:::
+
+## Pseudocode
+
+A fenced block with the `.pseudocode` class becomes a numbered terminal. Readers can link to a line.
+
+```{.pseudocode}
+booked ← 0
+for each request in requests
+    if booked + request ≤ capacity then
+        booked ← booked + request
+        record "book"
+    else
+        record "reject"
+    end if
+end for
+return booked
+```
+
+````markdown
+```{.pseudocode}
+booked ← 0
+...
+```
+````
+
+## Flowcharts
+
+Mermaid diagrams keep their natural size and scroll when wider than the column. Lucid adds an SVG title and description taken from the caption.
+
+```{mermaid}
+%%| label: fig-minibus-flow
+%%| fig-cap: "Decision flow for one booking request"
+flowchart TD
+  A([Start]) --> B[/Read capacity, booked, and request/]
+  B --> C{booked + request ≤ capacity?}
+  C -- yes --> D[Add request to booked]
+  C -- no --> E[Reject request]
+  D --> F([End])
+  E --> F
+```
+
+## Exercises and solutions
+
+A label inside a heading gets a copy-reference button. A callout titled `Solution [-@exr-id]` is retitled with the exercise identifier.
+
+### [E2.3]{.exercise-label data-exercise-id="E2.3"} Trace a running total {.exercise-heading}
+
+::: {#exr-running-total data-exercise-id="E2.3"}
+Trace `running_total([4, 7, 3])` and record `total` after each iteration.
+:::
+
+::: {.callout-tip collapse="true" title="Solution [-@exr-running-total]"}
+After each iteration `total` holds 4, 11, and 14, so the function returns `[4, 11, 14]`.
+:::
+
+```markdown
+### [E2.3]{.exercise-label data-exercise-id="E2.3"} Trace a running total {.exercise-heading}
+
+::: {#exr-running-total data-exercise-id="E2.3"}
+Trace `running_total([4, 7, 3])` ...
+:::
+
+::: {.callout-tip collapse="true" title="Solution [-@exr-running-total]"}
+...
+:::
+```
+
+## Scope notes
+
+```{=html}
+<details class="scope-note optional">
+<summary><strong>Optional extension: weighted totals</strong></summary>
+```
+
+Multiply each value by its weight before adding it. The loop structure does not change.
+
+```{=html}
+</details>
+```
+
+```{=html}
+<details class="scope-note preview">
+<summary><strong>Preview: files and records</strong></summary>
+```
+
+The next module reads these values from a CSV file instead of a list.
+
+```{=html}
+</details>
+```
+
+## Worksheets
+
+### Spreadsheet preview
+
+```{=html}
+<table class="excel-table" data-quarto-disable-processing="true">
+  <tr><th></th><th>A</th><th>B</th><th>C</th></tr>
+  <tr><td>1</td><td>Region</td><td>Orders</td><td>Revenue</td></tr>
+  <tr><td>2</td><td>North</td><td>1204</td><td>=B2*40</td></tr>
+  <tr><td>3</td><td>East</td><td>986</td><td>=B3*40</td></tr>
+</table>
+```
+
+### Lettered answers
+
+::: {.alpha-list}
+- `total` is 14 after the loop.
+- `total` is 11 after the loop.
+- The loop never runs.
+- The function raises an error.
+:::
+
+### Answers written by hand
+
+```{=html}
+<table class="handwritten-table" data-quarto-disable-processing="true">
+  <tr><th>Iteration</th><th>value</th><th>total</th></tr>
+  <tr><td>1</td><td></td><td></td></tr>
+  <tr><td>2</td><td></td><td></td></tr>
+</table>
+```
+
+### Notice
+
+::: {.warningbox}
+Submit the paper before you leave the room.
+:::

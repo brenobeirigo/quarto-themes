@@ -1,0 +1,1 @@
+Sitemap: https://brenobeirigo.github.io/quarto-themes/sitemap.xml

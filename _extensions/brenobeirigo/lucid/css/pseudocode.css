@@ -1,0 +1,133 @@
+/* Lucid pseudocode: a line-addressable listing presented as a terminal.
+
+   Write a fenced block with the .pseudocode class; lucid.lua adds line numbers.
+   Change the title bar text with --lucid-pseudocode-label, for example
+   :root { --lucid-pseudocode-label: "Pseudocódigo"; } */
+
+div.sourceCode:has(pre.terminal-pseudocode) {
+  background: var(--lucid-terminal-surface);
+  border: 1px solid var(--lucid-terminal-line);
+  border-radius: 0.4rem;
+  box-shadow: 0 0.7rem 1.7rem rgb(0 0 0 / 12%);
+  margin: 1rem 0 1.25rem;
+  overflow: hidden;
+  padding-top: 2.35rem;
+  position: relative;
+}
+
+/* Title bar */
+div.sourceCode:has(pre.terminal-pseudocode)::before {
+  background: var(--lucid-terminal-bar);
+  border-bottom: 1px solid color-mix(in srgb, var(--lucid-terminal-line) 85%, var(--lucid-terminal-bar));
+  box-sizing: border-box;
+  color: color-mix(in srgb, var(--lucid-terminal-text) 70%, var(--lucid-terminal-muted));
+  content: var(--lucid-pseudocode-label, "Pseudocode");
+  font-family: var(--lucid-font-heading);
+  font-size: 0.68rem;
+  font-weight: 650;
+  height: 2.35rem;
+  inset: 0 0 auto;
+  letter-spacing: 0.09em;
+  line-height: 1;
+  padding: 0.72rem 3.1rem 0.58rem 4.35rem;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+/* Window dots */
+div.sourceCode:has(pre.terminal-pseudocode)::after {
+  background: color-mix(in srgb, var(--lucid-terminal-muted) 85%, var(--lucid-terminal-surface));
+  border-radius: 50%;
+  box-shadow:
+    0.95rem 0 color-mix(in srgb, var(--lucid-terminal-muted) 85%, var(--lucid-terminal-surface)),
+    1.9rem 0 color-mix(in srgb, var(--lucid-terminal-muted) 70%, var(--lucid-terminal-text));
+  content: "";
+  height: 0.48rem;
+  left: 1rem;
+  position: absolute;
+  top: 0.9rem;
+  width: 0.48rem;
+}
+
+div.sourceCode:has(pre.terminal-pseudocode) pre,
+pre.terminal-pseudocode {
+  background: transparent !important;
+  border: 0;
+  border-radius: 0;
+  color: var(--lucid-terminal-text);
+  font-family: var(--lucid-font-mono);
+  font-size: 0.84rem;
+  line-height: 1.62;
+  margin: 0;
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 1rem 0 1.05rem;
+  white-space: pre;
+}
+
+.terminal-pseudocode code,
+.terminal-pseudocode code span {
+  background: transparent !important;
+  color: var(--lucid-terminal-text) !important;
+  font-family: inherit;
+}
+
+.terminal-pseudocode code > span {
+  left: 0 !important;
+  padding-right: 1.1rem;
+}
+
+/* Line-number gutter */
+.terminal-pseudocode code > span > a:first-child::before {
+  border-right: 1px solid var(--lucid-terminal-line);
+  color: var(--lucid-terminal-muted) !important;
+  content: counter(source-line);
+  font-variant-numeric: tabular-nums;
+  margin-right: 1rem;
+  min-width: 3.2rem;
+  padding-right: 0.85rem;
+  text-align: right;
+}
+
+.terminal-pseudocode code > span:target {
+  background: rgb(255 255 255 / 7%) !important;
+}
+
+.code-copy-outer-scaffold:has(pre.terminal-pseudocode) .code-copy-button {
+  color: color-mix(in srgb, var(--lucid-terminal-text) 80%, var(--lucid-terminal-muted));
+  top: 0.42rem;
+}
+
+.code-copy-outer-scaffold:has(pre.terminal-pseudocode) .code-copy-button:hover {
+  background: var(--lucid-terminal-line);
+  color: #ffffff;
+}
+
+@media (max-width: 650px) {
+  div.sourceCode:has(pre.terminal-pseudocode) pre,
+  pre.terminal-pseudocode {
+    font-size: 0.78rem;
+  }
+}
+
+@media print {
+  div.sourceCode:has(pre.terminal-pseudocode) {
+    background: #ffffff;
+    border-color: #777777;
+    box-shadow: none;
+  }
+
+  div.sourceCode:has(pre.terminal-pseudocode)::before {
+    background: #eeeeee;
+    border-color: #bbbbbb;
+    color: #222222;
+  }
+
+  div.sourceCode:has(pre.terminal-pseudocode) pre,
+  pre.terminal-pseudocode,
+  .terminal-pseudocode code,
+  .terminal-pseudocode code span {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+}

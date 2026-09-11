@@ -1,0 +1,39 @@
+# Gallery site for the themes in _extensions/. Rendered to docs/ for GitHub Pages.
+# quarto add installs only _extensions/, so nothing here reaches other projects.
+
+project:
+  type: website
+  output-dir: docs
+  render:
+    - index.qmd
+    - lucid/*.qmd
+
+website:
+  title: "Quarto themes"
+  site-url: https://brenobeirigo.github.io/quarto-themes/
+  repo-url: https://github.com/brenobeirigo/quarto-themes
+  reader-mode: false
+  navbar:
+    left:
+      - href: index.qmd
+        text: Themes
+      - text: Lucid
+        menu:
+          - href: lucid/index.qmd
+            text: Overview
+          - href: lucid/components.qmd
+            text: Components
+          - href: lucid/landing.qmd
+            text: Landing page
+          - href: lucid/course-outline.qmd
+            text: Course outline
+    right:
+      - icon: github
+        href: https://github.com/brenobeirigo/quarto-themes
+        aria-label: Source on GitHub
+  page-footer:
+    center: "Quarto themes · Breno Alves Beirigo"
+
+format:
+  lucid-html:
+    toc: true

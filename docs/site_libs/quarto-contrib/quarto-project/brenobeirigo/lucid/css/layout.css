@@ -1,0 +1,123 @@
+/* Lucid layout: diagram viewports, media, captions, and reader mode. */
+
+/* Diagrams keep their natural size so labels stay readable. A wide diagram
+   scrolls inside its own viewport instead of shrinking to tiny text. */
+.flowchart-viewport {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  overscroll-behavior-inline: contain;
+  padding: 0.5rem 0;
+  scrollbar-gutter: stable both-edges;
+  width: 100%;
+}
+
+svg.flowchart {
+  display: block;
+  margin: 0 auto;
+  max-width: none !important;
+  overflow: visible;
+}
+
+.flowchart-viewport > svg.flowchart {
+  height: auto !important;
+  width: var(--flowchart-intrinsic-width, 100%) !important;
+}
+
+svg.flowchart foreignObject,
+svg.flowchart .nodeLabel,
+svg.flowchart .nodeLabel p {
+  overflow: visible !important;
+}
+
+svg.flowchart .nodeLabel,
+svg.flowchart .nodeLabel p {
+  margin: 0 !important;
+  white-space: normal !important;
+}
+
+svg.flowchart .node rect,
+svg.flowchart .node circle,
+svg.flowchart .node ellipse,
+svg.flowchart .node polygon,
+svg.flowchart .node path {
+  stroke-width: 1.25px !important;
+}
+
+svg.flowchart .label,
+svg.flowchart .nodeLabel,
+svg.flowchart .label text,
+svg.flowchart .label span,
+svg.flowchart text,
+svg.flowchart foreignObject div {
+  font-weight: var(--mermaid-font-weight) !important;
+}
+
+/* Embedded videos fit the reading column at every width. */
+.quarto-video {
+  max-width: 100%;
+}
+
+.quarto-video > iframe {
+  aspect-ratio: 4 / 3;
+  display: block;
+  height: auto !important;
+  margin-inline: auto;
+  max-width: 100%;
+  width: min(100%, 400px) !important;
+}
+
+/* A centred figure centres its caption as well. */
+main.content .quarto-figure.quarto-figure-center figcaption,
+main.content .quarto-figure.quarto-figure-center .quarto-float-caption {
+  text-align: center !important;
+}
+
+/* Wide captioned tables scroll inside their float; the caption stays put. */
+main.content .quarto-float-tbl > div[aria-describedby] {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-gutter: stable both-edges;
+}
+
+/* Reader mode (book: reader-mode: true) removes both sidebars and widens the
+   column to 1000px while prose keeps its measure. */
+@media (min-width: 992px) {
+  body:has(.quarto-reader-toggle.reader) #quarto-sidebar,
+  body:has(.quarto-reader-toggle.reader) #quarto-margin-sidebar {
+    display: none !important;
+  }
+
+  body:has(.quarto-reader-toggle.reader) #quarto-content.page-columns {
+    grid-template-columns:
+      [screen-start] 1.5rem
+      [screen-start-inset] 0
+      [page-start] minmax(0, 1fr)
+      [page-start-inset] 0
+      [body-start-outset] 0
+      [body-start] 0
+      [body-content-start] minmax(0, 1000px)
+      [body-content-end] 0
+      [body-end] 0
+      [body-end-outset] 0
+      [page-end-inset] minmax(0, 1fr)
+      [page-end] 0
+      [screen-end-inset] 1.5rem
+      [screen-end];
+  }
+
+  body:has(.quarto-reader-toggle.reader) main.content {
+    max-width: 1000px;
+    width: 100%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}

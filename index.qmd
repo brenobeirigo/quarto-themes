@@ -1,0 +1,36 @@
+---
+title: "Quarto themes"
+subtitle: "Installable looks for Quarto books, websites, and documents"
+toc: false
+---
+
+Each theme in this collection is a Quarto format extension. Install the collection once, then choose a theme for a project by naming its format.
+
+```bash
+quarto add brenobeirigo/quarto-themes
+```
+
+```yaml
+format:
+  lucid-html: default
+```
+
+## Themes
+
+::: {.landing-cards}
+::: {.landing-card}
+<span class="landing-card-number">LUCID-HTML</span>
+
+### [Lucid](lucid/index.qmd)
+
+Clear, accessible, and restrained. Viridis accents on charcoal and paper, square edges, and keyboard-friendly interactions, for material that people study rather than skim.
+
+[Overview](lucid/index.qmd) · [Components](lucid/components.qmd) · [Landing page](lucid/landing.qmd) · [Course outline](lucid/course-outline.qmd)
+:::
+:::
+
+## How a theme is built
+
+A theme lives in `_extensions/brenobeirigo/<name>/` and declares one HTML format. Its SCSS layers set Bootstrap variables and publish colour tokens as CSS custom properties. Component stylesheets read only those tokens, so light and dark modes need no duplicated rules. A Lua filter adds build-time accessibility fixes and loads optional browser enhancements.
+
+The [repository README](https://github.com/brenobeirigo/quarto-themes#readme) explains how to customise a theme and how to add a new one.

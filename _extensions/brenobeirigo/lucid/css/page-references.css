@@ -1,0 +1,9 @@
+/* Lucid page references (opt in with lucid: page-references: true).
+
+   A Quarto book keeps a page-local bibliography for citation popovers but
+   hides it when the book has no single closing bibliography. This keeps the
+   list of references visible at the end of every page that cites a source. */
+
+#refs.references {
+  display: block !important;
+}

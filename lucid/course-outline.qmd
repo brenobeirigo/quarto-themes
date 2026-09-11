@@ -1,0 +1,221 @@
+---
+title: "Course outline"
+description: "A Lucid course outline: hero, key facts, dates, modules, and support."
+toc: false
+---
+
+::: {.syllabus-hero}
+<p class="eyebrow">COURSE OUTLINE · 2026–2027</p>
+
+::: {.hero-title}
+Reasoning with data
+:::
+
+Learn to turn an unclear question into an analysis that another person can inspect, test, and improve.
+
+::: {.course-meta}
+::: {.meta-pill}
+**6 modules**<br>
+One cumulative learning path
+:::
+::: {.meta-pill}
+**About 84 hours**<br>
+Including independent study
+:::
+::: {.meta-pill}
+**No prerequisites**<br>
+Starts from problem formulation
+:::
+:::
+
+::: {.course-actions}
+[Start module 1](landing.qmd){.btn .btn-primary}
+[See the components](components.qmd){.btn .btn-outline-secondary}
+:::
+:::
+
+::: {.syllabus-nav role="navigation" aria-label="Outline sections"}
+**Jump to:** [Getting started](#getting-started) | [Dates](#dates) | [Modules](#modules) | [Success](#success) | [Weekly rhythm](#rhythm) | [Support](#support)
+:::
+
+## Getting started {#getting-started}
+
+::: {.quick-start}
+::: {.quick-start-item}
+### If you are enrolled
+
+Open the course space, check this week's release, and join the launch session.
+:::
+::: {.quick-start-item}
+### If you are studying independently
+
+Follow the modules in order and use the checks at the end of each page.
+:::
+:::
+
+::: {.learning-path}
+::: {.path-stage}
+**Frame problems and evidence**
+Define problems, design algorithms, and check tabular data.
+:::
+::: {.path-stage}
+**Build executable solutions**
+Translate algorithms into programs and organise decisions in functions.
+:::
+::: {.path-stage}
+**Integrate and assure results**
+Test, validate, and improve a complete solution.
+:::
+:::
+
+## Planned dates {#dates}
+
+::: {.calendar-grid}
+::: {.calendar-card}
+**Introduction**<br>
+31 August 2026<br>
+First problem launch
+:::
+::: {.calendar-card}
+**Review**<br>
+20 October 2026<br>
+Integration and practice
+:::
+::: {.calendar-card}
+**Examination**<br>
+21 October 2026<br>
+Written, closed book
+:::
+::: {.calendar-card}
+**Resit**<br>
+4 November 2026<br>
+Same content blueprint
+:::
+:::
+
+## Modules {#modules}
+
+::: {.module-list}
+::: {.module-card}
+::: {.module-header}
+<div class="module-number">01</div>
+
+::: {.module-heading}
+MODULE 1
+
+### Problems and algorithms {.unnumbered .unlisted}
+
+Formulate before you program.
+:::
+
+<span class="module-effort">About 12 hours</span>
+:::
+
+::: {.module-outcome}
+**Outcome:** you can state a computational problem precisely and trace an algorithm that solves it.
+:::
+
+::: {.module-grid}
+::: {.module-section}
+#### You will learn {.unnumbered .unlisted}
+
+- Inputs, outputs, and state
+- Pseudocode and flowcharts
+:::
+::: {.module-section}
+#### You will do {.unnumbered .unlisted}
+
+- Trace a booking algorithm by hand
+- Design tests at and around a threshold
+:::
+:::
+
+::: {.completion-check}
+**Completion check:** you can explain why an exact-fit request fails a strict comparison.
+:::
+:::
+:::
+
+## What success looks like {#success}
+
+::: {.success-grid}
+::: {.success-card}
+### Explain
+
+You can say what a result means and what it cannot support.
+:::
+::: {.success-card}
+### Verify
+
+You can choose tests that would reveal a wrong answer.
+:::
+:::
+
+## Weekly rhythm {#rhythm}
+
+::: {.process-intro}
+Each week follows the same three moves, so you always know what comes next.
+:::
+
+::: {.rhythm-grid}
+::: {.rhythm-card}
+#### Launch
+
+A short problem introduces the week.
+:::
+::: {.rhythm-card}
+#### Study
+
+Readings and checks build the ideas.
+:::
+::: {.rhythm-card}
+#### Consolidate
+
+A paper exercise brings them together.
+:::
+:::
+
+::: {.timeline}
+1. Read the problem and write down what you already know.
+2. Trace the worked example.
+3. Attempt the practice set before opening solutions.
+:::
+
+::: {.workload-note}
+### Workload
+
+Plan about 12 hours per module, spread over at least three days.
+:::
+
+## Support {#support}
+
+::: {.support-grid}
+::: {.support-card}
+### Questions about content
+
+Ask in the [discussion forum](components.qmd) so that others benefit from the answer.
+:::
+::: {.support-card}
+### Personal circumstances
+
+Contact the [course coordinator](landing.qmd) directly and in confidence.
+:::
+:::
+
+::: {.tool-grid}
+::: {.tool-card .tool-card-wide}
+### Python
+
+The reference language for every programming exercise. Any recent version works.
+:::
+::: {.tool-card}
+### Spreadsheet
+
+Used for checking results and communicating them.
+:::
+::: {.tool-card}
+### Paper
+
+Tracing by hand remains the fastest way to find a logic error.
+:::
+:::

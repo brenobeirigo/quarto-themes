@@ -1,0 +1,446 @@
+/*-- scss:defaults --*/
+
+// Lucid shared layer.
+//
+// The palette files (lucid-light.scss, lucid-dark.scss) define the $lucid-*
+// colour tokens. This layer maps those tokens onto Bootstrap and Quarto and
+// holds every rule both modes share. All assignments use !default, so a brand
+// file listed after the palette can override any of them.
+
+// Fonts. Bootswatch imports $web-font-path; pointing it at the Lucid faces
+// replaces the base theme font request. Set it to false to self-host.
+$web-font-path: "https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;1,400&display=swap" !default;
+$lucid-font-sans: "Libre Franklin", "Segoe UI", Arial, sans-serif !default;
+$lucid-font-heading: "Jost", "Segoe UI", Arial, sans-serif !default;
+$lucid-font-mono: "Consolas", "Cascadia Mono", "SFMono-Regular", monospace !default;
+
+// Geometry: square edges and a readable line length.
+$lucid-radius: 0.2rem !default;
+$lucid-measure: 76ch !default;
+
+// The pseudocode terminal is dark in both modes.
+$lucid-terminal-surface: #181a1f !default;
+$lucid-terminal-bar: #22252b !default;
+$lucid-terminal-line: #3b3f45 !default;
+$lucid-terminal-text: #f1f3f5 !default;
+$lucid-terminal-muted: #858b95 !default;
+
+// Bootstrap and Quarto variables derived from the tokens.
+$primary: $lucid-blue !default;
+$secondary: $lucid-muted !default;
+// Button text must meet WCAG AA contrast. Darkly lowers this to 1.9.
+$min-contrast-ratio: 4.5 !default;
+$body-bg: $lucid-paper !default;
+$body-color: $lucid-text !default;
+$body-secondary-color: $lucid-muted !default;
+$body-tertiary-bg: $lucid-soft !default;
+$border-color: $lucid-line !default;
+$link-color: $lucid-blue !default;
+$link-hover-color: $lucid-accent-strong !default;
+$navbar-bg: $lucid-chrome !default;
+$navbar-fg: $lucid-chrome-text !default;
+$navbar-hl: $lucid-accent-light !default;
+$footer-bg: $lucid-chrome !default;
+$footer-fg: $lucid-chrome-text !default;
+$font-family-sans-serif: $lucid-font-sans !default;
+$headings-font-family: $lucid-font-heading !default;
+$font-family-monospace: $lucid-font-mono !default;
+$font-size-root: 16px !default;
+$headings-font-weight: 600 !default;
+$border-radius: $lucid-radius !default;
+$code-bg: $lucid-soft !default;
+$code-color: $lucid-text !default;
+$toc-color: $lucid-accent-strong !default;
+
+/*-- scss:rules --*/
+
+// Tokens as custom properties. The plain CSS component files read only these,
+// so every component follows the active colour scheme without extra rules.
+:root {
+  --lucid-ink: #{$lucid-ink};
+  --lucid-text: #{$lucid-text};
+  --lucid-muted: #{$lucid-muted};
+  --lucid-paper: #{$lucid-paper};
+  --lucid-wash: #{$lucid-wash};
+  --lucid-soft: #{$lucid-soft};
+  --lucid-mist: #{$lucid-mist};
+  --lucid-line: #{$lucid-line};
+  --lucid-accent: #{$lucid-accent};
+  --lucid-accent-strong: #{$lucid-accent-strong};
+  --lucid-accent-light: #{$lucid-accent-light};
+  --lucid-blue: #{$lucid-blue};
+  --lucid-violet: #{$lucid-violet};
+  --lucid-danger: #{$lucid-danger};
+  --lucid-on-accent: #{$lucid-on-accent};
+  --lucid-chrome: #{$lucid-chrome};
+  --lucid-chrome-text: #{$lucid-chrome-text};
+  --lucid-chrome-muted: #{$lucid-chrome-muted};
+  --lucid-chrome-line: #{$lucid-chrome-line};
+
+  --lucid-table-head-bg: #{$lucid-table-head-bg};
+  --lucid-table-head-text: #{$lucid-table-head-text};
+  --lucid-table-frame: #{$lucid-table-frame};
+  --lucid-table-row-alt: #{$lucid-table-row-alt};
+  --lucid-table-row-hover: #{$lucid-table-row-hover};
+  --lucid-table-row-head: #{$lucid-table-row-head};
+  --lucid-shadow: #{$lucid-shadow};
+
+  --lucid-terminal-surface: #{$lucid-terminal-surface};
+  --lucid-terminal-bar: #{$lucid-terminal-bar};
+  --lucid-terminal-line: #{$lucid-terminal-line};
+  --lucid-terminal-text: #{$lucid-terminal-text};
+  --lucid-terminal-muted: #{$lucid-terminal-muted};
+
+  --lucid-font-sans: #{inspect($lucid-font-sans)};
+  --lucid-font-heading: #{inspect($lucid-font-heading)};
+  --lucid-font-mono: #{inspect($lucid-font-mono)};
+  --lucid-radius: #{$lucid-radius};
+  --lucid-measure: #{$lucid-measure};
+
+  // Bootstrap hairlines follow the palette as well.
+  --bs-border-color: #{$lucid-line};
+}
+
+// Mermaid reads these variables while the page is still loading. Declaring
+// them on body, inside the compiled stylesheet of each mode, keeps diagram
+// contrast independent of the later Quarto body-class update.
+body {
+  --mermaid-bg-color: #{$lucid-diagram-bg} !important;
+  --mermaid-fg-color: #{$lucid-diagram-text} !important;
+  --mermaid-fg-color--lighter: #{$lucid-diagram-edge} !important;
+  --mermaid-fg-color--lightest: #{$lucid-diagram-cluster} !important;
+  --mermaid-node-bg-color: #{$lucid-diagram-node} !important;
+  --mermaid-node-fg-color: #{$lucid-diagram-text} !important;
+  --mermaid-label-bg-color: #{$lucid-diagram-bg} !important;
+  --mermaid-label-fg-color: #{$lucid-diagram-text} !important;
+  --mermaid-edge-color: #{$lucid-diagram-edge} !important;
+  --mermaid-font-weight: 400 !important;
+
+  -webkit-font-smoothing: antialiased;
+  container-type: inline-size;
+  line-height: 1.52;
+  overflow-x: clip;
+  text-rendering: optimizeLegibility;
+}
+
+// Typography
+
+a {
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.15em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--lucid-ink);
+  letter-spacing: -0.012em;
+}
+
+h1 {
+  font-size: clamp(2.2rem, 4.5vw, 3.25rem);
+  line-height: 1.05;
+}
+
+h2 {
+  border: 0;
+  font-size: clamp(1.5rem, 2.5vw, 1.9rem);
+  margin-top: 2.25rem;
+  padding-bottom: 0.5rem;
+  position: relative;
+}
+
+// The signature rule: an accent that fades into the hairline.
+h2::after {
+  background: linear-gradient(90deg, var(--lucid-accent), var(--lucid-line) 38%, transparent);
+  bottom: 0;
+  content: "";
+  height: 1px;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.25;
+}
+
+p,
+li {
+  max-width: var(--lucid-measure);
+}
+
+table {
+  font-variant-numeric: tabular-nums;
+}
+
+// Navigation chrome
+
+.navbar {
+  border-bottom: 3px solid var(--lucid-accent);
+  box-shadow: none;
+  font-family: $headings-font-family;
+  font-size: 0.92rem;
+}
+
+.navbar-brand {
+  font-size: 1.02rem;
+  font-weight: 600;
+}
+
+.navbar .nav-link {
+  font-weight: 500;
+}
+
+.navbar .dropdown-menu {
+  border: 1px solid var(--lucid-line);
+  border-radius: $lucid-radius;
+  box-shadow: 0 6px 18px var(--lucid-shadow);
+}
+
+.sidebar-navigation .sidebar-item-text {
+  font-size: 0.88rem;
+}
+
+.sidebar-title,
+.sidebar .chapter-number {
+  color: var(--lucid-ink);
+  font-weight: 600;
+}
+
+.sidebar-item-container .active,
+.sidebar-item-container a:hover {
+  color: var(--lucid-accent-strong);
+}
+
+.sidebar-item-container .active {
+  border-left: 3px solid var(--lucid-accent);
+  margin-left: -0.65rem;
+  padding-left: calc(0.65rem - 3px);
+}
+
+#TOC {
+  font-family: $headings-font-family;
+  font-size: 0.88rem;
+}
+
+#TOC .active {
+  color: var(--lucid-accent-strong) !important;
+  font-weight: 600;
+}
+
+.chapter-number,
+.header-section-number {
+  color: var(--lucid-accent-strong);
+}
+
+.nav-page a {
+  color: var(--lucid-blue);
+  font-family: $headings-font-family;
+  font-weight: 600;
+}
+
+.page-footer,
+.nav-footer {
+  background: var(--lucid-chrome);
+  border-top: 3px solid var(--lucid-accent);
+  color: var(--lucid-chrome-muted);
+  font-family: $headings-font-family;
+  font-size: 0.8rem;
+}
+
+.page-footer a,
+.nav-footer a {
+  color: var(--lucid-chrome-text);
+}
+
+// Callouts: one hairline frame, one coloured edge.
+
+.callout {
+  --lucid-callout-accent: var(--lucid-accent);
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-line) !important;
+  border-left: 4px solid var(--lucid-callout-accent) !important;
+  border-radius: $lucid-radius;
+  box-shadow: none;
+  color: var(--lucid-text);
+  overflow: clip;
+}
+
+.callout.callout-note {
+  --lucid-callout-accent: var(--lucid-blue);
+}
+
+.callout.callout-tip {
+  --lucid-callout-accent: var(--lucid-accent-strong);
+}
+
+.callout.callout-warning {
+  --lucid-callout-accent: var(--lucid-accent-light);
+}
+
+.callout.callout-important,
+.callout.callout-caution {
+  --lucid-callout-accent: var(--lucid-ink);
+}
+
+.callout .callout-header {
+  background: color-mix(in srgb, var(--lucid-callout-accent) #{$lucid-callout-tint}, var(--lucid-paper)) !important;
+  border-bottom: 1px solid color-mix(in srgb, var(--lucid-callout-accent) #{$lucid-callout-line-tint}, var(--lucid-line));
+  color: var(--lucid-ink);
+  font-family: $headings-font-family;
+  font-weight: 600;
+}
+
+.callout .callout-icon-container {
+  color: var(--lucid-callout-accent);
+}
+
+.callout .callout-header[aria-label="Toggle callout"]:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--lucid-callout-accent) 55%, transparent);
+  outline-offset: -3px;
+}
+
+// Code and tables
+
+pre,
+div.sourceCode {
+  border-color: var(--lucid-line);
+  border-radius: $lucid-radius;
+}
+
+pre.text,
+pre.sourceCode,
+.cell-output pre {
+  font-size: 0.82em;
+}
+
+.table > :not(caption) > * > * {
+  border-bottom-color: var(--lucid-line);
+}
+
+main.content table.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-bg-type: #{rgba($lucid-text, 0.07)};
+}
+
+// Mermaid flowcharts. Colours are compiled per mode rather than read from a
+// class, because the SVG is generated before Quarto settles the colour scheme.
+
+svg.flowchart {
+  background: $lucid-diagram-bg;
+  color: $lucid-diagram-text;
+}
+
+svg.flowchart .node rect,
+svg.flowchart .node circle,
+svg.flowchart .node ellipse,
+svg.flowchart .node polygon,
+svg.flowchart .node path {
+  fill: $lucid-diagram-node !important;
+  stroke: $lucid-diagram-text !important;
+}
+
+svg.flowchart .label,
+svg.flowchart .nodeLabel,
+svg.flowchart .nodeLabel p,
+svg.flowchart .label text,
+svg.flowchart .label span,
+svg.flowchart text,
+svg.flowchart foreignObject div {
+  color: $lucid-diagram-text !important;
+  fill: $lucid-diagram-text !important;
+}
+
+svg.flowchart .flowchart-link,
+svg.flowchart .edgePath path {
+  stroke: $lucid-diagram-edge !important;
+}
+
+svg.flowchart marker path,
+svg.flowchart .arrowheadPath {
+  fill: $lucid-diagram-edge !important;
+  stroke: $lucid-diagram-edge !important;
+}
+
+svg.flowchart .edgeLabel,
+svg.flowchart .edgeLabel rect,
+svg.flowchart .edgeLabel p,
+svg.flowchart .labelBkg {
+  background-color: $lucid-diagram-bg !important;
+  color: $lucid-diagram-text !important;
+  fill: $lucid-diagram-bg !important;
+}
+
+svg.flowchart .cluster rect {
+  fill: $lucid-diagram-cluster !important;
+  stroke: $lucid-diagram-cluster-line !important;
+}
+
+// Print always uses paper colours, whichever mode was on screen.
+@media print {
+  .navbar,
+  .page-footer,
+  .nav-footer,
+  #quarto-margin-sidebar,
+  .sidebar {
+    display: none !important;
+  }
+
+  body {
+    --mermaid-bg-color: #ffffff !important;
+    --mermaid-fg-color: #111827 !important;
+    --mermaid-fg-color--lighter: #4b5563 !important;
+    --mermaid-fg-color--lightest: #f9fafb !important;
+    --mermaid-node-bg-color: #ffffff !important;
+    --mermaid-node-fg-color: #111827 !important;
+    --mermaid-label-bg-color: #ffffff !important;
+    --mermaid-label-fg-color: #111827 !important;
+    --mermaid-edge-color: #4b5563 !important;
+    background: #ffffff;
+    color: #000000;
+    color-scheme: light;
+  }
+
+  a {
+    color: #000000;
+  }
+
+  svg.flowchart {
+    background: #ffffff !important;
+  }
+
+  svg.flowchart .node rect,
+  svg.flowchart .node circle,
+  svg.flowchart .node ellipse,
+  svg.flowchart .node polygon,
+  svg.flowchart .node path {
+    fill: #ffffff !important;
+    stroke: #111827 !important;
+  }
+
+  svg.flowchart .label,
+  svg.flowchart .nodeLabel,
+  svg.flowchart .nodeLabel p,
+  svg.flowchart .label text,
+  svg.flowchart .label span,
+  svg.flowchart text,
+  svg.flowchart foreignObject div {
+    color: #111827 !important;
+    fill: #111827 !important;
+  }
+
+  svg.flowchart .flowchart-link,
+  svg.flowchart .edgePath path,
+  svg.flowchart marker path,
+  svg.flowchart .arrowheadPath {
+    fill: #4b5563 !important;
+    stroke: #4b5563 !important;
+  }
+
+  svg.flowchart .cluster rect {
+    fill: #f9fafb !important;
+    stroke: #d1d5db !important;
+  }
+}

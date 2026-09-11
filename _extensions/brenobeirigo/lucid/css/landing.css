@@ -1,0 +1,433 @@
+/* Lucid landing page: hero, facts, cards, module list, and calls to action.
+
+   Add body-classes: landing-page to the page front matter. That hides the
+   default title block, so the hero carries the page title. */
+
+.landing-page #title-block-header {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.landing-page main.content {
+  padding-top: 1.4rem;
+}
+
+.landing-page h2 {
+  color: var(--lucid-ink);
+  font-size: clamp(1.7rem, 3vw, 2.35rem);
+  margin-top: 4rem;
+}
+
+/* Hero */
+
+.landing-hero {
+  background:
+    radial-gradient(circle at 82% 16%, color-mix(in srgb, var(--lucid-accent) 38%, transparent), transparent 25%),
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--lucid-chrome) 88%, #0b2a33) 0%,
+      var(--lucid-chrome) 58%,
+      color-mix(in srgb, var(--lucid-chrome) 82%, var(--lucid-accent-strong)) 100%
+    );
+  border: 1px solid var(--lucid-chrome-line);
+  border-bottom: 4px solid var(--lucid-accent);
+  border-radius: var(--lucid-radius);
+  color: var(--lucid-chrome-text);
+  overflow: hidden;
+  padding: clamp(2.4rem, 6vw, 5.5rem);
+  position: relative;
+}
+
+/* Concentric rings, lower right */
+.landing-hero::after {
+  border: 1px solid color-mix(in srgb, var(--lucid-accent-light) 20%, transparent);
+  border-radius: 50%;
+  bottom: -7rem;
+  box-shadow:
+    0 0 0 3rem color-mix(in srgb, var(--lucid-accent) 3.5%, transparent),
+    0 0 0 6rem color-mix(in srgb, var(--lucid-accent-light) 2.5%, transparent);
+  content: "";
+  height: 20rem;
+  position: absolute;
+  right: -5rem;
+  width: 20rem;
+}
+
+.landing-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.landing-eyebrow {
+  color: var(--lucid-accent-light);
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0.12em;
+  margin: 0 0 1.25rem;
+  text-transform: uppercase;
+}
+
+.landing-title {
+  color: var(--lucid-chrome-text);
+  font-size: clamp(2.55rem, 7vw, 5.6rem);
+  font-weight: 780;
+  letter-spacing: -0.065em;
+  line-height: 0.95;
+  margin: 0;
+  max-width: 13ch;
+}
+
+.landing-title span {
+  color: var(--lucid-accent-light);
+}
+
+.landing-lead {
+  font-size: clamp(1.25rem, 2.6vw, 1.8rem);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 2rem 0 0;
+  max-width: 31ch;
+}
+
+.landing-intro {
+  color: var(--lucid-chrome-muted);
+  font-size: 1.03rem;
+  line-height: 1.7;
+  margin: 1rem 0 0;
+  max-width: 68ch;
+}
+
+.landing-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.landing-button {
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--lucid-chrome-text) 50%, transparent);
+  border-radius: var(--lucid-radius);
+  display: inline-flex;
+  font-weight: 700;
+  min-height: 2.9rem;
+  padding: 0.7rem 1rem;
+  text-decoration: none;
+}
+
+.landing-button-primary,
+.landing-button-primary:hover {
+  background: var(--lucid-accent-light);
+  border-color: var(--lucid-accent-light);
+  color: var(--lucid-chrome);
+}
+
+.landing-button-primary:hover {
+  background: color-mix(in srgb, var(--lucid-accent-light) 82%, #ffffff);
+}
+
+.landing-button-secondary {
+  background: color-mix(in srgb, var(--lucid-chrome-text) 8%, transparent);
+  color: var(--lucid-chrome-text);
+}
+
+.landing-button-secondary:hover {
+  background: var(--lucid-chrome-text);
+  color: var(--lucid-chrome);
+}
+
+.landing-button:focus-visible {
+  outline: 3px solid var(--lucid-accent-light);
+  outline-offset: 3px;
+}
+
+/* Key facts */
+
+.landing-facts {
+  display: grid;
+  gap: 0.85rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 1rem 0 0;
+}
+
+.landing-fact {
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  padding: 1.15rem 1.2rem;
+}
+
+.landing-fact strong,
+.landing-fact span {
+  display: block;
+}
+
+.landing-fact strong {
+  color: var(--lucid-accent-strong);
+  font-size: 1rem;
+}
+
+.landing-fact span {
+  color: var(--lucid-muted);
+  font-size: 0.84rem;
+  margin-top: 0.25rem;
+}
+
+/* Pull statement */
+
+.landing-promise {
+  background: var(--lucid-soft);
+  border-left: 0.35rem solid var(--lucid-blue);
+  border-radius: 0 var(--lucid-radius) var(--lucid-radius) 0;
+  color: var(--lucid-ink);
+  font-size: clamp(1.12rem, 2vw, 1.35rem);
+  font-weight: 560;
+  line-height: 1.65;
+  max-width: 52rem;
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+/* Cards */
+
+.landing-cards,
+.landing-steps {
+  display: grid;
+  gap: 1rem;
+}
+
+.landing-cards {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.landing-card {
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  border-top: 3px solid var(--lucid-accent);
+  min-height: 14rem;
+  padding: 1.55rem;
+}
+
+.landing-card.compact {
+  min-height: 0;
+}
+
+.landing-card-number {
+  color: var(--lucid-accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+}
+
+.landing-card h3,
+.landing-step h3 {
+  color: var(--lucid-ink);
+  letter-spacing: -0.025em;
+  margin-top: 1rem;
+}
+
+.landing-card p,
+.landing-step p {
+  color: var(--lucid-muted);
+  line-height: 1.65;
+}
+
+/* Module list */
+
+.landing-modules {
+  display: grid;
+  gap: 0.8rem;
+  margin-top: 1.5rem;
+}
+
+.landing-module {
+  align-items: start;
+  background: var(--lucid-soft);
+  border: 1px solid var(--lucid-line);
+  border-left: 0.25rem solid var(--lucid-accent);
+  border-radius: var(--lucid-radius);
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: 6.5rem minmax(10rem, 17rem) minmax(0, 1fr);
+  padding: 1.2rem 1.3rem;
+}
+
+.landing-module-index {
+  color: var(--lucid-accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.landing-module h3,
+.landing-module p {
+  margin: 0;
+}
+
+.landing-module h3 {
+  color: var(--lucid-ink);
+  font-size: 1.08rem;
+  line-height: 1.35;
+}
+
+.landing-module h3::after {
+  display: none;
+}
+
+.landing-module p {
+  color: var(--lucid-muted);
+  line-height: 1.6;
+}
+
+/* Process: short labelled steps joined by arrows */
+
+.landing-process {
+  background: var(--lucid-mist);
+  border-radius: var(--lucid-radius);
+  margin: 1.6rem 0;
+  padding: 1.3rem;
+}
+
+.landing-process > p {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0;
+  max-width: none;
+}
+
+.landing-process span {
+  background: var(--lucid-paper);
+  border-radius: 999px;
+  color: var(--lucid-accent-strong);
+  font-size: 0.86rem;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem;
+}
+
+.landing-process b {
+  color: var(--lucid-blue);
+}
+
+/* Steps */
+
+.landing-steps {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.landing-step {
+  background: var(--lucid-soft);
+  border-radius: var(--lucid-radius);
+  border-top: 0.3rem solid var(--lucid-accent);
+  padding: 1.5rem;
+}
+
+.landing-step > span,
+.landing-step > p:first-child > span:only-child {
+  color: var(--lucid-accent-strong);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* Link grid */
+
+.landing-links {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1.5rem;
+}
+
+.landing-link {
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  color: var(--lucid-accent-strong);
+  display: block;
+  font-weight: 700;
+  padding: 1rem 1.15rem;
+  text-decoration: none;
+}
+
+.landing-link::after {
+  content: "\2192";
+  float: right;
+}
+
+.landing-link:hover {
+  background: var(--lucid-accent-strong);
+  border-color: var(--lucid-accent-strong);
+  color: var(--lucid-paper);
+}
+
+/* Closing call to action */
+
+.landing-cta {
+  background: var(--lucid-chrome);
+  border-bottom: 3px solid var(--lucid-accent);
+  border-radius: var(--lucid-radius);
+  color: var(--lucid-chrome-text);
+  margin-top: 4rem;
+  padding: 2rem;
+}
+
+.landing-cta h3 {
+  color: var(--lucid-chrome-text);
+  margin-top: 0;
+}
+
+.landing-cta a {
+  color: var(--lucid-accent-light);
+}
+
+@media (max-width: 900px) {
+  .landing-facts,
+  .landing-steps {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .landing-module {
+    grid-template-columns: 5.5rem minmax(0, 1fr);
+  }
+
+  .landing-module p {
+    grid-column: 2;
+  }
+}
+
+@media (max-width: 620px) {
+  .landing-hero {
+    padding: 2rem 1.35rem;
+  }
+
+  .landing-facts,
+  .landing-cards,
+  .landing-steps,
+  .landing-links {
+    grid-template-columns: 1fr;
+  }
+
+  .landing-module {
+    gap: 0.45rem;
+    grid-template-columns: 1fr;
+  }
+
+  .landing-module p {
+    grid-column: 1;
+  }
+
+  .landing-fact {
+    padding: 0.85rem 1rem;
+  }
+}

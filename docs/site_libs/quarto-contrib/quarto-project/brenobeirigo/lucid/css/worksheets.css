@@ -1,0 +1,197 @@
+/* Lucid worksheets: spreadsheet grids, answer lists, forms, and paper tables.
+
+   .excel-table          spreadsheet preview with lettered columns and numbered rows
+   .alpha-list           list items lettered A), B), C)
+   .questions            level-2 headings numbered "Question 1)"
+   .form-table           label / input rows
+   .handwritten-table    ruled cells for answers written by hand
+   .warningbox           centred high-attention notice */
+
+/* Spreadsheet preview */
+
+.excel-table {
+  border-collapse: collapse;
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 100%;
+  table-layout: auto;
+  width: auto;
+}
+
+.excel-table td,
+.excel-table th {
+  border: 1px solid var(--lucid-line);
+  padding: 8px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+/* Column letters */
+.excel-table th {
+  background-color: var(--lucid-soft) !important;
+  border: 1px solid color-mix(in srgb, var(--lucid-line) 70%, var(--lucid-muted)) !important;
+  border-bottom: 1px solid var(--lucid-muted) !important;
+  color: var(--lucid-text) !important;
+  font-weight: bold !important;
+  text-align: center !important;
+}
+
+/* Row numbers */
+.excel-table td:first-child {
+  background-color: var(--lucid-soft) !important;
+  border: 1px solid color-mix(in srgb, var(--lucid-line) 70%, var(--lucid-muted));
+  border-right: 1px solid var(--lucid-muted) !important;
+  color: var(--lucid-text) !important;
+  font-weight: bold !important;
+  text-align: center !important;
+  width: 50px !important;
+}
+
+.excel-table th:first-child {
+  background-color: color-mix(in srgb, var(--lucid-soft) 60%, var(--lucid-line)) !important;
+  border-right: 1px solid var(--lucid-muted) !important;
+  width: 50px;
+}
+
+.excel-table tr:hover {
+  background-color: var(--lucid-mist);
+}
+
+.align-second-row-right tr:nth-child(2) td {
+  text-align: right;
+}
+
+.align-second-row-left tr:nth-child(2) td {
+  text-align: left;
+}
+
+.align-second-row-left tr:nth-child(2) td:first-child {
+  text-align: center;
+}
+
+/* Answer lists and question numbering */
+
+.alpha-list {
+  counter-reset: list-counter;
+}
+
+.alpha-list li {
+  counter-increment: list-counter;
+  list-style: none;
+}
+
+.alpha-list li::before {
+  content: counter(list-counter, upper-alpha) ") ";
+  font-weight: bold;
+}
+
+.questions {
+  counter-reset: question-counter;
+}
+
+.questions h2::before {
+  content: "Question " counter(question-counter) ") ";
+  counter-increment: question-counter 1;
+}
+
+.reduce {
+  font-size: 1em !important;
+}
+
+.reduce h1 {
+  font-size: 1.5em !important;
+}
+
+.reduce h2 {
+  font-size: 1.2em !important;
+}
+
+.smaller-font {
+  font-size: 0.5em;
+}
+
+/* Forms */
+
+.form-table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.form-table th,
+.form-table td {
+  border-bottom: 1px solid var(--lucid-line);
+  padding: 8px;
+  text-align: left;
+}
+
+.form-table th {
+  width: 30%;
+}
+
+.form-table td input[type="text"],
+.form-table td input[type="number"] {
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  color: var(--lucid-text);
+  padding: 6px 10px;
+  width: 100%;
+}
+
+.form-table td input[type="submit"] {
+  background-color: var(--lucid-accent-strong);
+  border: none;
+  border-radius: var(--lucid-radius);
+  color: var(--lucid-on-accent);
+  cursor: pointer;
+  padding: 8px 16px;
+}
+
+.form-table td input[type="submit"]:hover {
+  background-color: color-mix(in srgb, var(--lucid-accent-strong) 85%, var(--lucid-ink));
+}
+
+/* Paper answer tables */
+
+.handwritten-table {
+  font-size: large;
+  width: 100%;
+}
+
+.handwritten-table th,
+.handwritten-table td {
+  border: 1px solid var(--lucid-text);
+  padding: 8px 15px;
+  text-align: left;
+  vertical-align: top;
+}
+
+.handwritten-table th {
+  background-color: var(--lucid-soft);
+  font-weight: bold;
+}
+
+/* A rule near the bottom of each cell leaves room to write. */
+.handwritten-table td {
+  background-image: linear-gradient(transparent 92%, var(--lucid-text) 92%);
+  background-position: bottom 4px;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+  height: 50px;
+}
+
+/* Notices */
+
+.warningbox {
+  background-color: color-mix(in srgb, var(--lucid-danger) 8%, var(--lucid-paper));
+  border: 2px solid var(--lucid-danger);
+  border-radius: var(--lucid-radius);
+  box-sizing: border-box;
+  color: var(--lucid-danger);
+  display: table;
+  margin: 0.5em auto;
+  max-width: 90%;
+  padding: 10px;
+  text-align: center;
+  word-wrap: break-word;
+}

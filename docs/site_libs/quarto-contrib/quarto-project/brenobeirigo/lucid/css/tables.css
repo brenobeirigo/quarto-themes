@@ -1,0 +1,338 @@
+/* Lucid tables: data tables, trace tables, Great Tables, and scroll regions.
+
+   Classes
+     .data-table     framed table with a dark header and banded rows
+     .trace-table    first column stays visible while the table scrolls
+     .row-headers    first column is a row header (see lucid.lua)
+   Great Tables output (table.gt_table) is framed automatically. */
+
+/* Ordinary Markdown tables get quiet banding. Component tables keep their own. */
+main.content table.table:not(.table-striped, .data-table, .excel-table, .gt_table, .form-table, .handwritten-table, .decision-table):not(.data-table table, .excel-table table, .form-table table, .handwritten-table table, .decision-table table) > tbody > tr:nth-of-type(even) > * {
+  --bs-table-bg-type: var(--lucid-table-row-alt);
+}
+
+/* Frame shared by data tables and Great Tables. */
+main.content div.quarto-figure:has(table.data-table),
+main.content div.quarto-figure:has(table.gt_table) {
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-table-frame);
+  border-radius: 0.45rem;
+  box-shadow: 0 0.45rem 1.15rem rgb(24 39 31 / 8%);
+  margin-block: 1.35rem 1.65rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+main.content figure.quarto-float-tbl:has(table.data-table),
+main.content figure.quarto-float-tbl:has(table.gt_table) {
+  margin: 0;
+}
+
+main.content div.quarto-figure:has(table.data-table) figcaption,
+main.content div.quarto-figure:has(table.data-table) .quarto-float-caption,
+main.content div.quarto-figure:has(table.gt_table) figcaption {
+  background: var(--lucid-soft);
+  border-bottom: 1px solid var(--lucid-table-frame);
+  color: var(--lucid-muted);
+  font-family: var(--lucid-font-heading);
+  font-size: 0.84rem;
+  font-weight: 520;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0.62rem 0.82rem;
+  text-align: left;
+}
+
+/* Data tables */
+
+main.content table.data-table {
+  --bs-table-bg: transparent;
+  background: var(--lucid-paper);
+  border-collapse: separate;
+  border-spacing: 0;
+  color: var(--lucid-text);
+  font-size: 0.96rem !important;
+  font-variant-numeric: tabular-nums;
+  line-height: 1.42;
+  margin: 0 !important;
+  max-width: none;
+  width: 100%;
+}
+
+main.content .callout table.data-table {
+  font-size: 0.94rem !important;
+}
+
+main.content table.data-table > thead > tr > th {
+  background: var(--lucid-table-head-bg) !important;
+  border-bottom: 3px solid var(--lucid-accent) !important;
+  border-top: 0;
+  color: var(--lucid-table-head-text) !important;
+  font-family: var(--lucid-font-heading);
+  font-size: 0.9em;
+  font-weight: 650;
+  letter-spacing: 0.012em;
+  line-height: 1.3;
+  padding: 0.76rem 0.82rem;
+  vertical-align: bottom;
+}
+
+main.content table.data-table > tbody > tr > td,
+main.content table.data-table > tbody > tr > th[scope="row"] {
+  background: var(--lucid-paper);
+  border-bottom: 1px solid var(--lucid-line);
+  color: var(--lucid-text);
+  padding: 0.68rem 0.82rem;
+  vertical-align: top;
+}
+
+main.content table.data-table > tbody > tr:nth-child(even) > td,
+main.content table.data-table > tbody > tr:nth-child(even) > th[scope="row"] {
+  background: var(--lucid-table-row-alt);
+}
+
+main.content table.data-table > tbody > tr:hover > td,
+main.content table.data-table > tbody > tr:hover > th[scope="row"] {
+  background: var(--lucid-table-row-hover);
+}
+
+main.content table.data-table > tbody > tr:last-child > td,
+main.content table.data-table > tbody > tr:last-child > th[scope="row"] {
+  border-bottom: 0;
+}
+
+main.content table.data-table th:not([style*="text-align"]),
+main.content table.data-table td:not([style*="text-align"]) {
+  text-align: left;
+}
+
+main.content table.data-table > tbody > tr > th[scope="row"] {
+  background: var(--lucid-table-row-head);
+  color: var(--lucid-ink);
+  font-family: var(--lucid-font-heading);
+  font-weight: 620;
+}
+
+main.content table.data-table code {
+  white-space: nowrap;
+}
+
+/* A trace preserves horizontal relationships. On a narrow screen it scrolls
+   rather than stacking state-before, condition, and state-after into cards. */
+main.content table.trace-table > thead > tr > th:first-child,
+main.content table.trace-table > tbody > tr > th[scope="row"] {
+  left: 0;
+  position: sticky;
+  z-index: 2;
+}
+
+main.content table.trace-table > thead > tr > th:first-child {
+  z-index: 3;
+}
+
+/* Great Tables */
+
+main.content div:has(> table.gt_table) {
+  max-width: 100%;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  overscroll-behavior-inline: contain;
+  padding: 0 !important;
+}
+
+main.content div:has(> table.gt_table) .gt_table {
+  font-size: 1rem !important;
+  line-height: 1.42;
+  margin: 0 !important;
+  min-width: 0;
+}
+
+main.content div:has(> table.gt_table) .gt_col_heading,
+main.content div:has(> table.gt_table) .gt_column_spanner_outer,
+main.content div:has(> table.gt_table) .gt_column_spanner {
+  background: var(--lucid-table-head-bg) !important;
+  color: var(--lucid-table-head-text) !important;
+  font-size: 0.92rem !important;
+  letter-spacing: 0.005em;
+  white-space: normal;
+}
+
+main.content div:has(> table.gt_table) .gt_col_heading:not(.gt_stub) {
+  min-width: 0;
+}
+
+/* Tables with a stub column (decision grids, for example) give it room. */
+main.content table.gt_table:has(.gt_stub) thead .gt_col_heading:first-child,
+main.content table.gt_table .gt_stub {
+  min-width: 0;
+  width: 42%;
+}
+
+main.content div:has(> table.gt_table) .gt_group_heading {
+  font-size: 0.94rem !important;
+  letter-spacing: 0.01em;
+}
+
+main.content div:has(> table.gt_table) .gt_row,
+main.content div:has(> table.gt_table) .gt_stub {
+  font-size: 1rem !important;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+main.content div:has(> table.gt_table) .gt_sourcenote {
+  font-size: 0.88rem !important;
+  line-height: 1.45;
+}
+
+body.quarto-dark main.content div:has(> table.gt_table) :is(.gt_table, .gt_row, .gt_stub),
+body[data-bs-theme="dark"] main.content div:has(> table.gt_table) :is(.gt_table, .gt_row, .gt_stub) {
+  background: var(--lucid-soft) !important;
+  border-color: var(--lucid-table-frame) !important;
+  color: var(--lucid-text) !important;
+}
+
+body.quarto-dark main.content div:has(> table.gt_table) .gt_group_heading,
+body[data-bs-theme="dark"] main.content div:has(> table.gt_table) .gt_group_heading {
+  background: var(--lucid-table-row-head) !important;
+  border-color: var(--lucid-table-frame) !important;
+  color: var(--lucid-ink) !important;
+}
+
+body.quarto-dark main.content div:has(> table.gt_table) .gt_row[style*="background-color"],
+body[data-bs-theme="dark"] main.content div:has(> table.gt_table) .gt_row[style*="background-color"] {
+  background: color-mix(in srgb, var(--lucid-accent) 24%, var(--lucid-paper)) !important;
+  color: var(--lucid-accent-strong) !important;
+}
+
+body.quarto-dark main.content div:has(> table.gt_table) :is(.gt_sourcenotes, .gt_sourcenote),
+body[data-bs-theme="dark"] main.content div:has(> table.gt_table) :is(.gt_sourcenotes, .gt_sourcenote) {
+  background: var(--lucid-wash) !important;
+  border-color: var(--lucid-table-frame) !important;
+  color: var(--lucid-muted) !important;
+}
+
+/* Scroll regions (added by js/table-scroll.js) */
+
+main.content .table-scroll-region {
+  max-width: 100%;
+  overflow-x: auto !important;
+  overflow-y: hidden;
+  overscroll-behavior-inline: contain;
+}
+
+main.content .table-scroll-region:focus-visible,
+main.content div:has(> table.gt_table):focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--lucid-accent) 72%, transparent);
+  outline-offset: 2px;
+}
+
+main.content .table-scroll-hint {
+  display: none;
+}
+
+@media (max-width: 650px) {
+  main.content table.data-table {
+    font-size: 0.92rem !important;
+  }
+
+  /* Past three columns a table keeps a readable width and scrolls instead. */
+  main.content :is(table.data-table, table.gt_table):has(thead th:nth-child(4)) {
+    min-width: 38rem;
+  }
+
+  main.content :is(table.data-table, table.gt_table):has(thead th:nth-child(5)) {
+    min-width: 44rem;
+  }
+
+  main.content :is(table.data-table, table.gt_table):has(thead th:nth-child(6)) {
+    min-width: 50rem;
+  }
+
+  main.content :is(table.data-table, table.gt_table):has(thead th:nth-child(7)) {
+    min-width: 58rem;
+  }
+
+  main.content table.gt_table:has(.gt_stub) thead .gt_col_heading:first-child,
+  main.content table.gt_table tbody .gt_stub {
+    left: 0;
+    max-width: 13.5rem;
+    min-width: 13.5rem;
+    position: sticky;
+    width: 13.5rem;
+    z-index: 3;
+  }
+
+  main.content table.gt_table:has(.gt_stub) thead .gt_col_heading:first-child {
+    z-index: 5;
+  }
+
+  main.content table.gt_table tbody .gt_stub {
+    background: var(--lucid-paper) !important;
+    box-shadow: 2px 0 0 var(--lucid-table-frame);
+  }
+
+  main.content :is(.table-scroll-region, div:has(> table.gt_table)) > .table-scroll-hint {
+    background: color-mix(in srgb, var(--lucid-paper) 92%, var(--lucid-accent));
+    border-bottom: 1px solid var(--lucid-line);
+    color: var(--lucid-muted);
+    display: block;
+    font-family: var(--lucid-font-heading);
+    font-size: 0.75rem;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0.02em;
+    padding: 0.4rem 0.72rem;
+    position: sticky;
+    width: max-content;
+    z-index: 6;
+  }
+}
+
+@media print {
+  main.content div.quarto-figure:has(table.data-table),
+  main.content div.quarto-figure:has(table.gt_table) {
+    border: 1px solid #555555;
+    border-radius: 0;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  main.content table.data-table {
+    color: #000000 !important;
+    font-size: 8.5pt !important;
+  }
+
+  main.content table.data-table > thead > tr > th {
+    background: #e7e7e7 !important;
+    border-bottom-color: #000000 !important;
+    color: #000000 !important;
+  }
+
+  main.content table.data-table > tbody > tr > td,
+  main.content table.data-table > tbody > tr > th[scope="row"] {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  main.content div:has(> table.gt_table) {
+    overflow: visible !important;
+  }
+
+  main.content div:has(> table.gt_table) .gt_table {
+    color: #000000 !important;
+    font-size: 8.5pt !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  main.content div:has(> table.gt_table) :is(.gt_col_heading, .gt_column_spanner_outer, .gt_column_spanner, .gt_group_heading, .gt_row, .gt_stub, .gt_sourcenote) {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 8pt !important;
+  }
+
+  main.content .table-scroll-hint {
+    display: none !important;
+  }
+}

@@ -1,0 +1,54 @@
+/*-- scss:defaults --*/
+
+// Lucid dark palette. Same roles as lucid-light.scss, tuned for a dark ground.
+
+$lucid-ink: #f3f4f6 !default;
+$lucid-text: #e6e8eb !default;
+$lucid-muted: #aab1ba !default;
+$lucid-paper: #17191d !default;
+$lucid-wash: #1b1f22 !default;
+$lucid-soft: #20242a !default;
+$lucid-mist: #1c2a24 !default;
+$lucid-line: #3a4048 !default;
+
+$lucid-accent: #5fd39a !default;
+$lucid-accent-strong: #75d6a3 !default;
+$lucid-accent-light: #b1e35d !default;
+$lucid-blue: #7fb3d5 !default;
+$lucid-violet: #a99bea !default;
+$lucid-danger: #ff8a80 !default;
+$lucid-on-accent: #111317 !default;
+
+$lucid-chrome: #111317 !default;
+$lucid-chrome-text: #f3f4f6 !default;
+$lucid-chrome-muted: #c5ccd3 !default;
+$lucid-chrome-line: #30393e !default;
+
+$lucid-table-head-bg: $lucid-chrome !default;
+$lucid-table-head-text: #f3f4f6 !default;
+$lucid-table-frame: #46504b !default;
+$lucid-table-row-alt: #1d2421 !default;
+$lucid-table-row-hover: #26342d !default;
+$lucid-table-row-head: #202b25 !default;
+$lucid-shadow: rgba(0, 0, 0, 0.35) !default;
+
+$lucid-diagram-bg: #17191d !default;
+$lucid-diagram-node: #20242a !default;
+$lucid-diagram-text: #f3f4f6 !default;
+$lucid-diagram-edge: #aab1ba !default;
+$lucid-diagram-cluster: #1d2126 !default;
+$lucid-diagram-cluster-line: #555d68 !default;
+
+$lucid-callout-tint: 15% !default;
+$lucid-callout-line-tint: 36% !default;
+
+/*-- scss:rules --*/
+
+// Striped and hovered rows need a light veil on a dark ground.
+main.content table.table-striped > tbody > tr:nth-of-type(odd) > * {
+  box-shadow: inset 0 0 0 9999px rgb(255 255 255 / 0.04);
+}
+
+main.content table.table-hover > tbody > tr:hover > * {
+  --bs-table-bg-state: rgb(255 255 255 / 0.1);
+}

@@ -1,0 +1,137 @@
+---
+title: "Reasoning with data"
+description: "A Lucid landing page: hero, facts, cards, modules, and calls to action."
+body-classes: landing-page
+page-layout: full
+toc: false
+---
+
+::: {.landing-hero}
+<p class="landing-eyebrow">Open course | 6 modules | Self-paced</p>
+
+<div class="landing-title" aria-hidden="true">Reasoning <span>with data</span></div>
+
+<p class="landing-lead">Turn an unclear question into an analysis that another person can inspect, test, and improve.</p>
+
+<p class="landing-intro">Each module pairs a short reading with worked examples, a traced algorithm, and a practice set with solutions.</p>
+
+<div class="landing-actions">
+  <a class="landing-button landing-button-primary" href="course-outline.html">Start the course</a>
+  <a class="landing-button landing-button-secondary" href="components.html">Browse the components</a>
+</div>
+:::
+
+::: {.landing-facts}
+::: {.landing-fact}
+<strong>Beginner level</strong>
+<span>No programming prerequisite</span>
+:::
+::: {.landing-fact}
+<strong>Python</strong>
+<span>The reference language</span>
+:::
+::: {.landing-fact}
+<strong>Spreadsheets</strong>
+<span>Checking and communication</span>
+:::
+::: {.landing-fact}
+<strong>6 modules</strong>
+<span>One cumulative path</span>
+:::
+:::
+
+## What you will be able to do
+
+::: {.landing-cards}
+::: {.landing-card}
+<span class="landing-card-number">01</span>
+
+### Frame the problem
+
+State the decision, the inputs, the constraints, and what would count as a correct answer before touching data.
+:::
+::: {.landing-card}
+<span class="landing-card-number">02</span>
+
+### Trace before you run
+
+Follow an algorithm step by step on paper so that surprises in code become questions you can answer.
+:::
+:::
+
+::: {.landing-promise}
+Every result in this course comes with the evidence that supports it and the assumptions that limit it.
+:::
+
+## Modules
+
+::: {.landing-modules}
+::: {.landing-module}
+[Module 1](course-outline.qmd){.landing-module-index}
+
+### [Problems and algorithms](course-outline.qmd)
+
+Formulate computational problems and design, trace, and test algorithms before programming.
+:::
+
+::: {.landing-module}
+[Module 2](course-outline.qmd){.landing-module-index}
+
+### [Tabular analysis](course-outline.qmd)
+
+Structure, calculate with, summarise, and communicate changing tables of data.
+:::
+
+::: {.landing-module}
+[Module 3](course-outline.qmd){.landing-module-index}
+
+### [Python foundations](course-outline.qmd)
+
+Translate algorithms into programs and explain their values, calculations, and state.
+:::
+:::
+
+## How a week works
+
+::: {.landing-process}
+<p><span>Read</span> <b>→</b> <span>Trace</span> <b>→</b> <span>Practise</span> <b>→</b> <span>Check</span> <b>→</b> <span>Reflect</span></p>
+:::
+
+::: {.landing-steps}
+::: {.landing-step}
+<span>Monday</span>
+
+### Launch
+
+Meet the problem of the week and make a first attempt.
+:::
+::: {.landing-step}
+<span>Midweek</span>
+
+### Study
+
+Work through readings and short checks at your own pace.
+:::
+::: {.landing-step}
+<span>Friday</span>
+
+### Consolidate
+
+Solve a paper exercise and discuss the difficult cases.
+:::
+:::
+
+## Where to go next
+
+::: {.landing-links}
+[Course outline](course-outline.qmd){.landing-link}
+[Component gallery](components.qmd){.landing-link}
+[Theme overview](index.qmd){.landing-link}
+[Source on GitHub](https://github.com/brenobeirigo/quarto-themes){.landing-link}
+:::
+
+::: {.landing-cta}
+### Ready to begin?
+
+Open the [course outline](course-outline.qmd) and start with the first module.
+:::

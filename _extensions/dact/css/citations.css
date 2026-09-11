@@ -1,6 +1,0 @@
-/* Quarto books retain a page-local bibliography for citation popovers but
-   hide it when the book is configured without a single terminal bibliography.
-   DACT publishes that bibliography at the end of every cited page. */
-#refs.references {
-  display: block !important;
-}

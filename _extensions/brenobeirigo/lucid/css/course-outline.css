@@ -1,0 +1,546 @@
+/* Lucid course outline: a learner-facing overview of a course or programme.
+
+   .syllabus-hero, .eyebrow, .hero-title   opening panel
+   .course-meta > .meta-pill               key facts
+   .course-actions                         button row
+   .syllabus-nav                           jump links
+   .quick-start, .learning-path            orientation panels
+   .calendar-grid > .calendar-card         dates
+   .module-list > .module-card             modules with header, outcome, sections
+   .success-grid, .support-grid,
+   .rhythm-grid, .tool-grid                card grids
+   .process-intro, .workload-note,
+   .timeline                               notes */
+
+.syllabus-hero {
+  background:
+    radial-gradient(circle at 90% 10%, color-mix(in srgb, var(--lucid-accent-light) 20%, transparent), transparent 28%),
+    linear-gradient(135deg, var(--lucid-soft) 0%, var(--lucid-paper) 100%);
+  border: 1px solid var(--lucid-line);
+  border-left: 4px solid var(--lucid-accent);
+  border-radius: var(--lucid-radius);
+  margin: 0 0 2.5rem;
+  overflow: hidden;
+  padding: clamp(1.75rem, 5vw, 3.75rem);
+  position: relative;
+}
+
+.syllabus-hero::after {
+  border: 2rem solid color-mix(in srgb, var(--lucid-accent) 8%, transparent);
+  border-radius: 50%;
+  bottom: -5rem;
+  content: "";
+  height: 14rem;
+  pointer-events: none;
+  position: absolute;
+  right: -4rem;
+  width: 14rem;
+}
+
+.syllabus-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  color: var(--lucid-accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  margin-bottom: 0.8rem;
+}
+
+.syllabus-hero .hero-title {
+  border: 0;
+  color: var(--lucid-ink);
+  display: block;
+  font-family: var(--lucid-font-heading);
+  font-weight: 600;
+  font-size: clamp(2rem, 6vw, 4rem);
+  letter-spacing: -0.045em;
+  line-height: 1.02;
+  margin: 0 0 1rem;
+  max-width: 18ch;
+}
+
+.syllabus-hero .hero-title::after {
+  display: none;
+}
+
+.syllabus-hero .hero-title p {
+  margin: 0;
+}
+
+.syllabus-hero > p:not(.eyebrow) {
+  color: var(--lucid-text);
+  font-size: clamp(1rem, 2.2vw, 1.25rem);
+  line-height: 1.65;
+  max-width: 65ch;
+}
+
+.course-meta,
+.learning-path,
+.calendar-grid,
+.quick-start {
+  display: grid;
+  gap: 1rem;
+}
+
+.course-meta {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.7rem 0;
+}
+
+.meta-pill {
+  background: color-mix(in srgb, var(--lucid-paper) 76%, transparent);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  color: var(--lucid-text);
+  line-height: 1.45;
+  min-height: 5.2rem;
+  padding: 1rem 1.1rem;
+}
+
+.meta-pill strong {
+  color: var(--lucid-ink);
+  font-size: 1.03rem;
+}
+
+.course-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.2rem;
+}
+
+.course-actions .btn {
+  border-radius: var(--lucid-radius);
+  font-weight: 700;
+  min-height: 2.75rem;
+  padding: 0.65rem 1.05rem;
+}
+
+.course-actions .btn:focus-visible,
+.syllabus-nav a:focus-visible,
+.support-card a:focus-visible {
+  outline: 0.2rem solid var(--lucid-accent);
+  outline-offset: 0.2rem;
+}
+
+.syllabus-nav {
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  color: var(--lucid-text);
+  line-height: 1.8;
+  margin: -1rem 0 2.5rem;
+  padding: 0.9rem 1rem;
+}
+
+.syllabus-nav p {
+  margin: 0;
+  max-width: none;
+}
+
+.syllabus-nav a {
+  display: inline-block;
+  margin: 0 0.12rem;
+  text-underline-offset: 0.16em;
+}
+
+.quick-start {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.5rem 0 2.5rem;
+}
+
+.quick-start > * {
+  background: var(--lucid-wash);
+  border: 1px solid var(--lucid-line);
+  border-left: 0.3rem solid var(--lucid-blue);
+  border-radius: var(--lucid-radius);
+  padding: 1.25rem 1.35rem;
+}
+
+.quick-start h3 {
+  font-size: 1.05rem;
+  margin-top: 0;
+}
+
+.learning-path {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1.25rem 0 2.75rem;
+}
+
+.path-stage {
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  border-top: 0.35rem solid var(--lucid-accent);
+  color: var(--lucid-text);
+  padding: 1.25rem 1.3rem 1.35rem;
+  position: relative;
+}
+
+.path-stage strong {
+  color: var(--lucid-ink);
+  display: block;
+  margin-bottom: 0.45rem;
+}
+
+.calendar-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin: 1.25rem 0 1.5rem;
+}
+
+.calendar-card {
+  background: var(--lucid-soft);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  color: var(--lucid-text);
+  line-height: 1.5;
+  padding: 1rem 1.1rem;
+}
+
+.calendar-card p {
+  margin: 0;
+}
+
+.calendar-card strong {
+  color: var(--lucid-ink);
+}
+
+/* Modules */
+
+.module-list {
+  display: grid;
+  gap: 1.6rem;
+  margin: 1.5rem 0 3rem;
+}
+
+.module-card {
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  overflow: hidden;
+}
+
+.module-header {
+  align-items: start;
+  background: var(--lucid-soft);
+  display: grid;
+  gap: 1.1rem;
+  grid-template-columns: auto 1fr auto;
+  padding: 1.45rem 1.5rem 1.25rem;
+}
+
+.module-number {
+  background: var(--lucid-accent-strong);
+  border-radius: var(--lucid-radius);
+  color: var(--lucid-on-accent);
+  display: grid;
+  font-size: 1rem;
+  font-weight: 800;
+  height: 3.2rem;
+  letter-spacing: 0.04em;
+  place-items: center;
+  width: 3.2rem;
+}
+
+.module-heading > p:first-child {
+  color: var(--lucid-accent-strong);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  margin: 0 0 0.3rem;
+}
+
+.module-heading h3 {
+  color: var(--lucid-ink);
+  font-size: clamp(1.35rem, 3vw, 1.85rem);
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+}
+
+.module-heading > p:last-child {
+  color: var(--lucid-muted);
+  margin: 0;
+}
+
+.module-effort {
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  color: var(--lucid-text);
+  font-size: 0.82rem;
+  padding: 0.45rem 0.7rem;
+  white-space: nowrap;
+}
+
+.module-outcome {
+  background: var(--lucid-soft);
+  border-bottom: 1px solid var(--lucid-line);
+  border-top: 1px solid var(--lucid-line);
+  color: var(--lucid-text);
+  margin: 0;
+  padding: 1rem 1.5rem;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.5fr);
+}
+
+.module-section {
+  padding: 1.25rem 1.5rem 1.1rem;
+}
+
+.module-section + .module-section {
+  border-left: 1px solid var(--lucid-line);
+}
+
+.module-section h4 {
+  color: var(--lucid-ink);
+  font-size: 1rem;
+  margin: 0 0 0.75rem;
+}
+
+.module-section ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.module-section li + li {
+  margin-top: 0.45rem;
+}
+
+.completion-check {
+  background: var(--lucid-wash);
+  border-top: 1px solid var(--lucid-line);
+  color: var(--lucid-text);
+  padding: 0.95rem 1.5rem 1.05rem;
+}
+
+.completion-check p {
+  margin: 0;
+}
+
+/* Card grids */
+
+.success-grid,
+.support-grid,
+.rhythm-grid,
+.tool-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.success-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.25rem 0;
+}
+
+.success-card,
+.support-card,
+.rhythm-card,
+.tool-card,
+.process-intro,
+.workload-note {
+  background: var(--lucid-paper);
+  border: 1px solid var(--lucid-line);
+  border-radius: var(--lucid-radius);
+  padding: 1.15rem 1.25rem;
+}
+
+.success-card h3,
+.support-card h3,
+.rhythm-card h4,
+.tool-card h3,
+.workload-note h3 {
+  color: var(--lucid-ink);
+  margin-top: 0;
+}
+
+.success-card > :last-child,
+.support-card > :last-child,
+.rhythm-card > :last-child,
+.tool-card > :last-child,
+.process-intro > :last-child,
+.workload-note > :last-child {
+  margin-bottom: 0;
+}
+
+.success-card {
+  border-top: 0.3rem solid var(--lucid-accent);
+}
+
+.workload-note {
+  background: var(--lucid-wash);
+  margin: 1rem 0 2.5rem;
+}
+
+.support-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.25rem 0 2rem;
+}
+
+.support-card {
+  border-top: 0.3rem solid var(--lucid-blue);
+}
+
+.support-card > p:first-of-type a {
+  font-weight: 700;
+}
+
+.process-intro {
+  background: var(--lucid-soft);
+  border-left: 0.35rem solid var(--lucid-accent-strong);
+  font-size: 1.05rem;
+  margin: 0 0 1.25rem;
+}
+
+.rhythm-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin: 1rem 0 1.25rem;
+}
+
+/* Three rhythm cards step along the viridis scale. */
+.rhythm-card {
+  border-top: 0.35rem solid var(--lucid-accent);
+  padding-top: 1.35rem;
+  position: relative;
+}
+
+.rhythm-card:nth-child(3n + 2) {
+  border-top-color: var(--lucid-blue);
+}
+
+.rhythm-card:nth-child(3n) {
+  border-top-color: var(--lucid-violet);
+}
+
+.tool-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin: 1.25rem 0 2.5rem;
+}
+
+.tool-card-wide {
+  grid-row: span 2;
+}
+
+.timeline {
+  background: var(--lucid-wash);
+  border-left: 0.3rem solid var(--lucid-accent-strong);
+  max-width: 52rem;
+  padding: 1rem 1.25rem;
+}
+
+.timeline ol {
+  margin-bottom: 0;
+}
+
+.timeline li + li {
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 900px) {
+  .course-meta,
+  .learning-path,
+  .rhythm-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .calendar-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .module-header {
+    grid-template-columns: auto 1fr;
+  }
+
+  .module-effort {
+    grid-column: 2;
+    justify-self: start;
+  }
+
+  .tool-card-wide {
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 620px) {
+  .syllabus-hero {
+    margin-left: -0.35rem;
+    margin-right: -0.35rem;
+    padding: 1.45rem 1.1rem;
+  }
+
+  .quick-start,
+  .calendar-grid,
+  .module-grid,
+  .success-grid,
+  .support-grid,
+  .tool-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .syllabus-nav {
+    line-height: 2;
+    margin-top: -0.5rem;
+  }
+
+  .module-header {
+    gap: 0.8rem;
+    grid-template-columns: 2.6rem 1fr;
+    padding: 1.15rem 1rem;
+  }
+
+  .module-number {
+    height: 2.6rem;
+    width: 2.6rem;
+  }
+
+  .module-effort {
+    grid-column: 1 / -1;
+  }
+
+  .module-outcome,
+  .module-section,
+  .completion-check {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .module-section + .module-section {
+    border-left: 0;
+    border-top: 1px solid var(--lucid-line);
+  }
+}
+
+@media print {
+  .course-actions,
+  .syllabus-nav {
+    display: none;
+  }
+
+  .module-card {
+    break-inside: auto;
+  }
+
+  .module-header,
+  .module-outcome,
+  .completion-check {
+    break-after: avoid;
+  }
+
+  .module-grid,
+  .success-grid,
+  .support-grid,
+  .rhythm-grid,
+  .tool-grid {
+    break-inside: avoid;
+  }
+
+  a[href^="http"]::after {
+    overflow-wrap: anywhere;
+  }
+}
