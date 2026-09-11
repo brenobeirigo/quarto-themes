@@ -1,0 +1,89 @@
+/* Responsive layout repairs kept in a versioned file to avoid stale caches. */
+
+/* Preserve a diagram's natural size so its labels remain readable. Wide
+   diagrams scroll inside their own viewport instead of shrinking to tiny text. */
+.flowchart-viewport {
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: visible;
+  padding: 0.5rem 0;
+  overscroll-behavior-inline: contain;
+  scrollbar-gutter: stable both-edges;
+  width: 100%;
+}
+
+.flowchart-viewport > svg.flowchart {
+  height: auto !important;
+  max-width: none !important;
+  overflow: visible;
+  width: var(--flowchart-intrinsic-width, 100%) !important;
+}
+
+/* Quarto videos must fit the reading column at every viewport width. */
+.quarto-video {
+  max-width: 100%;
+}
+
+.quarto-video > iframe {
+  aspect-ratio: 4 / 3;
+  display: block;
+  height: auto !important;
+  margin-inline: auto;
+  max-width: 100%;
+  width: min(100%, 400px) !important;
+}
+
+/* Quarto marks centered publication elements with quarto-figure-center.
+   Center their captions as well as the artifact itself. */
+main.content .quarto-figure.quarto-figure-center figcaption,
+main.content .quarto-figure.quarto-figure-center .quarto-float-caption {
+  text-align: center !important;
+}
+
+/* Make Quarto's requested striped tables visibly banded while leaving custom
+   worksheet and form tables under their component-specific styling. */
+main.content table.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-bg-type: rgba(17, 24, 39, 0.07);
+}
+
+/* Keep wide, captioned teaching tables readable on narrow screens. Quarto
+   places the table in the first child of its float; that child becomes the
+   horizontal viewport while the caption remains at the page width. */
+main.content .quarto-float-tbl > div[aria-describedby] {
+  max-width: 100%;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  scrollbar-gutter: stable both-edges;
+}
+
+/* Reader mode removes both sidebars but keeps prose at a readable measure. */
+@media (min-width: 992px) {
+  body:has(.quarto-reader-toggle.reader) #quarto-sidebar,
+  body:has(.quarto-reader-toggle.reader) #quarto-margin-sidebar {
+    display: none !important;
+  }
+
+  body:has(.quarto-reader-toggle.reader) #quarto-content.page-columns {
+    grid-template-columns:
+      [screen-start] 1.5rem
+      [screen-start-inset] 0
+      [page-start] minmax(0, 1fr)
+      [page-start-inset] 0
+      [body-start-outset] 0
+      [body-start] 0
+      [body-content-start] minmax(0, 1000px)
+      [body-content-end] 0
+      [body-end] 0
+      [body-end-outset] 0
+      [page-end-inset] minmax(0, 1fr)
+      [page-end] 0
+      [screen-end-inset] 1.5rem
+      [screen-end];
+  }
+
+  body:has(.quarto-reader-toggle.reader) main.content {
+    max-width: 1000px;
+    width: 100%;
+  }
+}

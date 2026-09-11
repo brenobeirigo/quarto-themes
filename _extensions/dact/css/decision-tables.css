@@ -1,0 +1,225 @@
+/* Great Tables decision grids: semantic HTML, course palette, and readable scale. */
+
+main.content div.quarto-figure:has([id^="dact-decision-"]) {
+  background: var(--paper);
+  border: 1px solid var(--dact-table-frame, #c8d5cf);
+  border-radius: 0.5rem;
+  box-shadow: 0 0.45rem 1.15rem rgb(24 39 31 / 8%);
+  margin-block: 1.35rem 1.65rem;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+main.content figure.quarto-float-tbl:has([id^="dact-decision-"]) {
+  margin: 0;
+}
+
+main.content div.quarto-figure:has([id^="dact-decision-"]) figcaption {
+  background: var(--dact-table-caption-bg, #f4f6f5);
+  border-bottom: 1px solid var(--dact-table-frame, #c8d5cf);
+  color: var(--muted);
+  font-family: "Jost", "Segoe UI", Arial, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 560;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0.7rem 0.9rem;
+  text-align: left;
+}
+
+main.content div[id^="dact-decision-"] {
+  max-width: 100%;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
+  overscroll-behavior-inline: contain;
+  padding: 0 !important;
+}
+
+main.content div[id^="dact-decision-"] .gt_table {
+  font-size: 1rem !important;
+  line-height: 1.42;
+  margin: 0 !important;
+  min-width: 0;
+}
+
+main.content #dact-decision-library-loan .gt_table,
+main.content #dact-decision-social-media-policy .gt_table {
+  min-width: 60rem;
+}
+
+main.content #dact-decision-umbrella-full .gt_table,
+main.content #dact-decision-umbrella-minimized .gt_table {
+  min-width: 46rem;
+}
+
+main.content div[id^="dact-decision-"] .gt_col_heading,
+main.content div[id^="dact-decision-"] .gt_column_spanner_outer,
+main.content div[id^="dact-decision-"] .gt_column_spanner {
+  background: #17324d !important;
+  color: #fff !important;
+  font-size: 0.92rem !important;
+  letter-spacing: 0.005em;
+  white-space: normal;
+}
+
+main.content div[id^="dact-decision-"] thead .gt_col_heading:first-child {
+  min-width: 0;
+  width: 42%;
+}
+
+main.content div[id^="dact-decision-"] .gt_col_heading:not(.gt_stub) {
+  min-width: 0;
+}
+
+main.content div[id^="dact-decision-"] .gt_group_heading {
+  font-size: 0.94rem !important;
+  letter-spacing: 0.01em;
+}
+
+main.content div[id^="dact-decision-"] .gt_row,
+main.content div[id^="dact-decision-"] .gt_stub {
+  font-size: 1rem !important;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+main.content div[id^="dact-decision-"] .gt_stub {
+  min-width: 0;
+  width: 42%;
+}
+
+main.content div[id^="dact-decision-"] .gt_sourcenote {
+  font-size: 0.88rem !important;
+  line-height: 1.45;
+}
+
+main.content div[id^="dact-decision-"]:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--accent) 72%, transparent);
+  outline-offset: 2px;
+}
+
+@media (max-width: 650px) {
+  main.content div[id^="dact-decision-"] {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+  }
+
+  main.content div[id^="dact-decision-"] .gt_table {
+    min-width: 40rem;
+  }
+
+  main.content #dact-decision-umbrella-minimized .gt_table {
+    min-width: 48rem;
+  }
+
+  main.content #dact-decision-umbrella-full .gt_table,
+  main.content #dact-decision-library-loan .gt_table,
+  main.content #dact-decision-social-media-policy .gt_table {
+    min-width: 60rem;
+  }
+
+  main.content div[id^="dact-decision-"] thead .gt_col_heading:first-child,
+  main.content div[id^="dact-decision-"] tbody .gt_stub {
+    left: 0;
+    max-width: 13.5rem;
+    min-width: 13.5rem;
+    position: sticky;
+    width: 13.5rem;
+    z-index: 3;
+  }
+
+  main.content div[id^="dact-decision-"] thead .gt_col_heading:first-child {
+    background: #17324d !important;
+    z-index: 5;
+  }
+
+  main.content div[id^="dact-decision-"] tbody .gt_stub {
+    background: var(--paper, #fff) !important;
+    box-shadow: 2px 0 0 var(--dact-table-frame, #c8d5cf);
+  }
+
+  main.content div[id^="dact-decision-"] > .table-scroll-hint {
+    background: color-mix(in srgb, var(--paper) 92%, var(--accent));
+    border-bottom: 1px solid var(--line);
+    color: var(--muted);
+    display: block;
+    font-family: "Jost", "Segoe UI", Arial, sans-serif;
+    font-size: 0.78rem;
+    font-weight: 600;
+    left: 0;
+    letter-spacing: 0.01em;
+    padding: 0.45rem 0.75rem;
+    position: sticky;
+    width: max-content;
+    z-index: 6;
+  }
+}
+
+body.quarto-dark main.content div[id^="dact-decision-"] .gt_table,
+body[data-bs-theme="dark"] main.content div[id^="dact-decision-"] .gt_table,
+body.quarto-dark main.content div[id^="dact-decision-"] .gt_row,
+body[data-bs-theme="dark"] main.content div[id^="dact-decision-"] .gt_row,
+body.quarto-dark main.content div[id^="dact-decision-"] .gt_stub,
+body[data-bs-theme="dark"] main.content div[id^="dact-decision-"] .gt_stub {
+  background: #20252a !important;
+  border-color: #52605a !important;
+  color: #eef2f0 !important;
+}
+
+body.quarto-dark main.content div[id^="dact-decision-"] .gt_group_heading,
+body[data-bs-theme="dark"] main.content div[id^="dact-decision-"] .gt_group_heading {
+  background: #263c35 !important;
+  border-color: #52605a !important;
+  color: #dff5e9 !important;
+}
+
+body.quarto-dark main.content div[id^="dact-decision-"] .gt_row[style*="background-color"],
+body[data-bs-theme="dark"] main.content div[id^="dact-decision-"] .gt_row[style*="background-color"] {
+  background: #174c38 !important;
+  color: #8ce8bd !important;
+}
+
+body.quarto-dark main.content div[id^="dact-decision-"] .gt_sourcenotes,
+body[data-bs-theme="dark"] main.content div[id^="dact-decision-"] .gt_sourcenotes,
+body.quarto-dark main.content div[id^="dact-decision-"] .gt_sourcenote,
+body[data-bs-theme="dark"] main.content div[id^="dact-decision-"] .gt_sourcenote {
+  background: #293038 !important;
+  border-color: #52605a !important;
+  color: #d8dfdc !important;
+}
+
+@media print {
+  main.content div.quarto-figure:has([id^="dact-decision-"]) {
+    border: 1px solid #555;
+    border-radius: 0;
+    box-shadow: none;
+    break-inside: avoid;
+  }
+
+  main.content div[id^="dact-decision-"] {
+    overflow: visible !important;
+  }
+
+  main.content div[id^="dact-decision-"] .gt_table {
+    color: #000 !important;
+    font-size: 8.5pt !important;
+    min-width: 0 !important;
+    width: 100% !important;
+  }
+
+  main.content div[id^="dact-decision-"] .gt_col_heading,
+  main.content div[id^="dact-decision-"] .gt_column_spanner_outer,
+  main.content div[id^="dact-decision-"] .gt_column_spanner,
+  main.content div[id^="dact-decision-"] .gt_group_heading,
+  main.content div[id^="dact-decision-"] .gt_row,
+  main.content div[id^="dact-decision-"] .gt_stub,
+  main.content div[id^="dact-decision-"] .gt_sourcenote {
+    background: #fff !important;
+    color: #000 !important;
+    font-size: 8pt !important;
+  }
+
+  main.content div[id^="dact-decision-"] > .table-scroll-hint {
+    display: none !important;
+  }
+}

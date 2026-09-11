@@ -1,0 +1,123 @@
+/* Pseudocode is a line-addressable Quarto listing presented as a terminal. */
+div.sourceCode:has(pre.terminal-pseudocode) {
+    position: relative;
+    margin: 1rem 0 1.25rem;
+    padding-top: 2.35rem;
+    overflow: hidden;
+    border: 1px solid #3b3f45;
+    border-radius: 0.4rem;
+    background: #181a1f;
+    box-shadow: 0 0.7rem 1.7rem rgb(0 0 0 / 12%);
+}
+
+div.sourceCode:has(pre.terminal-pseudocode)::before {
+    position: absolute;
+    inset: 0 0 auto;
+    height: 2.35rem;
+    box-sizing: border-box;
+    padding: 0.72rem 3.1rem 0.58rem 4.35rem;
+    border-bottom: 1px solid #343840;
+    color: #aeb4be;
+    background: #22252b;
+    content: "Pseudocode";
+    font-family: "Jost", "Segoe UI", Arial, sans-serif;
+    font-size: 0.68rem;
+    font-weight: 650;
+    letter-spacing: 0.09em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+div.sourceCode:has(pre.terminal-pseudocode)::after {
+    position: absolute;
+    top: 0.9rem;
+    left: 1rem;
+    width: 0.48rem;
+    height: 0.48rem;
+    border-radius: 50%;
+    background: #6f747d;
+    box-shadow: 0.95rem 0 #6f747d, 1.9rem 0 #9aa0aa;
+    content: "";
+}
+
+div.sourceCode:has(pre.terminal-pseudocode) pre,
+pre.terminal-pseudocode {
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem 0 1.05rem;
+    overflow-x: auto;
+    border: 0;
+    border-radius: 0;
+    color: #f1f3f5;
+    background: transparent !important;
+    font-family: Consolas, "Cascadia Mono", "SFMono-Regular", monospace;
+    font-size: 0.84rem;
+    line-height: 1.62;
+    white-space: pre;
+}
+
+.terminal-pseudocode code,
+.terminal-pseudocode code span {
+    color: #f1f3f5 !important;
+    background: transparent !important;
+    font-family: inherit;
+}
+
+.terminal-pseudocode code > span {
+    left: 0 !important;
+    padding-right: 1.1rem;
+}
+
+.terminal-pseudocode code > span > a:first-child::before {
+    min-width: 3.2rem;
+    margin-right: 1rem;
+    padding-right: 0.85rem;
+    border-right: 1px solid #3c4149;
+    color: #858b95 !important;
+    content: counter(source-line);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+}
+
+.terminal-pseudocode code > span:target {
+    background: rgb(255 255 255 / 7%) !important;
+}
+
+.code-copy-outer-scaffold:has(pre.terminal-pseudocode) .code-copy-button {
+    top: 0.42rem;
+    color: #c8cdd5;
+}
+
+.code-copy-outer-scaffold:has(pre.terminal-pseudocode) .code-copy-button:hover {
+    color: #fff;
+    background: #343840;
+}
+
+@media (max-width: 650px) {
+    div.sourceCode:has(pre.terminal-pseudocode) pre,
+    pre.terminal-pseudocode {
+        font-size: 0.78rem;
+    }
+}
+
+@media print {
+    div.sourceCode:has(pre.terminal-pseudocode) {
+        border-color: #777;
+        background: #fff;
+        box-shadow: none;
+    }
+
+    div.sourceCode:has(pre.terminal-pseudocode)::before {
+        border-color: #bbb;
+        color: #222;
+        background: #eee;
+    }
+
+    div.sourceCode:has(pre.terminal-pseudocode) pre,
+    pre.terminal-pseudocode,
+    .terminal-pseudocode code,
+    .terminal-pseudocode code span {
+        color: #000 !important;
+        background: #fff !important;
+    }
+}

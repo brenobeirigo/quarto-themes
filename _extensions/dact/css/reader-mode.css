@@ -1,0 +1,19 @@
+@media (min-width: 992px) {
+  body:has(.quarto-reader-toggle.reader) #quarto-content.page-columns {
+    grid-template-columns:
+      [screen-start] 1.5rem
+      [screen-start-inset] 0
+      [page-start] minmax(0, 1fr)
+      [page-start-inset] 0
+      [body-start-outset] 0
+      [body-start] 0
+      [body-content-start] minmax(0, 1000px)
+      [body-content-end] 0
+      [body-end] 0
+      [body-end-outset] 0
+      [page-end-inset] minmax(0, 1fr)
+      [page-end] 0
+      [screen-end-inset] 1.5rem
+      [screen-end];
+  }
+}

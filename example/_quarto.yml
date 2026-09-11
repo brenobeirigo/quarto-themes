@@ -1,0 +1,10 @@
+project:
+  type: book
+book:
+  title: "DACT theme example"
+  reader-mode: true
+  chapters:
+    - index.qmd
+    - ch1.qmd
+format:
+  dact-html: default

@@ -1,0 +1,205 @@
+/*-- scss:defaults --*/
+$body-bg: #17191d;
+$body-color: #e6e8eb;
+$link-color: #75d6a3;
+$link-hover-color: #b1e35d;
+$navbar-bg: #111317;
+$navbar-fg: #f3f4f6;
+$navbar-hl: #b1e35d;
+$font-family-sans-serif: "Libre Franklin", "Segoe UI", Arial, sans-serif;
+$headings-font-family: "Jost", "Segoe UI", Arial, sans-serif;
+$font-family-monospace: "Consolas", "Cascadia Mono", "SFMono-Regular", monospace;
+$font-size-root: 16px;
+$headings-font-weight: 600;
+$border-radius: 0.2rem;
+$code-bg: #20242a;
+$code-color: #eef1f4;
+$toc-color: #75d6a3;
+
+/*-- scss:rules --*/
+body {
+  background-color: #17191d;
+  color: #e6e8eb;
+
+  --bs-body-bg: #17191d;
+  --bs-body-color: #e6e8eb;
+  --bs-border-color: #3a4048;
+  --bs-secondary-color: #aab1ba;
+  --bs-tertiary-bg: #20242a;
+  --navy: #f3f4f6;
+  --ink: #e6e8eb;
+  --muted: #aab1ba;
+  --paper: #17191d;
+  --soft: #20242a;
+  --line: #3a4048;
+  --accent: #5fd39a;
+  --accent-strong: #75d6a3;
+  --accent-light: #b1e35d;
+  --blue: #7fb3d5;
+  --dact-ink: #e6e8eb;
+  --dact-muted: #aab1ba;
+  --dact-paper: #17191d;
+  --dact-soft: #20242a;
+  --dact-line: #3a4048;
+  --dact-accent: #5fd39a;
+  --dact-accent-strong: #75d6a3;
+  --dact-accent-light: #b1e35d;
+  --dact-code-bg: #111317;
+  --dact-code-text: #eef1f4;
+  --dact-code-muted: #aab1ba;
+  --dact-code-border: #3a4048;
+
+  /* Defining Mermaid variables on body avoids a race between Quarto's initial
+     color-scheme selection and its body-class update on mobile browsers. */
+  --mermaid-bg-color: #17191d !important;
+  --mermaid-fg-color: #e6e8eb !important;
+  --mermaid-fg-color--lighter: #aab1ba !important;
+  --mermaid-fg-color--lightest: #20242a !important;
+  --mermaid-node-bg-color: #20242a !important;
+  --mermaid-node-fg-color: #f3f4f6 !important;
+  --mermaid-label-bg-color: #17191d !important;
+  --mermaid-label-fg-color: #f3f4f6 !important;
+  --mermaid-edge-color: #aab1ba !important;
+}
+
+/* These rules are deliberately explicit. Mermaid SVGs are generated while the
+   page is still loading, so their contrast must not depend on a later class. */
+body svg.flowchart {
+  background: #17191d;
+}
+
+body svg.flowchart .node rect,
+body svg.flowchart .node circle,
+body svg.flowchart .node ellipse,
+body svg.flowchart .node polygon,
+body svg.flowchart .node path {
+  fill: #20242a !important;
+  stroke: #f3f4f6 !important;
+}
+
+body svg.flowchart .label,
+body svg.flowchart .nodeLabel,
+body svg.flowchart .nodeLabel p,
+body svg.flowchart .label text,
+body svg.flowchart .label span,
+body svg.flowchart text,
+body svg.flowchart foreignObject div {
+  color: #f3f4f6 !important;
+  fill: #f3f4f6 !important;
+}
+
+body svg.flowchart .flowchart-link,
+body svg.flowchart .edgePath path {
+  stroke: #aab1ba !important;
+}
+
+body svg.flowchart marker path,
+body svg.flowchart .arrowheadPath {
+  fill: #aab1ba !important;
+  stroke: #aab1ba !important;
+}
+
+body svg.flowchart .edgeLabel,
+body svg.flowchart .edgeLabel rect,
+body svg.flowchart .edgeLabel p,
+body svg.flowchart .labelBkg {
+  background-color: #17191d !important;
+  fill: #17191d !important;
+  color: #f3f4f6 !important;
+}
+
+body svg.flowchart .cluster rect {
+  fill: #1d2126 !important;
+  stroke: #555d68 !important;
+}
+
+body main.content table.table-striped > tbody > tr:nth-of-type(odd) > * {
+  --bs-table-bg-type: rgb(255 255 255 / 0.06);
+  box-shadow: inset 0 0 0 9999px rgb(255 255 255 / 0.04);
+}
+
+body main.content table.table-hover > tbody > tr:hover > * {
+  --bs-table-bg-state: rgb(255 255 255 / 0.1);
+}
+
+body .syllabus-hero,
+body .syllabus-card,
+body .syllabus-facts,
+body .syllabus-fact,
+body .syllabus-assessment,
+body .syllabus-materials,
+body .syllabus-policy,
+body .syllabus-grading,
+body .syllabus-support,
+body .syllabus-collaboration,
+body .syllabus-staff,
+body .syllabus-contact {
+  background-color: #1d2126;
+  border-color: #3a4048;
+  color: #e6e8eb;
+}
+
+body .callout {
+  background: var(--paper);
+  border-color: var(--line) !important;
+  border-left-color: var(--dact-callout-accent) !important;
+  color: var(--ink);
+}
+
+body .callout .callout-header {
+  background: color-mix(in srgb, var(--dact-callout-accent) 15%, var(--paper)) !important;
+  border-bottom-color: color-mix(in srgb, var(--dact-callout-accent) 36%, var(--line));
+  color: var(--navy);
+}
+
+@media print {
+  body {
+    color-scheme: light;
+    --mermaid-bg-color: #fff !important;
+    --mermaid-fg-color: #111827 !important;
+    --mermaid-fg-color--lighter: #4b5563 !important;
+    --mermaid-fg-color--lightest: #f9fafb !important;
+    --mermaid-node-bg-color: #fff !important;
+    --mermaid-node-fg-color: #111827 !important;
+    --mermaid-label-bg-color: #fff !important;
+    --mermaid-label-fg-color: #111827 !important;
+    --mermaid-edge-color: #4b5563 !important;
+  }
+
+  body svg.flowchart {
+    background: #fff !important;
+  }
+
+  body svg.flowchart .node rect,
+  body svg.flowchart .node circle,
+  body svg.flowchart .node ellipse,
+  body svg.flowchart .node polygon,
+  body svg.flowchart .node path {
+    fill: #fff !important;
+    stroke: #111827 !important;
+  }
+
+  body svg.flowchart .label,
+  body svg.flowchart .nodeLabel,
+  body svg.flowchart .nodeLabel p,
+  body svg.flowchart .label text,
+  body svg.flowchart .label span,
+  body svg.flowchart text,
+  body svg.flowchart foreignObject div {
+    color: #111827 !important;
+    fill: #111827 !important;
+  }
+
+  body svg.flowchart .flowchart-link,
+  body svg.flowchart .edgePath path,
+  body svg.flowchart marker path,
+  body svg.flowchart .arrowheadPath {
+    fill: #4b5563 !important;
+    stroke: #4b5563 !important;
+  }
+
+  body svg.flowchart .cluster rect {
+    fill: #f9fafb !important;
+    stroke: #d1d5db !important;
+  }
+}

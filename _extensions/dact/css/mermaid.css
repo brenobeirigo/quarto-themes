@@ -1,0 +1,88 @@
+:root {
+  --mermaid-bg-color: #ffffff !important;
+  --mermaid-fg-color: #111827 !important;
+  --mermaid-fg-color--lighter: #9ca3af !important;
+  --mermaid-fg-color--lightest: #f3f4f6 !important;
+  --mermaid-node-bg-color: #ffffff !important;
+  --mermaid-node-fg-color: #111827 !important;
+  --mermaid-label-bg-color: #ffffff !important;
+  --mermaid-label-fg-color: #111827 !important;
+  --mermaid-edge-color: #4b5563 !important;
+  --mermaid-font-weight: 400 !important;
+}
+
+svg.flowchart {
+  background: #ffffff;
+  color: var(--mermaid-label-fg-color);
+  display: block;
+  margin: 0 auto;
+  max-width: none !important;
+  overflow: visible;
+}
+
+.flowchart-viewport {
+  max-width: 100%;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 0.5rem 0;
+}
+
+svg.flowchart foreignObject,
+svg.flowchart .nodeLabel,
+svg.flowchart .nodeLabel p {
+  overflow: visible !important;
+}
+
+svg.flowchart .nodeLabel,
+svg.flowchart .nodeLabel p {
+  margin: 0 !important;
+  white-space: normal !important;
+}
+
+svg.flowchart .node rect,
+svg.flowchart .node circle,
+svg.flowchart .node ellipse,
+svg.flowchart .node polygon,
+svg.flowchart .node path {
+  fill: var(--mermaid-node-bg-color) !important;
+  stroke: var(--mermaid-node-fg-color) !important;
+  stroke-width: 1.25px !important;
+}
+
+svg.flowchart .label,
+svg.flowchart .nodeLabel,
+svg.flowchart .label text,
+svg.flowchart .label span,
+svg.flowchart text,
+svg.flowchart foreignObject div {
+  color: var(--mermaid-label-fg-color) !important;
+  fill: var(--mermaid-label-fg-color) !important;
+  font-weight: var(--mermaid-font-weight) !important;
+}
+
+svg.flowchart .flowchart-link,
+svg.flowchart .edgePath path {
+  stroke: var(--mermaid-edge-color) !important;
+}
+
+svg.flowchart marker path,
+svg.flowchart .arrowheadPath {
+  fill: var(--mermaid-edge-color) !important;
+  stroke: var(--mermaid-edge-color) !important;
+}
+
+svg.flowchart .edgeLabel,
+svg.flowchart .edgeLabel rect,
+svg.flowchart .edgeLabel p,
+svg.flowchart .labelBkg {
+  background: var(--mermaid-label-bg-color) !important;
+  fill: var(--mermaid-label-bg-color) !important;
+  color: var(--mermaid-label-fg-color) !important;
+}
+
+svg.flowchart .cluster rect {
+  fill: #f9fafb !important;
+  stroke: #d1d5db !important;
+}
+
+

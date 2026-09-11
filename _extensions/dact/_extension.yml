@@ -1,0 +1,35 @@
+title: DACT theme
+author: Breno Alves Beirigo
+version: 1.0.0
+quarto-required: ">=1.4.0"
+contributes:
+  formats:
+    html:
+      mermaid-format: svg
+      toc-depth: 4
+      code-copy: true
+      code-line-numbers: true
+      code-overflow: wrap
+      theme:
+        light:
+          - cosmo
+          - scss/dact-theme.scss
+        dark:
+          - darkly
+          - scss/dact-theme-dark.scss
+      css:
+        - css/dact-home.css
+        - css/dact-syllabus.css
+        - css/reader-mode.css
+        - css/mermaid.css
+        - css/mcq.css
+        - css/excel.css
+        - css/print_black_white.css
+        - css/assessment.css
+        - css/pseudocode-terminal.css
+        - css/layout-responsive.css
+        - css/dact-tables.css
+        - css/decision-tables.css
+        - css/citations.css
+      filters:
+        - dact.lua
