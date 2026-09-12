@@ -121,3 +121,12 @@ main.content .quarto-float-tbl > div[aria-describedby] {
     scroll-behavior: auto !important;
   }
 }
+
+/* Wrapped numbered code. Pandoc shifts each numbered line 4em left so its
+   number sits in the margin, and a wrapped line would inherit that shift and
+   start under the numbers. A matching hanging indent keeps continuation lines
+   under the code text. Lines that do not wrap are unchanged. */
+pre.numberSource:not(.terminal-pseudocode) > code > span {
+  padding-left: 4em;
+  text-indent: -4em;
+}

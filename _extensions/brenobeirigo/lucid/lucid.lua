@@ -11,7 +11,7 @@
 --     table-scroll: false        # focusable scroll regions for wide tables
 --     page-references: true      # keep the page-local bibliography visible
 
-local VERSION = "1.0.0"
+local VERSION = "1.0.1"
 
 local options = {
   ["accessible-tables"] = true,
